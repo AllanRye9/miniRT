@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/19 11:24:40 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:39:17 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,10 @@ int	main(int argc, char *argv[])
 	int			fd;
 
 	fd = read_file(argc, argv);
+	if (fd == -1)
+		return (EXIT_FAILURE);
+	scene = parse_scene(fd);
+	if (!scene)
+		return (close(fd), free_scene(scene), EXIT_FAILURE);
+	close(fd);
 }
