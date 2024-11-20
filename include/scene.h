@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:28:47 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/19 11:56:55 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:55:25 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define SCENE_H
 
 # include <stdbool.h>
+# include <stdlib.h>
+# include "miniRT.h"
+# include "libft.h"
 
 typedef struct s_scene
 {

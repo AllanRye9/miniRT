@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2024/11/19 11:16:58 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/11/20 18:13:15 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ MLX_FLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 LIBFT_PATH = libft/
 
 LIBFT_LIB = $(LIBFT_PATH)libft.a
+
+GETNEXTLINE := get_next_line/*.c
 
 Y = "\033[33m"
 R = "\033[31m"
@@ -55,7 +57,7 @@ $(NAME): $(OBJECTS)
 	@echo $(G)Finished [$(CFILES)]$(X)
 	@echo
 	@echo $(Y)Compiling [$(NAME)]...$(X)
-	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJECTS) $(MLX_LIB) $(LIBFT_LIB) -o $(NAME)
+	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJECTS) $(MLX_LIB) $(LIBFT_LIB) $(GETNEXTLINE) -o $(NAME)
 	@echo $(G)Ready [$(NAME)]$(X)
 
 clean:
