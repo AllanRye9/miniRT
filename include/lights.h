@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   miniRT.h                                           :+:      :+:    :+:   */
+/*   lights.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 19:55:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/19 11:20:46 by sbartoul         ###   ########.fr       */
+/*   Created: 2024/11/19 11:39:19 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/11/19 11:56:32 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#ifndef LIGHTS_H
+# define LIGHTS_H
 
-# include <stdbool.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include <pthread.h>
-# include <semaphore.h>
-# include <signal.h>
-# include "libft.h"
-# include <stdio.h>
+# include "mathRT.h"
+
+typedef struct s_light
+{
+	t_light		type;
+	t_vector	position;
+	t_vector	dirctn;
+	t_vector	init_dirctn;
+	t_mat4		added_rots;
+	t_color		color;
+	double		intensity;
+	double		theta;
+}	t_light;
 
 #endif
