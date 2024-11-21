@@ -6,11 +6,34 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:40:53 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 10:35:23 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:15:58 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/scene.h"
+
+t_scene	*check_elements(t_scene *scene)
+{
+	if (scene->count.ambient_lights > 1 || scene->count.ambient_lights == 0)
+	{
+		if (scene->count.ambient_lights > 1)
+			printf("Error: Scene contain multiple ambient lights\n");
+		else
+			printf("Error: Scene contains no ambient lights\n");
+		free_scene(scene);
+		return (NULL);
+	}
+	if (scene->count.camera > 1 || scene->count.cameras == 0)
+	{
+		if (scene->count.cameras > 1)
+			printf("Error: Scene contains more than one camera\n");
+		else
+			printf("Error: Scene contains no camera\n");
+		free_scene(scene);
+		return (NULL);
+	}
+	return (scene);
+}
 
 static int	to_skipline(char **line, int fd, size_t *line_count)
 {
@@ -41,12 +64,12 @@ static bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 	else if (is_shape(split_word[0]))
 		parse_shape(scene, split_word);
 	else
-		scene->error_flags.unknow_identifier = true;
-	if (find_error(&scene->error_flags))
+		scene->err_flag.unknow_identifier = true;
+	if (find_error(&scene->err_flag))
 		print_error(scene, line, *line_num, split_word[0]);
 	free(line);
 	free_split_array(split_word);
-	return (!find_error(&scene->error_flags));
+	return (!find_error(&scene->err_flag));
 }
 
 t_scene	*parse_scene(int fd)
