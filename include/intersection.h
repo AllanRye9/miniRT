@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:15:09 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 17:23:16 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/21 19:27:11 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct s_ray
 	t_vector	origin;
 	t_vector	dir;
 }	t_ray;
-
 
 typedef struct s_intersect
 {
