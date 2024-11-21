@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 22:17:03 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/03/25 17:18:48 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:02:22 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,12 @@ char	*get_next_line(int fd)
 	ssize_t		read_bytes;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE >= INT32_MAX)
+	{
+		if (bucket)
+			free(bucket);
+		bucket = NULL;
 		return (NULL);
+	}
 	read_bytes = 1;
 	cup = malloc(BUFFER_SIZE + 1);
 	if (!cup)
