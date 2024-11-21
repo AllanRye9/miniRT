@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lights.h                                           :+:      :+:    :+:   */
+/*   mathrt.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 11:39:19 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 12:37:23 by sbartoul         ###   ########.fr       */
+/*   Created: 2024/11/21 12:35:59 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/11/21 12:42:50 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIGHTS_H
-# define LIGHTS_H
+#ifndef MATHRT_H
+# define MATHRT_H
 
-# include "mathrt.h"
+# define RAD_TO_DEG 57.2957795131
+# define DEG_TO_RAD 0.01745329252
 
-typedef struct s_light
+typedef struct s_vector
 {
-	t_light		type;
-	t_vector	position;
-	t_vector	dirctn;
-	t_vector	init_dirctn;
-	t_mat4		added_rots;
-	t_color		color;
-	double		intensity;
-	double		theta;
-}	t_light;
+	double	x;
+	double	y;
+	double	z;
+	double	w;
+}	t_vector;
 
 #endif
