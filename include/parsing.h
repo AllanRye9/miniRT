@@ -19,6 +19,7 @@
 # include "mathrt.h"
 # include "color.h"
 # include "shape.h"
+# include <math.h>
 
 typedef struct s_scene	t_scene;
 
@@ -82,4 +83,6 @@ typedef struct s_parsing_err_flag
 	bool			setting_err;
 }	t_err_flag;
 
+
+char *ft_strtrim_free(char *a, char *b);
 #endif

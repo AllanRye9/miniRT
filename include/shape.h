@@ -12,6 +12,8 @@
 
 #ifndef SHAPE_H
 # define SHAPE_H
+#include "color.h"
+
 
 typedef enum e_shape_type
 {
@@ -34,7 +36,7 @@ typedef enum e_pattern_type
 
 typedef struct s_shape_props
 {
-	bool			§highlighted;
+	bool			highlighted;
 	double			radius;
 	double			radius_squared;
 	double			height;
