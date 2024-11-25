@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/20 15:39:17 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/25 22:18:43 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,18 @@ int	main(int argc, char *argv[])
 	if (!scene)
 		return (close(fd), free_scene(scene), EXIT_FAILURE);
 	close(fd);
+	init_settings(&scene->init_settings);
+	sem_unlink("/loading");
+	scene->sem_loading = sem_open("/loading", O_CREAT, 0644, 0);
+	init_display(&disp, &scene->settings);
+	if (disp.mlx = NULL)
+		return (close(fd), free_scene(scene), EXIT_FAILURE);
+	scene->disp = &disp;
+	setup_hooks(scene);
+	camera_init(&scene->cam, scene);
+	scene->cam.theta = atan(scene->cam.dir.z / scene->cam.dir.x);
+	scene->cam.phi = acos(scene->cam.dir.y);
+	calc_transform(scene);
+	draw_scene(scene);
+	mlx_loop(disp.mlx);
 }

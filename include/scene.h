@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:28:47 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 12:27:04 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/25 22:35:20 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,57 @@
 # include <stdbool.h>
 # include <stdlib.h>
 # include "miniRT.h"
-# include "libft.h"
+
+typedef struct s_el_count
+{
+	int	ambient_lights;
+	int	cameras;
+	int	lights;
+	int	shapes;
+}	t_el_count;
+
+typedef struct s_look_at
+{
+	t_vector	final_pos;
+	t_vector	initial_orientation;
+	t_vector	final_dir;
+	t_vector	current_dir;
+	t_vector	pos_diff;
+	t_vector	dir_diff;
+	bool		trigger;
+	int			step_num;
+	int			step_amount;
+}	t_look_at;
+
+typedef struct s_mouse
+{
+	bool	active;
+	bool	toggle;
+	int		prev_x;
+	int		prev_y;
+	int		x;
+	int		y;
+	int		key;
+}	t_mouse;
+
+typedef struct s_settings
+{
+	int		disp_h;
+	int		disp_w;
+	int		render_h;
+	int		render_w;
+	int		edit_h;
+	int		edit_w;
+	bool	camera_mode;
+	bool	edit_mode;
+	bool	light_mode;
+	int		reflection_depth;
+	double	edit_scale;
+	double	render_scale;
+	bool	collisions;
+	bool	help_menu;
+	bool	supersampling;
+}	t_settings;
 
 typedef struct s_scene
 {
