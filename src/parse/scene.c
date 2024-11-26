@@ -6,15 +6,15 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:40:53 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 12:15:58 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/26 13:45:50 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/scene.h"
 
-void free_textures(t_scene *scene)
+void	free_textures(t_scene *scene)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (++i < scene->count.shapes && scene->shapes != NULL)
@@ -24,14 +24,14 @@ void free_textures(t_scene *scene)
 	}
 }
 
-void free_texture(t_shape *shape, t_color **texture)
+void	free_texture(t_shape *shape, t_color **texture)
 {
-	int i;
+	int	i;
 
 	if (texture == NULL)
-		return;
+		return ;
 	i = 0;
-	while (i < shape->tex_height)
+	while (i < shape->text_height)
 	{
 		free(texture[i]);
 		i++;
@@ -39,10 +39,10 @@ void free_texture(t_shape *shape, t_color **texture)
 	free(texture);
 }
 
-void free_scene(t_scene *scene)
+void	free_scene(t_scene *scene)
 {
 	if (scene == NULL)
-		return;
+		return ;
 	if (scene->disp != NULL && scene->disp->mlx != NULL)
 	{
 		mlx_destroy_image(scene->disp->mlx, scene->disp->display_img);
@@ -63,7 +63,7 @@ void free_scene(t_scene *scene)
 	free(scene);
 }
 
-t_scene *check_elements(t_scene *scene)
+t_scene	*check_elements(t_scene *scene)
 {
 	if (scene->count.ambient_lights > 1 || scene->count.ambient_lights == 0)
 	{
@@ -74,7 +74,7 @@ t_scene *check_elements(t_scene *scene)
 		free_scene(scene);
 		return (NULL);
 	}
-	if (scene->count.camera > 1 || scene->count.cameras == 0)
+	if (scene->count.cameras > 1 || scene->count.cameras == 0)
 	{
 		if (scene->count.cameras > 1)
 			printf("Error: Scene contains more than one camera\n");
@@ -86,18 +86,18 @@ t_scene *check_elements(t_scene *scene)
 	return (scene);
 }
 
-char *ft_strtrim_free(char *a, char *b)
+char	*ft_strtrim_free(char *a, char *b)
 {
-	char *str;
+	char	*str;
 
 	if (!a)
-		return NULL;
+		return (NULL);
 	str = ft_strtrim(a, b);
 	free(a);
-	return str;
+	return (str);
 }
 
-int is_whitespaces(char c)
+int	is_whitespaces(char c)
 {
 	if (c == '\n' || c == '\f' || c == 'r' || c == '\t' || c == 32 || c == '\v')
 		return (1);
@@ -289,7 +289,7 @@ void parse_ambient(t_scene *scene, char **s)
 				&scene->error_flags.ambient.color);
 }
 
-static bool parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
+static	bool parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 {
 	char **trimmed;
 

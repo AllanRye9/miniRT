@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:55:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/25 19:50:44 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/26 13:18:37 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 # include "render.h"
 # include "parsing.h"
 # include "utils.h"
-# include "collisions.h"
+# include "collision.h"
 # define EPSILON 0.001f
 
 #endif

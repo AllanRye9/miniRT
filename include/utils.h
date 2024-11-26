@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camera.c                                           :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 22:02:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/26 13:35:15 by sbartoul         ###   ########.fr       */
+/*   Created: 2024/11/26 13:02:53 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/11/26 13:10:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#ifndef UTILS_H
+# define UTILS_H
 
-void	calc_cam_transform(t_scene *scene)
-{
-	t_vector	from;
-	t_vector	up;
+# include "miniRT.h"
 
-	from.x = scene->cam.pos.x;
-	from.y = scene->cam.pos.y;
-	from.z = scene->cam.pos.z;
-	from.w = 1;
-	normalize_vec(&scene->cam.dir);
-	up.x = 0;
-	up.y = 0;
-	up.z = 0;
-	up.w = 0;
-	view_transform(&scene->cam.transform, &from, &up, &scene->cam.dir);
-	mat_inverse(&scene->cam.inv_trans, &scene->cam.transform);
-}
+#endif
