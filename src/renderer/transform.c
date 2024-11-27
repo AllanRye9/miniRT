@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:52:57 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/26 13:41:06 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/27 12:25:39 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void	calc_shape_transform(t_shape *shape)
 	identity_matrix(&rot);
 	identity_matrix(&translate);
 	if (shape->type == CUBE || shape->type == SPHERE)
-		scaling_matrix(&scale, shape->props.scale.x,
+		matrix_scaling(&scale, shape->props.scale.x,
 			shape->props.scale.y, shape->props.scale.z);
 	if (shape->type == CYLINDER)
-		scaling_matrix(&scale, shape->props.scale.x, 1, shape->props.scale.z);
+		matrix_scaling(&scale, shape->props.scale.x, 1, shape->props.scale.z);
 	if (shape->type == CONE)
-		scaling_matrix(&scale, shape->props.radius * 2, shape->props.height * 2,
+		matrix_scaling(&scale, shape->props.radius * 2, shape->props.height * 2,
 			shape->props.radius * 2);
 	if (shape->type == PLANE || shape->type == CYLINDER || shape->type == CONE)
 		calculate_orientation(&rot, shape);
