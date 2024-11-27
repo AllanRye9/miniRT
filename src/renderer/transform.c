@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:52:57 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/27 12:25:39 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/27 21:29:05 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ void	calc_transform(t_scene *scene)
 	i = 0;
 	while (i < scene->count.lights)
 	{
-		mat_vec_multlipy(&scene->lights[i].dirctn,
-			&scene->lights[i].added_rots, &scene->lights[i].init_dirctn);
+		mat_vec_multlipy(&scene->lights[i].direction,
+			&scene->lights[i].added_rots, &scene->lights[i].init_direction);
 		i++;
 	}
 }

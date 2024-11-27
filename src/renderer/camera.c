@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:02:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/26 13:35:15 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/27 22:22:53 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	calc_cam_transform(t_scene *scene)
 	from.y = scene->cam.pos.y;
 	from.z = scene->cam.pos.z;
 	from.w = 1;
-	normalize_vec(&scene->cam.dir);
+	normalize_vector(&scene->cam.dir);
 	up.x = 0;
 	up.y = 0;
 	up.z = 0;

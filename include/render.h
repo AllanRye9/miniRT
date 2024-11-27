@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 20:50:30 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/27 22:19:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,8 @@ typedef struct s_worker
 	char	*addr;
 	t_scene	*scene;
 }	t_worker;
+
+void	calc_transform(t_scene *scene);
+void	calc_cam_transform(t_scene *scene);
 
 #endif

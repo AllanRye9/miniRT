@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mathrt.h                                           :+:      :+:    :+:   */
+/*   mathRT.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 12:35:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/25 22:42:52 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/27 23:05:45 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,23 @@ typedef struct s_vector
 	double	z;
 	double	w;
 }	t_vector;
+
+void	matrix_multiply(t_mat4 *result, const t_mat4 *m1, const t_mat4 *m2);
+void	mat_vec_mult(t_vector *result, const t_mat4 *mat, const t_vector *vec);
+void	identity_matrix(t_mat4 *mat);
+void	tanspose_matrix(t_mat4 *mat);
+void	matrix_scaling(t_mat4 *mat, double x, double y, double z);
+void	matrix_translation(t_mat4 *mat, double x, double y, double z);
+void	matrix_rotate_xaxis(t_mat2 *mat, double r);
+void	matrix_rotate_yaxis(t_mat2 *mat, double r);
+void	matrix_rotate_axis(t_mat4 *rot_mat, const t_vector *ax, double angle);
+void	add_vector(t_vector *result, const t_vector *v1, const t_vector *v2);
+void	sub_vector(t_vector *result, const t_vector *v1, const t_vector *v2);
+void	scale_vector(t_vector *result, const t_vector *v, double scale);
+void	negate_vector(t_vector *result, const t_vector *v);
+void	normalize_vector(t_vector *vect);
+double	vector_magnitude(const t_vector *v);
+double	dot_product(const t_vector *v1, const t_vector *v2);
+double	vec_distance(const t_vector *v1, const t_vector *v2);
 
 #endif
