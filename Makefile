@@ -38,7 +38,7 @@ CUT = "\033[K"
 
 CFILES = src/main.c
 
-OBJECTS = $(CFILES:.c=.o)
+OBJECTS = $(CFILES:%.c=%.o)
 
 all: subsystems $(NAME)
 

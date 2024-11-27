@@ -13,7 +13,7 @@
 #ifndef INTERSECTION_H
 # define INTERSECTION_H
 
-# include "mathrt.h"
+# include "mathRT.h"
 # include <stdbool.h>
 # include "shape.h"
 # include "camera.h"
