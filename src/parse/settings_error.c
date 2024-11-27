@@ -7,7 +7,7 @@ bool	check_colons(char *line)
 
 	colon_count = 0;
 	i = 0;
-	while (line[i] != '\0')
+	while (line[i])
 	{
 		if (line[i] == ':')
 			colon_count++;
@@ -30,7 +30,7 @@ bool	check_braces(char *settings_str, size_t *line_num)
 	opening = 0;
 	closing = 0;
 	i = -1;
-	while (settings_str[++i] != '\0')
+	while (settings_str[++i])
 	{
 		if (settings_str[i] == '{')
 			opening++;
