@@ -1,7 +1,7 @@
 #include "miniRT.h"
 
 typedef struct s_keys{
-    	bool	w;
+    bool	w;
 	bool	a;
 	bool	s;
 	bool	d;
