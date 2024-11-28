@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 12:35:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/28 11:00:36 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/28 22:36:53 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void	normalize_vector(t_vector *vect);
 double	vector_magnitude(const t_vector *v);
 double	dot_product(const t_vector *v1, const t_vector *v2);
 double	vec_distance(const t_vector *v1, const t_vector *v2);
+void	inverse_matrix(t_mat4 *result, const t_mat4 *matrix);
 
 #endif

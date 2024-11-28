@@ -6,11 +6,31 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:52:57 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/27 21:29:05 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/28 21:19:18 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
+
+void	multiply_transform(t_shape *shape, t_mat4 *scale, t_mat4 *rot,
+		t_mat4 *translate)
+{
+	t_mat4	temp;
+
+	matrix_multiply(&shape->transf, translate, &shape->added_rots);
+	ft_memcpy(&temp, &shape->transf, sizeof(t_mat4));
+	matrix_multiply(&shape->transf, &temp, rot);
+	ft_memcpy(translate, &shape->transf, sizeof(t_mat4));
+	matrix_multiply(&shape->transf, translate, scale);
+	inverse_matrix(&shape->inv_transf, &shape->transf);
+	if (shape->type == CONE)
+	{
+		matrix_translation(&temp, 0, 0.5, 0);
+		matrix_multiply(&shape->inv_transf, &temp, &shape->inv_transf);
+	}
+	ft_memcpy(&shape->norm_transf, &shape->inv_transf, sizeof(t_mat4));
+	tanspose_matrix(&shape->norm_transf);
+}
 
 void	calc_shape_transform(t_shape *shape)
 {
@@ -32,9 +52,9 @@ void	calc_shape_transform(t_shape *shape)
 			shape->props.radius * 2);
 	if (shape->type == PLANE || shape->type == CYLINDER || shape->type == CONE)
 		calculate_orientation(&rot, shape);
-	translate_matrix(&translate, shape->origin.x, shape->origin.y,
+	matrix_translation(&translate, shape->origin.x, shape->origin.y,
 		shape->origin.z);
-	multiply_transforms(shape, &scale, &rot, &translate);
+	multiply_transform(shape, &scale, &rot, &translate);
 }
 
 void	calc_transform(t_scene *scene)
@@ -51,7 +71,7 @@ void	calc_transform(t_scene *scene)
 	i = 0;
 	while (i < scene->count.lights)
 	{
-		mat_vec_multlipy(&scene->lights[i].direction,
+		mat_vec_mult(&scene->lights[i].direction,
 			&scene->lights[i].added_rots, &scene->lights[i].init_direction);
 		i++;
 	}
