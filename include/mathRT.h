@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 12:35:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/27 23:05:45 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/28 11:00:36 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # define RAD_TO_DEG 57.2957795131
 # define DEG_TO_RAD 0.01745329252
+# define EPSILON 0.001f
 
 typedef double	t_mat4[4][4];
 typedef double	t_mat3[3][3];
