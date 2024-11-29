@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:10:14 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 17:13:41 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:07:14 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_display
 	void		*render_img;
 	char		*render_addr;
 	int			bpp;
-	int			line_line;
+	int			line_len;
 	int			endian;
 }		t_display;
 
