@@ -52,6 +52,8 @@ typedef struct s_vector
 # include "parsing.h"
 # include "utils.h"
 # include "collision.h"
+# include "shape.h"
+# include "macro.h"
 # define EPSILON 0.001f
 
 #endif

@@ -14,6 +14,21 @@
 # define PARSING_H
 
 # include "macro.h"
+# include "camera.h"
+
+
+typedef struct s_light_errors
+{
+	bool			intensity_other;
+	bool			intensity_range;
+	bool			max_lights;
+	bool			other;
+	bool			coords;
+	t_orient_error	orient;
+	bool			angle_other;
+	bool			angle_range;
+	t_color_error	color;
+}t_light_errors;
 
 typedef struct 	s_error_flags{
 	t_ambient_err	ambient;
@@ -23,6 +38,7 @@ typedef struct 	s_error_flags{
 	bool				unknown_identifier;
 	bool				settings_err;
 }t_error_flags;
+
 
 typedef struct s_color_err
 {
@@ -109,7 +125,23 @@ typedef struct s_parsing_err_flag
 }	t_err_flag;
 
 
+bool	print_color_error(t_color_error *err, const char *line, int line_num,
+			char *element);
+bool	print_orient_error(t_orient_error *err, const char *line, int line_num);
 void	check_color_range(t_color *color, t_color_error *err);
 void	parse_color(t_color *color, const char *str, t_color_error *errs);
+void	parse_coordinates(t_vector *position, const char *str, bool *status);
+void	check_orientation_vector(t_vector *orientation, t_orient_error *err);
+void	parse_orientation(t_vector *orientation, const char *str,
+			t_orient_error *err);
+bool	print_ambient_light_error(t_ambient_err *err, const char *line,
+			int line_num);
+bool	print_cam_error(t_cam_errors *err, const char *line, int line_num);
+bool	print_light_error(t_light_errors *err, const char *line, int line_num);
+void	parse_light_props(t_scene *scene, t_light *light, char **splitted);
+void	parse_light(t_scene *scene, char **splitted);
+bool	parse_ambient_props(t_scene *scene);
+bool	parse_ambient(t_scene *scene, char **splitted);
+void	parse_camera(t_scene *scene, char **split);
 
 #endif

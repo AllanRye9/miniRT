@@ -29,4 +29,24 @@ typedef struct s_camera
 	double		theta;
 }		t_camera;
 
+typedef struct s_orient_error
+{
+	bool			other;
+	bool			coords;
+	bool			fov_other;
+	bool			fov_range;
+	bool			up_vector;
+	t_orient_error	dir;
+}t_orient_error;
+
+typedef struct s_cam_errors
+{
+	bool			other;
+	bool			coords;
+	bool			fov_other;
+	bool			fov_range;
+	bool			up_vector;
+	t_orient_error	dir;
+}t_cam_errors;
+
 #endif
