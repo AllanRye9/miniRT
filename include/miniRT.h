@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:55:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/26 13:18:37 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/29 20:40:38 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 # include "shape.h"
 # include "scene.h"
 # include "parsing.h"
+# include "edit_mode.h"
 
 typedef struct s_vector
 {

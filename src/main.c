@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/29 11:05:08 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:01:29 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,18 @@ static int	read_file(int argc, char *argv[])
 	return (fd);
 }
 
+void	scene_init(t_scene *scene, t_display *display)
+{
+	scene->disp = display;
+	setup_hooks(scene);
+	camera_init(&scene->cam, scene);
+	scene->cam.theta = atan(scene->cam.dir.z / scene->cam.dir.x);
+	scene->cam.pi = acos(scene->cam.dir.y);
+	calc_transform(scene);
+	collide(scene, true, 10, NULL);
+	draw_scene(scene);
+}
+
 int	main(int argc, char *argv[])
 {
 	t_scene		*scene;
@@ -56,12 +68,6 @@ int	main(int argc, char *argv[])
 	init_display(&dsply, &scene->settings);
 	if (dsply.mlx == NULL)
 		return (close(fd), free_scene(scene), EXIT_FAILURE);
-	scene->disp = &dsply;
-	setup_hooks(scene);
-	camera_init(&scene->cam, scene);
-	scene->cam.theta = atan(scene->cam.dir.z / scene->cam.dir.x);
-	scene->cam.pi = acos(scene->cam.dir.y);
-	calc_transform(scene);
-	draw_scene(scene);
+	scene_init(&scene, &dsply);
 	mlx_loop(dsply.mlx);
 }

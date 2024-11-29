@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:02:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/28 10:55:32 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/29 19:17:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,33 @@ void	calc_cam_transform(t_scene *scene)
 	up.w = 0;
 	transform_view(&scene->cam.transform, &from, &up, &scene->cam.dir);
 	inverse_matrix(&scene->cam.inv_trans, &scene->cam.transform);
+}
+
+void	camera_init(t_camera *camera, t_scene *scene)
+{
+	double	half_view;
+	double	aspect;
+	double	h;
+	double	w;
+
+	h = scene->settings.render_h;
+	w = scene->settings.render_w;
+	if (scene->settings.edit_mode == true)
+	{
+		h = scene->settings.edit_h;
+		w = scene->settings.edit_w;
+	}
+	half_view = tan((camera->fov / 2.0f) * M_PI / 180.0f);
+	aspect = w / h;
+	if (aspect >= 1)
+	{
+		camera->half_w = half_view;
+		camera->half_h = half_view / aspect;
+	}
+	else
+	{
+		camera->half_w = half_view * aspect;
+		camera->half_h = half_view;
+	}
+	camera->pixel_sz = (camera->half_w * 2) / w;
 }
