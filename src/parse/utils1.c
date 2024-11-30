@@ -1,6 +1,6 @@
 #include "miniRT.h"
 
-static bool	is_whitespace(const char c)
+bool	is_whitespace(const char c)
 {
 	return (c == ' ' || c == '\f'
 		|| c == '\n' || c == '\r'

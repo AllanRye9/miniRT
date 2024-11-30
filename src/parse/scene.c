@@ -1,6 +1,6 @@
 #include "miniRT.h"
 
-static bool	check_element_count(t_scene *scene)
+bool	check_element_count(t_scene *scene)
 {
 	if (scene->count.ambience >= 0)
 	{
@@ -34,7 +34,7 @@ bool	skip_line(char **line, int fd, size_t *line_count)
 	return (false);
 }
 
-static bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
+bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 {
 	char	**splitted;
 
@@ -95,4 +95,3 @@ t_scene	*parse_scene(int fd)
 	}
 	return (check_elements(scene));
 }
-

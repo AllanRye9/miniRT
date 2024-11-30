@@ -26,7 +26,7 @@ bool	print_cam_error(t_cam_errors *err, const char *line, int line_num)
 	if (err->coords)
 		printf(GENERIC_ERROR, "camera origin", line_num, line);
 	else if (print_orient_error(&err->dir, line, line_num,
-			"camera orientation") && err->dir.other)
+			"camera orientation") && err->dir.others)
 		printf(CAMERA_SYNTAX);
 	else if (err->up_vector)
 	{
@@ -63,7 +63,7 @@ bool	print_light_error(t_light_errors *err, const char *line, int line_num)
 			"light color") && err->other)
 		printf(LIGHT_SYNTAX);
 	else if (print_orient_error(&err->orient, line, line_num,
-			"spotlight orientation") && err->orient.other == true)
+			"spotlight orientation") && err->orient.others == true)
 		printf(SPOTLIGHT_SYNTAX);
 	else if (err->angle_other)
 		printf(GENERIC_ERROR""SPOTLIGHT_SYNTAX, "spotlight beam width",

@@ -31,6 +31,7 @@
 # include "shape.h"
 # include "scene.h"
 # include "parsing.h"
+# include "parsing2.h"
 # include "edit_mode.h"
 
 typedef struct s_vector
