@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/29 21:01:29 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/11/30 17:27:05 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	scene_init(t_scene *scene, t_display *display)
 	scene->cam.theta = atan(scene->cam.dir.z / scene->cam.dir.x);
 	scene->cam.pi = acos(scene->cam.dir.y);
 	calc_transform(scene);
-	collide(scene, true, 10, NULL);
+	collided(scene, true, 10, NULL);
 	draw_scene(scene);
 }
 

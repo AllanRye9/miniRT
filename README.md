@@ -63,3 +63,5 @@ cy for cylinder
 - Cylinder diameter
 - Cylinder height
 - RGB color at last.
+
+For orthographic the ray is parrallel, u can imaging shadow created on the dark on the wall and for perspective view the ray is triangular starting from the camera or eye.
