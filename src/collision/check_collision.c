@@ -6,13 +6,13 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 17:28:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/02 14:52:32 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/03 22:55:17 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
 
-void	resolve_sphere_sphere(t_shape *shape1, t_shape *shape2,
+static void	resolve_sphere_sphere(t_shape *shape1, t_shape *shape2,
 	t_shape *transformed_shape)
 {
 	if (shape2 == transformed_shape)
@@ -21,7 +21,7 @@ void	resolve_sphere_sphere(t_shape *shape1, t_shape *shape2,
 		sphere_sphere_collision_resolution(shape1, shape2);
 }
 
-void	box_box_collision_resolution(t_shape *shape1, t_shape *shape2,
+static void	box_box_collision_resolution(t_shape *shape1, t_shape *shape2,
 	t_shape *transformed_shape)
 {
 	if (shape2 == transformed_shape)
@@ -30,8 +30,8 @@ void	box_box_collision_resolution(t_shape *shape1, t_shape *shape2,
 		box_box_collision(shape1, shape2, true);
 }
 
-bool	handle_complex_collision(t_shape *shape1, t_shape *shape2, bool resolve,
-	t_shape *transformed_shape)
+static bool	handle_complex_collision(t_shape *shape1, t_shape *shape2,
+	bool resolve, t_shape *transformed_shape)
 {
 	bool	collided;
 
