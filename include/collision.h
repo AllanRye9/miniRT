@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/04 11:41:07 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/04 23:17:55 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,29 @@ typedef struct cylinder_plane_collision_math
 	t_vector	center_to_point;
 }	t_colmath;
 
+typedef struct cylinder_sphere_data
+{
+	t_vector	cylinder_to_sphere;
+	t_vector	up_vector;
+	double		v_dist;
+	t_vector	cap_to_sphere;
+	double		dist;
+	double		v_cap_distance;
+	double		h_cap_distance;
+	t_vector	dir;
+	t_vector	center_delta;
+	t_vector	edge;
+	t_vector	center_adjusted;
+	double		edge_distance;
+}	t_cy_sp_data;
+
+typedef struct s_collision_inputs
+{
+	t_shape	*cylinder;
+	t_shape	*sphere;
+	bool	resolve;
+}	t_collision_inputs;
+
 bool	test_axis_overlap(t_box_axes *ba, t_shape *b1, t_shape *b2, int axis);
 void	compute_center_distance(t_box_axes *ba, t_shape *b1, t_shape *b2);
 void	calculate_rotation_matrices(t_box_axes *ba);
@@ -65,5 +88,10 @@ void	initialize_box_axes(t_box_axes *ba);
 bool	test_box_axes(t_shape *b1, t_shape *b2, t_vector *resolution);
 bool	check_collision(t_shape *shape1, t_shape *shape2, bool resolve,
 			t_shape *transformed_shape);
+void	handle_secondary_plane_case(t_cy_collision_data *cy_data,
+			t_shape *cylinder, t_shape *plane);
+void	cylinder_plane_collision_resolution(t_shape *cylinder, t_shape *plane);
+bool	cylinder_sphere_collision(t_shape *cylinder, t_shape *sphere,
+			bool cylinder_sphere, bool resolve);
 
 #endif
