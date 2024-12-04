@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/03 22:52:42 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/04 11:41:07 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,29 @@ typedef struct s_box_axes
 	double		ra;
 	double		rb;
 }	t_box_axes;
+
+typedef struct cylinder_collision_data
+{
+	t_vector	cylinder_normal;
+	t_vector	top_cap_center;
+	t_vector	bottom_cap_center;
+	t_vector	cap_center;
+	t_vector	resolution;
+}	t_cy_collision_data;
+
+typedef struct cylinder_plane_collision_math
+{
+	double		d;
+	double		t;
+	double		dist;
+	t_ray		ray;
+	t_vector	point_on_splane;
+	t_vector	dir;
+	t_vector	end_point;
+	t_vector	plane_to_end_point;
+	t_vector	resolution;
+	t_vector	center_to_point;
+}	t_colmath;
 
 bool	test_axis_overlap(t_box_axes *ba, t_shape *b1, t_shape *b2, int axis);
 void	compute_center_distance(t_box_axes *ba, t_shape *b1, t_shape *b2);

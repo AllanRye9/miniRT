@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shape_shape.c                                      :+:      :+:    :+:   */
+/*   sameshape_collision.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:25:45 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/02 18:35:49 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/03 23:27:34 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,27 @@ bool	box_box_collision(t_shape *box1, t_shape *box2, bool resolve)
 	}
 	else if (test_box_axes(box1, box2, NULL) == true)
 		return (true);
+	return (false);
+}
+
+bool	cone_cone_collision(t_shape *co1, t_shape *co2)
+{
+	if (gjk(co1, co2) == true)
+		return (true);
+	return (false);
+}
+
+bool	box_box_collision(t_shape *box1, t_shape *box2, bool resolve)
+{
+	t_vector	resolution;
+
+	if (resolve == true)
+	{
+		if (test_box_axes(box1, box2, &resolution) == true)
+		{
+			add_vector(&box2->origin, &box2->origin, &resolution);
+			return (true);
+		}
+	}
 	return (false);
 }
