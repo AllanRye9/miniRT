@@ -50,10 +50,10 @@ char *create_string(char *line, int start, int end)
 {
     char *res;
 
-    res = (char *)malloc(sizeof(char) * (end - start) + 2);
+    res = (char *)malloc(sizeof(char) * (end - start) + 1);
     if (!res)
         return (free(res), NULL);
-    ft_strlcpy(res, &line[start], (end - start) + 2);
+    ft_strlcpy(res, &line[start], (end - start) + 1);
     return (res);
 }
 

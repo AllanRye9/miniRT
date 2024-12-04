@@ -87,11 +87,7 @@ t_scene	*parse_scene(int fd)
 			continue ;
 		success = parse_line(scene, line, &line_count, fd);
 		if (success == false)
-		{
-			get_next_line(-1);
-			free_scene(scene);
-			return (NULL);
-		}
+			return (get_next_line(-1), get_next_line(-1), NULL);
 		line = get_next_line(fd);
 		line_count++;
 	}
