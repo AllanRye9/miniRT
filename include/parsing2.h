@@ -72,4 +72,5 @@ bool 		is_num(const char *str, bool decimal);
 size_t 		split_count(char **split);
 void 		free_split_array(char **arr);
 char 		*ft_strtrim_free(char *s1, char *set);
+char		**ft_split_whitespace(char *line);
 # endif
