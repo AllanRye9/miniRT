@@ -20,6 +20,8 @@ bool	check_element_count(t_scene *scene)
 	}
 	return (true);
 }
+//skipline helps to element an usable data like comma, empty file, spaces,tabs and all 
+//kinds of whitespaces and extracts only string data.
 
 bool	skip_line(char **line, int fd, size_t *line_count)
 {
@@ -53,11 +55,11 @@ bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 		parse_settings(scene, line, line_num, fd);
 	else
 		scene->error_flag.unknown_identifier = true;
-	if (find_error(&scene->error_flag))
+	if (mem_error(&scene->error_flag))
 		print_error(scene, line, *line_num, splitted[0]);
 	free(line);
 	free_split_array(splitted);
-	return (!find_error(&scene->error_flag));
+	return (!mem_error(&scene->error_flag));
 }
 
 t_scene	*check_elements(t_scene *scene)

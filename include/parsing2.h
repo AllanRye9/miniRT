@@ -5,6 +5,9 @@
 # include "camera.h"
 # include "parsing.h"
 
+double		ft_atol(char *str, bool *status);
+long		atol_helper(char *str, int i, bool *status);
+double		ft_atof(char *p, bool *status);
 char		**ft_split_whitespace(char *line);
 bool 		print_color_error(t_color_error *err, const char *line, int line_num,
 					char *element);

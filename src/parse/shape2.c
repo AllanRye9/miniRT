@@ -32,16 +32,16 @@ void	parse_sphere(t_scene *scene, t_shape *shape, char **splitted)
 		return ;
 	}
 	parse_coordinates(&shape->origin, splitted[1], &success);
-	if (!find_error(&scene->error_flag) && success == false)
+	if (!mem_error(&scene->error_flag) && success == false)
 		scene->error_flag.shape.origin = true;
 	shape->props.radius = ft_atof(splitted[2], &success) / 2;
-	if (!find_error(&scene->error_flag) && success == false)
+	if (!mem_error(&scene->error_flag) && success == false)
 		scene->error_flag.shape.diameter_other = true;
-	if (!find_error(&scene->error_flag) && shape->props.radius <= 0.0)
+	if (!mem_error(&scene->error_flag) && shape->props.radius <= 0.0)
 		scene->error_flag.shape.diameter_range = true;
 	parse_color(&shape->props.color, splitted[3],
 		&scene->error_flag.shape.color);
-	if (find_error(&scene->error_flag))
+	if (mem_error(&scene->error_flag))
 		return ;
 }
 
@@ -57,16 +57,16 @@ void	parse_cube(t_scene *scene, t_shape *shape, char **splitted)
 		return ;
 	}
 	parse_coordinates(&shape->origin, splitted[1], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.shape.origin = true;
 	shape->props.radius = ft_atof(splitted[2], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.shape.side_len_other = true;
-	if (find_error(&scene->error_flag) == false && shape->props.radius <= 0.0)
+	if (mem_error(&scene->error_flag) == false && shape->props.radius <= 0.0)
 		scene->error_flag.shape.side_len_range = true;
 	parse_color(&shape->props.color, splitted[3],
 		&scene->error_flag.shape.color);
-	if (find_error(&scene->error_flag) == true)
+	if (mem_error(&scene->error_flag) == true)
 		return ;
 }
 
@@ -82,15 +82,15 @@ void	parse_plane(t_scene *scene, t_shape *shape, char **splitted)
 		return ;
 	}
 	parse_coordinates(&shape->origin, splitted[1], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.shape.origin = true;
 	parse_orientation(&shape->orientation, splitted[2],
 		&scene->error_flag.shape.orient);
-	if (find_error(&scene->error_flag) == true)
+	if (mem_error(&scene->error_flag) == true)
 		return ;
 	parse_color(&shape->props.color, splitted[3],
 		&scene->error_flag.shape.color);
-	if (find_error(&scene->error_flag) == true)
+	if (mem_error(&scene->error_flag) == true)
 		return ;
 }
 

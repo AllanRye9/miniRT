@@ -7,14 +7,14 @@ void	parse_spotlight_props2(t_light *light, char **splitted, t_scene *scene)
 
 	success = true;
 	light->theta = ft_atof(splitted[4], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.light.angle_other = true;
-	if (find_error(&scene->error_flag) == false
+	if (mem_error(&scene->error_flag) == false
 		&& (light->theta < 0.0 || light->theta > 180))
 		scene->error_flag.light.angle_range = true;
 	light->theta *= DEG_TO_RAD;
 	parse_color(&light->color, splitted[5], &scene->error_flag.light.color);
-	if (find_error(&scene->error_flag))
+	if (mem_error(&scene->error_flag))
 		return ;
 	col_sum = light->color.r + light->color.g + light->color.b;
 	if (light->color.r != 0 && light->color.g != 0 && light->color.b != 0)
@@ -32,18 +32,18 @@ void	parse_spotlight_props(t_scene *scene, t_light *light, char **splitted)
 	success = true;
 	light->type = SPOT;
 	parse_coordinates(&light->position, splitted[1], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.light.coords = true;
 	light->intensity = ft_atof(splitted[2], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.light.intensity_other = true;
-	if (find_error(&scene->error_flag) == false
+	if (mem_error(&scene->error_flag) == false
 		&& (light->intensity < 0.0 || light->intensity > 1.0))
 		scene->error_flag.light.intensity_range = true;
 	light->intensity *= 1.8;
 	parse_orientation(&light->init_direction, splitted[3],
 		&scene->error_flag.light.orient);
-	if (find_error(&scene->error_flag))
+	if (mem_error(&scene->error_flag))
 		return ;
 	parse_spotlight_props2(light, splitted, scene);
 }

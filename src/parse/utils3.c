@@ -47,3 +47,24 @@ double ft_atof(char *p, bool *status)
     handle_error(p, status);
     return (sign * (j + y));
 }
+
+double ft_atol(char *str, bool *status)
+{
+    int i;
+    int sign;
+
+    i = 0;
+    sign  = 1;
+    status = true;
+    while(is_whitespace(str[i]))
+        i++;
+    if (ft_strcmp(&str[i], "-9223372036854775808"))
+        return (LONG_MIN);
+    if (str[i] == '-' || str[i] == '+')
+    {
+        if (str[i] == '-')
+            sign *= -1;
+        i++;
+    }
+    return (atol_helper(str, i, status));
+}
