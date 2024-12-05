@@ -5,6 +5,7 @@
 # include "camera.h"
 # include "parsing.h"
 
+char		**ft_split_whitespace(char *line);
 bool 		print_color_error(t_color_error *err, const char *line, int line_num,
 					char *element);
 bool 		print_orient_error(t_orient_error *err, const char *line, int line_num);
