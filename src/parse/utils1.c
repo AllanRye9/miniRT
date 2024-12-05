@@ -46,7 +46,7 @@ bool	is_num(const char *str, bool decimal)
 	dot_count = 0;
 	while (str[i])
 	{
-		if (ft_isdigit(str[i]) == false && str[i] != '-' && str[i] != '+'
+		if (ft_isdigit(str[i]) == 0 && str[i] != '-' && str[i] != '+'
 			&& str[i] != '.')
 			return (false);
 		if (str[i] == '.')

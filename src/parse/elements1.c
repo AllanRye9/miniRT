@@ -8,7 +8,7 @@ void	parse_light_props(t_scene *scene, t_light *light, char **splitted)
 	success = true;
 	light->type = POINT;
 	parse_color(&light->color, splitted[3], &scene->error_flag.light.color);
-	if (find_error(&scene->error_flag))
+	if (mem_error(&scene->error_flag))
 		return ;
 	col_sum = light->color.r + light->color.g + light->color.b;
 	if (light->color.r != 0 && light->color.g != 0 && light->color.b != 0)
@@ -18,12 +18,12 @@ void	parse_light_props(t_scene *scene, t_light *light, char **splitted)
 		light->color.b /= col_sum;
 	}
 	parse_coordinates(&light->position, splitted[1], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.light.coords = true;
 	light->intensity = ft_atof(splitted[2], &success);
-	if (find_error(&scene->error_flag) == false && success == false)
+	if (mem_error(&scene->error_flag) == false && success == false)
 		scene->error_flag.light.intensity_other = true;
-	if (find_error(&scene->error_flag) == false
+	if (mem_error(&scene->error_flag) == false
 		&& (light->intensity < 0.0 || light->intensity > 1.0))
 		scene->error_flag.light.intensity_range = true;
 	light->intensity *= 2;

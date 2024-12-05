@@ -44,7 +44,7 @@ void	print_error(t_scene *scene, const char *line, int line_num,
 		&scene->error_flag.shape, line, line_num);
 }
 
-bool	find_error(t_error_flags *err)
+bool	mem_error(t_error_flags *err)
 {
 	return (ft_memchr(err, 1, sizeof(t_error_flags)));
 }

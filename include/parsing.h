@@ -129,7 +129,7 @@ bool 		print_ambient_light_error(t_ambient_err *err, const char *line,
 bool 		print_light_error(t_light_errors *err, const char *line, int line_num);
 bool 		print_shape_error(t_shape *shape, t_shape_errors *error, const char *line,
 					   int line_num);
-bool 		find_error(t_error_flags *err);
+bool 		mem_error(t_error_flags *err);
 bool 		print_sphere_error(t_shape_errors *err, const char *line, int line_num);
 bool 		print_cube_error(t_shape_errors *err, const char *line, int line_num);
 bool 		print_plane_error(t_shape_errors *err, const char *line, int line_num);
