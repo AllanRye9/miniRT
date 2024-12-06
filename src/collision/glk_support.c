@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:17:21 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/05 23:41:17 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/06 22:50:05 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,38 @@ t_vector	cube_furthest_point(const t_vector *dir, const t_shape *box)
 		i++;
 	}
 	return (transvtx[largest_idx]);
+}
+
+void	add_to_simplex(t_simplex *sim, t_vector *point)
+{
+	int	i;
+
+	if (sim->size >= MAX_SIMPLEX_SIZE)
+	{
+		printf("Error: Simplex is full and cannot add more points");
+		return ;
+	}
+	i = sim->size;
+	while (i > 0)
+	{
+		sim->arr[i] = sim->arr[i - 1];
+		i--;
+	}
+	sim->arr[0] = *point;
+	sim->size += 1;
+}
+
+bool	handle_simplex(t_simplex *sim, t_vector *dir)
+{
+	if (sim->size == 2)
+		return (line_on_origin(sim, dir));
+	else if (sim->size == 3)
+		return (triangle_on_origin(sim, dir));
+	else if (sim->size == 4)
+		return (tetrahedron_on_origin(sim, dir));
+	else
+	{
+		printf("Invalid simplex size\n");
+		exit(1);
+	}
 }

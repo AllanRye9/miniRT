@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/05 16:22:28 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/06 19:18:05 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "scene.h"
 # include "shape.h"
+# define MAX_SIMPLEX_SIZE 4
 
 typedef struct s_scene	t_scene;
 
@@ -110,5 +111,6 @@ void		fill_vtx4(t_vector *vtx);
 void		fill_vtx5(t_vector *vtx);
 void		fill_vtx6(t_vector *vtx);
 void		fill_vtx7(t_vector *vtx);
+void		add_to_simplex(t_simplex *sim, t_vector *point);
 
 #endif

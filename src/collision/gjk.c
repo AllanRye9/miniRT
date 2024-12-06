@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:56:40 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/05 23:41:40 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/06 19:01:27 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ bool	gjk(t_shape *s1, t_shape *s2)
 	sub_vector(&dir, &s2->origin, &s1->origin);
 	normalize_vector(&dir);
 	support = gjk_support(s1, s2, &dir);
-	add_to_simplex(simplex, &support, &simplex.size);
+	add_to_simplex(&simplex, &support);
 	negate_vector(&dir, &support);
 	normalize_vector(&dir);
 	i = 0;
@@ -123,8 +123,8 @@ bool	gjk(t_shape *s1, t_shape *s2)
 		support = gjk_support(s1, s2, &dir);
 		if (dot_product(&support, &dir) <= 0)
 			return (false);
-		add_to_simplex(simplex, &support, &simplex.size);
-		if (handle_simplex(simplex.arr, &dir, &simplex.size) == true)
+		add_to_simplex(&simplex, &support);
+		if (handle_simplex(&simplex, &dir) == true)
 			return (true);
 		i++;
 	}
