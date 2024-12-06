@@ -58,7 +58,7 @@ bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 	if (mem_error(&scene->error_flag))
 		print_error(scene, line, *line_num, splitted[0]);
 	free(line);
-	free_split_array(splitted);
+	free_2d_array(splitted);
 	return (!mem_error(&scene->error_flag));
 }
 
@@ -89,7 +89,7 @@ t_scene	*parse_scene(int fd)
 			continue ;
 		success = parse_line(scene, line, &line_count, fd);
 		if (success == false)
-			return (get_next_line(-1), get_next_line(-1), NULL);
+			return (get_next_line(-1), NULL);
 		line = get_next_line(fd);
 		line_count++;
 	}

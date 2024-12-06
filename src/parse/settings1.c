@@ -37,7 +37,7 @@ bool	check_key_val_split(char **key_val, char **settings, int line_idx)
 			printf(INVALID_KEY, settings[line_idx], key_val[0]);
 		else
 			printf(INVALID_PROP_VALUE, key_val[0], key_val[1], key_val[1]);
-		return (free_split_array(key_val), false);
+		return (free_2d_array(key_val), false);
 	}
 	return (true);
 }
@@ -51,15 +51,15 @@ bool	check_key_vals(char **key_val, char **settings, t_scene *scene,
 			printf(INVALID_KEY, settings[line_idx], key_val[0]);
 		else
 			printf(INVALID_PROP_VALUE, key_val[0], key_val[1], key_val[1]);
-		return (free_split_array(key_val), false);
+		return (free_2d_array(key_val), false);
 	}
 	if (!is_valid_key(key_val[0]) || !is_valid_val(key_val[0], key_val[1]))
 	{
 		if (!is_valid_key(key_val[0]))
 			printf(INVALID_KEY, settings[line_idx], key_val[0]);
-		return (free_split_array(key_val), false);
+		return (free_2d_array(key_val), false);
 	}
 	if (!parse_setting(&scene->shapes[scene->count.shapes - 1], key_val))
-		return (free_split_array(key_val), false);
+		return (free_2d_array(key_val), false);
 	return (true);
 }

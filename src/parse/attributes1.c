@@ -24,7 +24,7 @@ void	parse_color(t_color *color, const char *str, t_color_error *errs)
 	if (!rgb || count_commas(str) != 2 || split_count(rgb) != 3)
 	{
 		errs->others = true;
-		free_split_array(rgb);
+		free_2d_array(rgb);
 		return ;
 	}
 	i = -1;
@@ -34,7 +34,7 @@ void	parse_color(t_color *color, const char *str, t_color_error *errs)
 			errs->others = true;
 		res[i] = ft_atol(rgb[i], &status) / 255.0f;
 	}
-	free_split_array(rgb);
+	free_2d_array(rgb);
 	color->r = res[0];
 	color->g = res[1];
 	color->b = res[2];
@@ -51,7 +51,7 @@ void	parse_coordinates(t_vector *position, const char *str, bool *status)
 	if (!coords || count_commas(str) != 2 || split_count(coords) != 3)
 	{
 		*status = false;
-		free_split_array(coords);
+		free_2d_array(coords);
 		return ;
 	}
 	i = -1;
@@ -61,7 +61,7 @@ void	parse_coordinates(t_vector *position, const char *str, bool *status)
 		if (!is_num(coords[i], true) || *status == false)
 			*status = false;
 	}
-	free_split_array(coords);
+	free_2d_array(coords);
 	position->x = res[0];
 	position->y = res[1];
 	position->z = res[2];

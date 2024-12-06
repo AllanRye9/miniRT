@@ -12,7 +12,7 @@ void	parse_orientation(t_vector *orientation, const char *str,
 	xyz = ft_split(str, ',');
 	if (xyz == NULL || count_commas(str) != 2 || split_count(xyz) != 3)
 	{
-		free_split_array(xyz);
+		free_2d_array(xyz);
 		err->others = true;
 		return ;
 	}
@@ -23,7 +23,7 @@ void	parse_orientation(t_vector *orientation, const char *str,
 		if (status == false || !is_num(xyz[i], true))
 			err->others = true;
 	}
-	free_split_array(xyz);
+	free_2d_array(xyz);
 	orientation->x = res[0];
 	orientation->y = res[1];
 	orientation->z = res[2];
