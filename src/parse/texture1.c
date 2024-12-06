@@ -10,12 +10,12 @@ int	read_rest_of_header(char *buff, int *w, int *h, int fd)
 		return (-1);
 	if (split_count(tokens) != 2)
 	{
-		free_split_array(tokens);
+		free_2d_array(tokens);
 		return (-1);
 	}
 	*w = ft_atoi(tokens[0]);
 	*h = ft_atoi(tokens[1]);
-	free_split_array(tokens);
+	free_2d_array(tokens);
 	if (*w <= 0 || *h <= 0)
 		return (-1);
 	bytes = read(fd, buff, 4);
