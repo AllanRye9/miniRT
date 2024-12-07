@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/30 17:27:05 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/07 19:01:22 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	scene_init(t_scene *scene, t_display *display)
 	scene->cam.pi = acos(scene->cam.dir.y);
 	calc_transform(scene);
 	collided(scene, true, 10, NULL);
-	draw_scene(scene);
+	render_scene(scene);
 }
 
 int	main(int argc, char *argv[])

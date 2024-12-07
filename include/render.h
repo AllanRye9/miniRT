@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/29 19:18:36 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/07 20:07:39 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 # define NUM_THREADS 16
 # define REFLECTION_DEPTH 1
 
-typedef struct s_worker
+typedef struct s_thread_data
 {
-	int		worker_id;
+	int		tid;
 	int		y_start;
 	int		y_end;
 	int		y_scale_start;
 	int		y_scale_end;
-	int		max_workers;
+	int		max_tid;
 	int		height;
 	int		width;
 	char	*addr;
 	t_scene	*scene;
-}	t_worker;
+}	t_thread_data;
 
 void	calc_transform(t_scene *scene);
 void	calc_cam_transform(t_scene *scene);
