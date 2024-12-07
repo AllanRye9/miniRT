@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/06 19:18:05 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:41:47 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,27 @@ typedef struct s_simplex
 	int			size;
 }	t_simplex;
 
+typedef struct s_triangleData
+{
+	t_vector	pb;
+	t_vector	pc;
+	t_vector	po;
+	t_vector	pbc;
+	t_vector	pbc_pc;
+	t_vector	pb_pbc;
+}	t_triangleData;
+
+typedef struct s_tetrahedron_data
+{
+	t_vector	ab;
+	t_vector	ac;
+	t_vector	ad;
+	t_vector	ao;
+	t_vector	abc;
+	t_vector	acd;
+	t_vector	adb;
+}	t_tetrahedron_data;
+
 bool		test_axis_overlap(t_box_axes *ba, t_shape *b1, t_shape *b2,
 				int axis);
 void		compute_center_distance(t_box_axes *ba, t_shape *b1, t_shape *b2);
@@ -112,5 +133,11 @@ void		fill_vtx5(t_vector *vtx);
 void		fill_vtx6(t_vector *vtx);
 void		fill_vtx7(t_vector *vtx);
 void		add_to_simplex(t_simplex *sim, t_vector *point);
+t_vector	triple_cross_product(const t_vector *v1, const t_vector *v2,
+				const t_vector *v3);
+bool		triangle_on_origin(t_simplex *simplex, t_vector *dir);
+bool		line_on_origin(t_simplex *simplex, t_vector *dir);
+bool		tetrahedron_on_origin(t_simplex *simplex, t_vector *dir);
+bool		handle_simplex(t_simplex *sim, t_vector *dir);
 
 #endif
