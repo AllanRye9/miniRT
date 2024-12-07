@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:49:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/02 14:05:51 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/07 18:52:24 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 bool	collided(t_scene *scene, bool r, int depth,
 		t_shape *t)
 {
-	bool		collided;
+	bool		did_collide;
 	int			i;
 	int			j;
 
-	collided = false;
+	did_collide = false;
 	calc_transform(scene);
 	i = 0;
 	while (i < scene->count.shapes)
@@ -30,12 +30,12 @@ bool	collided(t_scene *scene, bool r, int depth,
 			if (i == j)
 				continue ;
 			if (check_collision(&scene->shapes[i], &scene->shapes[j], r, t))
-				collided = true;
+				did_collide = true;
 		}
 	}
 	if (!r)
-		return (collided);
-	if (collide(scene, false, 0, NULL) == true && depth > 0)
-		collide(scene, true, depth - 1, NULL);
-	return (collided);
+		return (did_collide);
+	if (collided(scene, false, 0, NULL) == true && depth > 0)
+		collided(scene, true, depth - 1, NULL);
+	return (did_collide);
 }

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 12:41:47 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/07 18:47:19 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,11 +133,13 @@ void		fill_vtx5(t_vector *vtx);
 void		fill_vtx6(t_vector *vtx);
 void		fill_vtx7(t_vector *vtx);
 void		add_to_simplex(t_simplex *sim, t_vector *point);
-t_vector	triple_cross_product(const t_vector *v1, const t_vector *v2,
+t_vector	triple_cross_product(t_vector *v1, t_vector *v2,
 				const t_vector *v3);
 bool		triangle_on_origin(t_simplex *simplex, t_vector *dir);
 bool		line_on_origin(t_simplex *simplex, t_vector *dir);
 bool		tetrahedron_on_origin(t_simplex *simplex, t_vector *dir);
 bool		handle_simplex(t_simplex *sim, t_vector *dir);
+bool		collided(t_scene *scene, bool r, int depth,
+				t_shape *t);
 
 #endif
