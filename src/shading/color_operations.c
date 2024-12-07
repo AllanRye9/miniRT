@@ -1,6 +1,6 @@
 #include "miniRT.h"
 
-int get_color(t_worker *w, int x, int y)
+int get_color(t_thread_data *w, int x, int y)
 {
     int bpp;
 
@@ -8,8 +8,7 @@ int get_color(t_worker *w, int x, int y)
     return (*(int *)(w->addr + ((y * w->width) + x) * bpp));
 }
 
-
-void set_color(t_worker *w, int x, int y, int color)
+void set_color(t_thread_data *w, int x, int y, int color)
 {
     int bpp;
 
