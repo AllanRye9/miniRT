@@ -1,32 +1,31 @@
 #include "miniRT.h"
 
-bool	check_element_count(t_scene *scene)
+bool check_element_count(t_scene *scene)
 {
 	if (scene->count.ambience >= 0)
 	{
 		if (scene->count.ambience > 1)
-			printf(RED"Error: Scene contains multiple ambient light\n"RESET);
+			printf(RED "Error: Scene contains multiple ambient light\n" RESET);
 		else
-			printf(RED"Error: Scene contains no ambient lights\n"RESET);
+			printf(RED "Error: Scene contains no ambient lights\n" RESET);
 		return (free_scene(scene), false);
 	}
 	if (scene->count.cameras >= 0)
 	{
 		if (scene->count.cameras > 1)
-			printf(RED"Error: Scene contains more than one camera\n"RESET);
+			printf(RED "Error: Scene contains more than one camera\n" RESET);
 		else
-			printf(RED"Error: Scene contains no cameras\n"RESET);
+			printf(RED "Error: Scene contains no cameras\n" RESET);
 		return (free_scene(scene), false);
 	}
 	return (true);
 }
-//skipline helps to element an usable data like comma, empty file, spaces,tabs and all 
-//kinds of whitespaces and extracts only string data.
+// skipline helps to element an usable data like comma, empty file, spaces,tabs and all
+// kinds of whitespaces and extracts only string data.
 
-bool	skip_line(char **line, int fd, size_t *line_count)
+bool skip_line(char **line, int fd, size_t *line_count)
 {
-	if (ft_strlen(*line) == 0 || all_whitespace(*line) == true
-		|| ft_strncmp(*line, "//", 2) == 0 || ft_strncmp(*line, "#", 1) == 0)
+	if (ft_strlen(*line) == 0 || all_whitespace(*line) == true || ft_strncmp(*line, "//", 2) == 0 || ft_strncmp(*line, "#", 1) == 0)
 	{
 		free(*line);
 		*line = ft_strtrim_free(get_next_line(fd), " \t\n");
@@ -36,9 +35,9 @@ bool	skip_line(char **line, int fd, size_t *line_count)
 	return (false);
 }
 
-bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
+bool parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 {
-	char	**splitted;
+	char **splitted;
 
 	splitted = ft_split_whitespace(line);
 	if (ft_strcmp(splitted[0], "A") == 0)
@@ -62,31 +61,31 @@ bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 	return (!mem_error(&scene->error_flag));
 }
 
-t_scene	*check_elements(t_scene *scene)
+t_scene *check_elements(t_scene *scene)
 {
 	if (check_element_count(scene) == false)
 		return (NULL);
 	return (scene);
 }
 
-t_scene	*parse_scene(int fd)
+t_scene *parse_scene(int fd)
 {
-	size_t	line_count;
-	t_scene	*scene;
-	char	*line;
-	bool	success;
+	size_t line_count;
+	t_scene *scene;
+	char *line;
+	bool success;
 
 	line_count = 1;
 	scene = ft_calloc(1, sizeof(t_scene));
 	if (!scene)
 		return (NULL);
 	line = get_next_line(fd);
-	if(!line)
+	if (!line)
 		return (free(line), ft_putstr_fd("FD - encountered and Error", 2), -1);
 	while (line != NULL)
 	{
 		if (skip_line(&line, fd, &line_count) == true)
-			continue ;
+			continue;
 		success = parse_line(scene, line, &line_count, fd);
 		if (success == false)
 			return (get_next_line(-1), NULL);
