@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 19:01:22 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/08 12:18:21 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	read_file(int argc, char *argv[])
 	return (fd);
 }
 
-void init_settings(t_settings *settings)
+void	init_settings(t_settings *settings)
 {
 	settings->edit_scale = 0.55;
 	settings->render_scale = 2;

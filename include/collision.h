@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 18:47:19 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/08 12:59:28 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,9 @@ bool		tetrahedron_on_origin(t_simplex *simplex, t_vector *dir);
 bool		handle_simplex(t_simplex *sim, t_vector *dir);
 bool		collided(t_scene *scene, bool r, int depth,
 				t_shape *t);
+void		render_scene(t_scene *scene);
+void		exec_thread(t_thread_data *tdata, t_scene *scene,
+				bool loading, void *func);
+void		init_thread_data(t_thread_data *tdata, t_scene *scene);
 
 #endif
