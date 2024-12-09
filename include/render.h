@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 20:07:39 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/09 13:11:03 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ void	init_settings(t_settings *settings);
 void	calculate_orientation(t_mat4 *rot_transform, t_shape *shape);
 void	init_display(t_display *display, t_settings *settings);
 void	camera_init(t_camera *camera, t_scene *scene);
+void	project_rays_on_screen(t_scene *scene);
+void	render_scene(t_scene *scene);
 
 #endif
