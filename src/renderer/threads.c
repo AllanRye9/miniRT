@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 12:22:05 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/08 12:58:55 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:18:56 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ void	init_thread_data(t_thread_data *tdata, t_scene *scene)
 	}
 }
 
-void	exec_thread(t_thread_data *tdata, t_scene *scene,
-	bool loading, void *func)
+void	exec_thread(t_thread_data *tdata, t_scene *scene, void *func)
 {
 	pthread_t	threads[NUM_THREADS];
 	int			i;
@@ -50,8 +49,6 @@ void	exec_thread(t_thread_data *tdata, t_scene *scene,
 	i = -1;
 	while (++i < NUM_THREADS)
 		pthread_create(&threads[i], NULL, func, &tdata[i]);
-	if (loading == true)
-		display_loading_bar(scene);
 	i = -1;
 	while (++i < NUM_THREADS)
 		pthread_join(threads[i], NULL);

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/08 12:18:21 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:23:54 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,6 @@ int	main(int argc, char *argv[])
 		return (close(fd), free_scene(scene), EXIT_FAILURE);
 	close(fd);
 	init_settings(&scene->settings);
-	sem_unlink("/loading");
-	scene->sem_loading = sem_open("/loading", O_CREAT, 0644, 0);
 	init_display(&dsply, &scene->settings);
 	if (dsply.mlx == NULL)
 		return (close(fd), free_scene(scene), EXIT_FAILURE);

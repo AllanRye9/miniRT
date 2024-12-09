@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:02:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 21:07:04 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:19:35 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,8 @@ void	render_scene(t_scene *scene)
 	t_thread_data	tdata[NUM_THREADS];
 
 	init_thread_data(tdata, scene);
-	exec_thread(tdata, scene, true, renderwith_threads);
-	exec_thread(tdata, scene, false, scale_adjacent);
+	exec_thread(tdata, scene, renderwith_threads);
+	exec_thread(tdata, scene, scale_adjacent);
 	mlx_put_image_to_window(scene->disp->mlx, scene->disp->win,
 		scene->disp->display_img, 0, 0);
 	if (scene->settings.light_mode == true)
