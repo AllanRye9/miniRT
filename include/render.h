@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 13:11:03 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:15:22 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,21 @@ typedef struct s_thread_data
 	t_scene	*scene;
 }	t_thread_data;
 
-void	calc_transform(t_scene *scene);
-void	calc_cam_transform(t_scene *scene);
-void	init_settings(t_settings *settings);
-void	calculate_orientation(t_mat4 *rot_transform, t_shape *shape);
-void	init_display(t_display *display, t_settings *settings);
-void	camera_init(t_camera *camera, t_scene *scene);
-void	project_rays_on_screen(t_scene *scene);
-void	render_scene(t_scene *scene);
+void		calc_transform(t_scene *scene);
+void		calc_cam_transform(t_scene *scene);
+void		init_settings(t_settings *settings);
+void		calculate_orientation(t_mat4 *rot_transform, t_shape *shape);
+void		init_display(t_display *display, t_settings *settings);
+void		camera_init(t_camera *camera, t_scene *scene);
+void		project_rays_on_screen(t_scene *scene);
+void		render_scene(t_scene *scene);
+t_vector	get_origin(t_shape *shape, t_scene *scene);
+void		perspective_projection(t_vector *point, const t_scene *scene);
+void		draw_shape_properties(t_shape *shape, t_scene *scene,
+				t_vector *proj_origin);
+void		draw_shape_coordinates(t_shape *shape, t_scene *scene,
+				t_vector *proj_origin);
+void		draw_shape_type(t_scene *scene, t_shape *shape,
+				t_vector *proj_origin);
 
 #endif

@@ -6,11 +6,39 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:02:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 12:53:03 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:07:04 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
+
+void	render_shape_info(t_scene *scene)
+{
+	int			shape_idx;
+	t_shape		*shape;
+	t_vector	origin;
+
+	shape_idx = -1;
+	if (scene->settings.edit_mode == false)
+		return ;
+	while (++shape_idx < scene->count.shapes)
+	{
+		shape = &scene->shapes[shape_idx];
+		if (shape->props.highlighted == false)
+			continue ;
+		origin = get_origin(shape, scene);
+		if (origin.z > 0)
+			return ;
+		perspective_projection(&origin, scene);
+		if (shape->type == SPHERE || shape->type == CYLINDER
+			|| shape->type == CUBE || shape->type == CONE)
+		{
+			draw_shape_type(scene, shape, &origin);
+			draw_shape_coordinates(shape, scene, &origin);
+			draw_shape_properties(shape, scene, &origin);
+		}
+	}
+}
 
 void	scale_adjacent(t_thread_data *tdata)
 {
@@ -77,7 +105,8 @@ void	render_scene(t_scene *scene)
 	if (scene->settings.light_mode == true)
 	{
 		project_rays_on_screen(scene);
-		reflect_light(scene);
+		mlx_string_put(scene->disp->mlx, scene->disp->win,
+			scene->settings.disp_w * .9, 20, 0xffffff, "LIGHT MODE");
 	}
 	else
 		render_shape_info(scene);
