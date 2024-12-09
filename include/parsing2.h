@@ -77,4 +77,6 @@ size_t 		split_count(char **split);
 void 		free_2d_array(char **arr);
 char 		*ft_strtrim_free(char *s1, char *set);
 char		**ft_split_whitespace(char *line);
+void 		mat4_multiply(t_vector *res, const t_mat4 *mat,
+    		const t_vector *vec);
 # endif

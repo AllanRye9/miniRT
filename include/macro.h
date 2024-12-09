@@ -17,6 +17,8 @@
 # define LIGHT_MAX 20
 # define SHAPE_MAX 100
 
+# define M_PI 0.0
+
 # define GENERIC_ERROR "\033[33mError with parsing %s on \
 line #%d\n\n\033[31m->\t%s\n\n"
 

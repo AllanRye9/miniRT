@@ -65,7 +65,7 @@ typedef struct s_shape
 	t_mat4 			added_rots;
 	t_mat4 			**diffuse_tex;
 	t_mat4 			**normal_tex;
-	t_color 		**diffuse_tex;
+	t_color 		**diffuse_texs;
 	t_color 		**normal_tex;
 	int 			tex_width;
 	int 			text_height;
