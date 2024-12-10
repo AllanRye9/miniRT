@@ -47,5 +47,9 @@ bool	get_specular_and_diffuse(t_scene *scene, int light_x,
                 p->over_point);
         normalize_vec(&light_v);
         p->normal.w = 0;
-        dot = product(&light_v, &p->normal)
+        dot = dot_product(&light_v, &p->normal);
+        if (dot < 0 || is_shadow(scene, light_x, &p->over_point \
+            &s_angle))
+            return (false);
+        
 }

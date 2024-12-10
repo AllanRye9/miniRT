@@ -49,5 +49,7 @@ void		draw_shape_coordinates(t_shape *shape, t_scene *scene,
 				t_vector *proj_origin);
 void		draw_shape_type(t_scene *scene, t_shape *shape,
 				t_vector *proj_origin);
-
+bool		is_shadow(t_scene *scene, int light_idx, t_vector *itx_point,
+			double *angle);
+void		sub_vec(t_vector *res, const t_vector *vec1, const t_vector *vec2);
 #endif
