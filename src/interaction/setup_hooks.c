@@ -6,11 +6,51 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:33:51 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/29 20:42:46 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/10 12:12:46 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
+
+int	close_window(t_scene *scene)
+{
+	free_scene(scene);
+	exit(EXIT_SUCCESS);
+	return (0);
+}
+
+int	key_release(int key, t_scene *scene)
+{
+	toggle_keys_held(key, scene, false);
+	return (0);
+}
+
+int	key_press(int key, t_scene *scene)
+{
+	if (key == J)
+	{
+		scene->settings.supersampling = !scene->settings.supersampling;
+		calculate_transforms(scene);
+		draw_scene(scene);
+	}
+	if (key == RETURN && scene->settings.edit_mode == true)
+		spawn_shape(scene);
+	if (key == T && scene->settings.edit_mode == true)
+		toggle_shape(scene);
+	if (scene->settings.light_mode == true)
+		handle_color_change(key, scene, &scene->lights[scene->light_idx].color);
+	else
+		handle_color_change(key, scene,
+			&scene->shapes[scene->shape_idx].props.color);
+	rest_of_key_presses(key, scene);
+	if (key == ESC)
+		return (close_window(scene));
+	if (!is_toggle_key(key, scene))
+		return (0);
+	calculate_transforms(scene);
+	draw_scene(scene);
+	return (0);
+}
 
 void	setup_hooks(t_scene *scene)
 {

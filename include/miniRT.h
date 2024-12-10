@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:55:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/04 11:10:58 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/10 11:26:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 # include "scene.h"
 # include "parsing.h"
 # include "parsing2.h"
-# include "edit_mode.h"
+# include "interactions.h"
 # include "../mlx/mlx.h"
 # include "mathRT.h"
 # include "display.h"
