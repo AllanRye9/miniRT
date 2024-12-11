@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:39:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/10 17:15:32 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/11 11:11:42 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,15 +84,33 @@ typedef struct s_keys
 # define H 4
 # define T 17
 
-void	setup_hooks(t_scene *scene);
-int		mouse_down(int key_code, int x, int y, t_scene *scene);
-int		mouse_up(t_scene *scene);
-void	mouse_move(t_scene *scene);
-int		mouse_rotate(t_scene *scene);
-int		render_loop(t_scene *scene);
-void	drag_along_plane(t_scene *scene, t_ray *mouse_selection);
-void	rotate_along_mouse_axis(t_scene *scene);
-void	mouse_select(t_scene *scene, double x, double y);
-void	transform_object(t_scene *scene);
+void		setup_hooks(t_scene *scene);
+int			mouse_down(int key_code, int x, int y, t_scene *scene);
+int			mouse_up(t_scene *scene);
+void		mouse_move(t_scene *scene);
+int			mouse_rotate(t_scene *scene);
+int			render_loop(t_scene *scene);
+void		drag_along_plane(t_scene *scene, t_ray *mouse_selection);
+void		rotate_along_mouse_axis(t_scene *scene);
+void		mouse_select(t_scene *scene, double x, double y);
+void		transform_object(t_scene *scene);
+void		free_textures(t_scene *scene);
+void		free_scene(t_scene *scene);
+void		toggle_keys_held(int key, t_scene *scene, bool onoff);
+void		select_shape(int key, t_scene *scene);
+void		spawn_shape(t_scene *scene);
+void		toggle_shape(t_scene *scene);
+void		toggle_edit_mode(int key, t_scene *scene);
+void		handle_color_change(int key, t_scene *scene, t_color *color);
+void		rest_press(int key, t_scene *scene);
+void		light_controls(t_scene *scene);
+t_vector	*sphere_mod(t_vector *vec, double phi, double theta, double r);
+void		move_object_v(t_scene *scene, t_shape *shape);
+void		move_object_h(t_scene *scene, t_shape *shape);
+void		move_object_fwd(t_scene *scene, t_shape *shape);
+void		change_height(t_scene *scene, t_shape *shape);
+void		scale_object(t_scene *scene, t_shape *shape);
+void		look_at_animation(t_scene *scene);
+void		toggle_reflections(t_scene *scene);
 
 #endif

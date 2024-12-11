@@ -6,11 +6,22 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:02:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/10 17:08:16 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/11 10:59:36 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
+
+bool	is_loop_hook_key(t_scene *scene)
+{
+	return (scene->keys_held.w || scene->keys_held.a || scene->keys_held.s
+		|| scene->keys_held.d || scene->keys_held.up
+		|| scene->keys_held.right || scene->keys_held.q
+		|| scene->keys_held.e || scene->keys_held.down
+		|| scene->keys_held.left || scene->keys_held.plus
+		|| scene->keys_held.minus || scene->keys_held.x
+		|| scene->keys_held.y || scene->keys_held.z);
+}
 
 int	render_loop(t_scene *scene)
 {
@@ -33,8 +44,8 @@ int	render_loop(t_scene *scene)
 	if (scene->settings.edit_mode == true
 		&& is_loop_hook_key(scene))
 	{
-		calculate_transforms(scene);
-		draw_scene(scene);
+		calc_transform(scene);
+		render_scene(scene);
 	}
 	return (0);
 }

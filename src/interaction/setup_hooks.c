@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:33:51 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/10 12:12:46 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/11 10:07:38 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int	key_press(int key, t_scene *scene)
 	if (key == J)
 	{
 		scene->settings.supersampling = !scene->settings.supersampling;
-		calculate_transforms(scene);
-		draw_scene(scene);
+		calc_transform(scene);
+		render_scene(scene);
 	}
 	if (key == RETURN && scene->settings.edit_mode == true)
 		spawn_shape(scene);
@@ -42,13 +42,13 @@ int	key_press(int key, t_scene *scene)
 	else
 		handle_color_change(key, scene,
 			&scene->shapes[scene->shape_idx].props.color);
-	rest_of_key_presses(key, scene);
+	rest_press(key, scene);
 	if (key == ESC)
 		return (close_window(scene));
 	if (!is_toggle_key(key, scene))
 		return (0);
-	calculate_transforms(scene);
-	draw_scene(scene);
+	calc_transform(scene);
+	render_scene(scene);
 	return (0);
 }
 
