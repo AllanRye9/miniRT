@@ -6,11 +6,35 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:53:52 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 10:55:22 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/11 11:56:35 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
+
+void	scale_cube_sides(t_scene *scene, t_shape *shape)
+{
+	if (shape->type != CUBE)
+		return ;
+	if (scene->keys_held.shift == false)
+	{
+		if (scene->keys_held.x)
+			shape->props.scale.x += 0.05;
+		if (scene->keys_held.y)
+			shape->props.scale.y += 0.05;
+		if (scene->keys_held.z)
+			shape->props.scale.z += 0.05;
+	}
+	if (scene->keys_held.shift == true)
+	{
+		if (scene->keys_held.x && shape->props.scale.x > 0.3)
+			shape->props.scale.x -= 0.05;
+		if (scene->keys_held.y && shape->props.scale.y > 0.3)
+			shape->props.scale.y -= 0.05;
+		if (scene->keys_held.z && shape->props.scale.z > 0.3)
+			shape->props.scale.z -= 0.05;
+	}
+}
 
 void	scale_object(t_scene *scene, t_shape *shape)
 {

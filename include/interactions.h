@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:39:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 11:11:42 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/11 11:56:56 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,9 @@ void		change_height(t_scene *scene, t_shape *shape);
 void		scale_object(t_scene *scene, t_shape *shape);
 void		look_at_animation(t_scene *scene);
 void		toggle_reflections(t_scene *scene);
+void		look_at(t_scene *scene, t_shape *shape);
+void		camera_controls(t_scene *scene);
+void		rotate_object(t_scene *scene);
+void		scale_cube_sides(t_scene *scene, t_shape *shape);
 
 #endif
