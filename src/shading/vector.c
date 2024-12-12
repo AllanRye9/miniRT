@@ -22,4 +22,3 @@ void scale_vector(t_vector *res, t_vector *v, double scale)
         res->x = scale * res->x;
 
 }
-

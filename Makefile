@@ -26,7 +26,8 @@ LIBFT_PATH = libft/
 
 LIBFT_LIB = $(LIBFT_PATH)libft.a
 
-GETNEXTLINE := get_next_line/*.c
+GETNEXTLINE := get_next_line/get_next_line_utils.c \
+			get_next_line/get_next_line.c \
 
 Y = "\033[33m"
 R = "\033[31m"
@@ -36,7 +37,7 @@ X = "\033[0m"
 UP = "\033[A"
 CUT = "\033[K"
 
-CFILES = src/main.c
+CFILES = a.c
 
 OBJECTS = $(CFILES:%.c=%.o)
 
