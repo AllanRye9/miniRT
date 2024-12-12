@@ -6,11 +6,19 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:12:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 10:14:21 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:52:54 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
+
+void	ray_position(t_vector *pos, const t_ray *ray, double time)
+{
+	pos->x = ray->dir.x * time + ray->origin.x;
+	pos->y = ray->dir.y * time + ray->origin.y;
+	pos->z = ray->dir.z * time + ray->origin.z;
+	pos->w = 1;
+}
 
 void	ray_from_cam(t_ray *ray, const t_camera *cam, double x, double y)
 {
