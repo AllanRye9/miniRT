@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:47:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 11:06:32 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/12 09:56:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,15 @@ void	toggle_keys_held(int key, t_scene *scene, bool onoff)
 	if (key == O)
 		scene->keys_held.o = onoff;
 	toggle_keys_continue(key, scene, onoff);
+}
+
+bool	is_toggle_key(int key, t_scene *scene)
+{
+	return (key == SPACE || key == R
+		|| (scene->settings.edit_mode == true
+			&& (key == RETURN || key == ONE_KEY || key == TWO_KEY
+				|| key == THREE_KEY || key == FOUR_KEY
+				|| key == FIVE_KEY || key == SIX_KEY
+				|| key == TAB || key == C || key == T
+				|| key == P || key == L || key == H)));
 }
