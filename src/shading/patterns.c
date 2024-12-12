@@ -6,8 +6,8 @@ t_color	stripe_pattern(t_intersection *itx, t_vector point,
 	t_vector	transf_point;
 	t_mat4		pattern_transf;
 
-	scaling_matrix(&pattern_transf, itx->shape->props.scale.x * 4.,
-		itx->shape->props.scale.y * 4., itx->shape->props.scale.z * 4.0);
+	initialize_matrix(&pattern_transf, itx->shape->props.scale.x * 4.0,
+		itx->shape->props.scale.y * 4.0, itx->shape->props.scale.z * 4.0);
 	mat4_multiply(&transf_point, &itx->shape->inv_transf, &point);
 	mat4_multiply(&transf_point, &pattern_transf, &transf_point);
 	transf_point.x += 0.5;
@@ -23,10 +23,10 @@ t_color	ring_pattern(t_intersection *itx, t_vector point, t_color a, t_color b)
 	t_vector	transf_point;
 	t_mat4		pattern_transf;
 
-	scaling_matrix(&pattern_transf, itx->shape->props.scale.x * 4.,
+	initialize_matrix(&pattern_transf, itx->shape->props.scale.x * 4.,
 		itx->shape->props.scale.y * 4., itx->shape->props.scale.z * 4.0);
-	mat_vec_multiply(&transf_point, &itx->shape->inv_transf, &point);
-	mat_vec_multiply(&transf_point, &pattern_transf, &transf_point);
+	mat4_multiply(&transf_point, &itx->shape->inv_transf, &point);
+	mat4_multiply(&transf_point, &pattern_transf, &transf_point);
 	if ((int) floor(sqrt(((transf_point.x * transf_point.x) + \
 		(transf_point.z * transf_point.z)))) % 2 == 0)
 		return (b);
@@ -41,8 +41,8 @@ t_color	gradient_pattern(t_intersection *itx, t_vector point, t_color a,
 	t_vector	transf_point;
 	t_mat4		pattern_transf;
 
-	scaling_matrix(&pattern_transf, 0.5, 0.5, 0.5);
-	mat_vec_multiply(&transf_point, &itx->shape->inv_transf, &point);
+	initialize_matrix(&pattern_transf, 0.5, 0.5, 0.5);
+	mat4_multiply(&transf_point, &itx->shape->inv_transf, &point);
 	mat4_multiply(&transf_point, &pattern_transf, &transf_point);
 	transf_point.x += 0.5;
 	transf_point.y += 0.5;
@@ -78,16 +78,16 @@ t_color	checker_pattern(t_intersection *itx, t_vector *point)
 	double		v;
 	t_vector	transf_point;
 
-	mat_vec_multiply(&transf_point, &itx->shape->inv_transf, point);
+	mat4_multiply(&transf_point, &itx->shape->inv_transf, point);
 	if (itx->shape->type == CYLINDER || itx->shape->type == CONE)
 		cylindrical_map(&u, &v, &transf_point);
 	else if (itx->shape->type == SPHERE)
 		spherical_map(&u, &v, &transf_point);
 	else
-		cubical_map(&u, &v, &transf_point);
+		cubicle_mapping(&u, &v, &transf_point);
 	u2 = floor(u * 40);
 	v2 = floor(v * 20);
 	if ((int)(u2 + v2) % 2 == 0)
-		return (int_to_color(0x0));
-	return (int_to_color(0xffffff));
+		return (coloring(0x0));
+	return (coloring(0xffffff));
 }

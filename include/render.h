@@ -51,5 +51,6 @@ void		draw_shape_type(t_scene *scene, t_shape *shape,
 				t_vector *proj_origin);
 bool		is_shadow(t_scene *scene, int light_idx, t_vector *itx_point,
 			double *angle);
-void		sub_vec(t_vector *res, const t_vector *vec1, const t_vector *vec2);
+void		reflect_vector(t_vector *res, t_vector *in_vector, t_vector *normal);
+void		sub_vector(t_vector *res, const t_vector *vec1, const t_vector *vec2);
 #endif
