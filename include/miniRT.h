@@ -25,7 +25,6 @@
 # include "libft.h"
 # include <stdio.h>
 # include "display.h"
-# include "mode.h"
 # include "color.h"
 # include "lights.h"
 # include "shape.h"
@@ -43,13 +42,5 @@
 # include "collision.h"
 # include "macro.h"
 # define EPSILON 0.001f
-
-typedef struct s_vector
-{
-	double	x;
-	double	y;
-	double	z;
-	double	w;
-}	t_vector;
 
 #endif

@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 bool	check_colons(char *line)
 {

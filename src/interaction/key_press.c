@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 void	rest_press(int key, t_scene *scene)
 {

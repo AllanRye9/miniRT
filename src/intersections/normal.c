@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 t_vector	cylinder_normal(const t_shape *shape, const t_vector *itx_point)
 {

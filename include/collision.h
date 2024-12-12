@@ -144,5 +144,6 @@ bool		collided(t_scene *scene, bool r, int depth,
 void		render_scene(t_scene *scene);
 void		exec_thread(t_thread_data *tdata, t_scene *scene, void *func);
 void		init_thread_data(t_thread_data *tdata, t_scene *scene);
-
+bool		check_spotlight(t_scene *scene, int light_idx, t_ray *ray,
+			double *angle);
 #endif

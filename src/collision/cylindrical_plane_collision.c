@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 static bool	handle_parallel_case(t_cy_collision_data *cy_data,
 	t_shape *cylinder, t_shape *plane)

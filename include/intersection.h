@@ -42,12 +42,29 @@ typedef struct s_intersections
 	int				count;
 }	t_intersections;
 
-t_vector	get_texture_coords(const t_shape *shape, double u, double v, t_vector *normal);
-t_vector	sphere_normal(t_vector *normal, const t_shape *shape, const t_vector *itx_point); 
-t_vector	cube_normal(const t_shape *shape, const t_vector *itx_point);
-t_vector	plane_normal(const t_shape *shape, const t_vector *itx_point);
-t_vector	cone_normal(const t_shape *shape, const t_vector *itx_point);
-t_vector	cylinder_normal(const t_shape *shape, const t_vector *itx_point);
-t_vector	normal_map(t_vector *normal, const t_shape *shape, const t_vector *itx_point);
-t_vector	normal_at(const t_shape *shape, const t_vector *itx_point);
+void			calculate_specular(t_vector *reflect_v, t_intersection *itx,
+				t_glear *glear, t_light *light);
+t_color			ring_pattern(t_intersection *itx, t_vector point, t_color a, t_color b);
+t_color			gradient_pattern(t_intersection *itx, t_vector point, t_color a,
+				t_color b);
+t_color			checker_pattern(t_intersection *itx, t_vector *point);
+t_color			stripe_pattern(t_intersection *itx, t_vector point,
+				t_color a, t_color b);
+t_color			get_shape_color(t_intersection *itx);
+t_color			get_texture_color(t_intersection *p);
+t_color			cast_reflection_ray(t_scene *scene, t_intersection *intersection,
+				int remaining, int light_idx);
+t_color			glear(t_intersection *itx, t_scene *scene, int light_idx);
+t_color			reflection_color(t_intersection *itx, t_scene *scene,
+				int remaining, int light_idx);
+bool			intersect(t_shape *shape, const t_ray *ray, t_intersections *xs);
+t_intersection	*hit(t_intersections *xs);
+t_vector		get_texture_coords(const t_shape *shape, double u, double v, t_vector *normal);
+t_vector		sphere_normal(t_vector *normal, const t_shape *shape, const t_vector *itx_point); 
+t_vector		cube_normal(const t_shape *shape, const t_vector *itx_point);
+t_vector		plane_normal(const t_shape *shape, const t_vector *itx_point);
+t_vector		cone_normal(const t_shape *shape, const t_vector *itx_point);
+t_vector		cylinder_normal(const t_shape *shape, const t_vector *itx_point);
+t_vector		normal_map(t_vector *normal, const t_shape *shape, const t_vector *itx_point);
+t_vector		normal_at(const t_shape *shape, const t_vector *itx_point);
 #endif

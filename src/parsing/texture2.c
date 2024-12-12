@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 t_color	**parse_texture(char *img_path, t_shape *shape)
 {

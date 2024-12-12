@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 void mult_color(t_color *res, const t_color *color, double pres)
 {

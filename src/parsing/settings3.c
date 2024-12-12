@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 bool	parse_split_settings(t_scene *scene, char **settings)
 {

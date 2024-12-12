@@ -15,7 +15,7 @@
 
 # include "macro.h"
 # include "camera.h"
-# include "parsing2.h"
+# include "parsing.h"
 
 typedef struct s_light_errors
 {
@@ -75,15 +75,6 @@ typedef struct s_cam_err
 	t_orient_err 	dir;
 } t_cam_err;
 
-typedef struct s_orient_error
-{
-	bool 	x;
-	bool 	y;
-	bool 	z;
-	bool 	zero;
-	bool 	others;
-} t_orient_error;
-
 typedef struct s_shape_errors
 {
 	bool 			max_shapes;
@@ -95,7 +86,7 @@ typedef struct s_shape_errors
 	bool 			side_len_other;
 	bool 			side_len_range;
 	bool 			other;
-	t_color_error 	color;
+	t_color_err 	color;
 	t_orient_error 	orient;
 } t_shape_errors;
 

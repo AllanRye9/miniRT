@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 void	parse_orientation(t_vector *orientation, const char *str,
 			t_orient_error *err)

@@ -14,6 +14,7 @@
 # define CAMERA_H
 
 # include "mathRT.h"
+# include "parsing.h"
 
 typedef struct s_camera
 {
@@ -27,7 +28,7 @@ typedef struct s_camera
 	t_mat4		inv_trans;
 	double		pi;
 	double		theta;
-}		t_camera;
+}t_camera;
 
 typedef struct s_orient_error
 {
@@ -49,4 +50,5 @@ typedef struct s_cam_errors
 	t_orient_error	dir;
 }t_cam_errors;
 
+void			initialize_matrix(t_mat4 *mat, double x, double y, double z);
 #endif

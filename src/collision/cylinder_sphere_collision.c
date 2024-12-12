@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 bool	calculate_cylinder_normal(t_cy_collision_data *data, t_shape *cylinder)
 {

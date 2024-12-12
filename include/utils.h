@@ -13,7 +13,7 @@
 #ifndef UTILS_H
 # define UTILS_H
 
-# include "miniRT.h"
+# include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 double	min(double a, double b);
 double	max(double a, double b);

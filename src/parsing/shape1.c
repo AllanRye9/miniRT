@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 void	parse_cylinder_props(t_shape *shape, t_scene *scene, char **splitted)
 {

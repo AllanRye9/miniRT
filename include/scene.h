@@ -13,39 +13,14 @@
 #ifndef SCENE_H
 # define SCENE_H
 
-# include "miniRT.h"
+# include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+# include "parsing.h"
 
 typedef struct s_ambient
 {
 	double	intensity;
 	t_color	color;
 }	t_ambient;
-
-typedef struct s_camera
-{
-	t_vector	position;
-	t_vector	dir;
-	double		fov;
-	double		pixel_size;
-	double		half_width;
-	double		half_height;
-	t_mat4		transform;
-	t_mat4		inv_trans;
-	double		phi;
-	double		theta;
-}	t_camera;
-
-typedef struct s_light
-{
-	t_light_type	type;
-	t_vector		position;
-	t_vector		direction;
-	t_vector		init_direction;
-	t_mat4			added_rots;
-	t_color			color;
-	double			intensity;
-	double			theta;
-}	t_light;
 
 typedef struct s_el_count
 {
@@ -133,6 +108,8 @@ typedef struct s_scene
 	t_error_flag	error_flag;
 }	t_scene;
 
+void 			cylindrical_map(double *x, double *y, t_vector *comp);
+void			cubicle_mapping(double *x, double *y, t_vector *p);
 void 			mapping_right(double *x, double *y, t_vector *p);
 void 			mapping_left(double *x, double *y, t_vector *p);
 void 			mapping_up(double *x, double *y, t_vector *p);

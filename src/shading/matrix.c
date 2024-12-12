@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 void	initialize_matrix(t_mat4 *mat, double x, double y, double z)
 {

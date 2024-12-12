@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 void	cylinder_cone_lookat_pos(t_vector *cam_to_object, t_look *look_at,
 		t_shape *shape)

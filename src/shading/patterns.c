@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
 
 t_color	stripe_pattern(t_intersection *itx, t_vector point,
 			t_color a, t_color b)

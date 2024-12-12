@@ -17,15 +17,15 @@
 
 typedef struct s_light
 {
-	t_light 	type;
-	t_vector 	position;
-	t_vector 	dirctn;
-	t_vector 	init_dirctn;
-	t_mat4 		added_rots;
-	t_color 	color;
-	double 		intensity;
-	double 		theta;
-} t_light;
+	t_light_type	type;
+	t_vector		position;
+	t_vector		direction;
+	t_vector		init_direction;
+	t_mat4			added_rots;
+	t_color			color;
+	double			intensity;
+	double			theta;
+}	t_light;
 
 typedef enum s_light_type
 {
