@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 21:15:22 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/12 12:22:18 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void		draw_shape_coordinates(t_shape *shape, t_scene *scene,
 void		draw_shape_type(t_scene *scene, t_shape *shape,
 				t_vector *proj_origin);
 bool		is_shadow(t_scene *scene, int light_idx, t_vector *itx_point,
-			double *angle);
+				double *angle);
 void		sub_vec(t_vector *res, const t_vector *vec1, const t_vector *vec2);
+void		fill_v(t_thread_data *tdata, int th);
+void		fill_h(t_thread_data *tdata, int th);
 #endif

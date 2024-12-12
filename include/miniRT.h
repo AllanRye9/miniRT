@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:55:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/10 11:26:09 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/12 12:31:13 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@
 # include "camera.h"
 # include "intersection.h"
 # include "render.h"
-# include "utils.h"
+# include "math_utils.h"
 # include "collision.h"
 # include "macro.h"
 # define EPSILON 0.001f
