@@ -133,4 +133,9 @@ typedef struct s_scene
 	t_error_flag	error_flag;
 }	t_scene;
 
+void 			mapping_right(double *x, double *y, t_vector *p);
+void 			mapping_left(double *x, double *y, t_vector *p);
+void 			mapping_up(double *x, double *y, t_vector *p);
+void 			mapping_down(double *x, double *y, t_vector *p);
+void 			mapping_front(double *x, double *y, t_vector *p);
 #endif

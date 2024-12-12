@@ -2,23 +2,50 @@
 
 void	reflect_vector(t_vector *res, t_vector *in_vector, t_vector *normal)
 {
-	scale_vec(res, normal, dot_product(in_vector, normal) * 2);
-	sub_vec(res, in_vector, res);
+	scale_vector(res, normal, dot_product(in_vector, normal) * 2);
+	sub_vector(res, in_vector, res);
 }
 
-t_color	int_to_color(int hex_color)
+t_color	cast_reflection_ray(t_scene *scene, t_intersection *intersection,
+		int remaining, int light_idx)
 {
-	t_color	color;
+	t_ray			ray;
+	t_intersections	arr;
+	int				shape_idx;
+	t_color			reflected;
+	t_intersection	*itx;
 
-	color.a = 0;
-	color.r = ((unsigned char *)&hex_color)[2] / 255.0f;
-	color.g = ((unsigned char *)&hex_color)[1] / 255.0f;
-	color.b = ((unsigned char *)&hex_color)[0] / 255.0f;
-	return (color);
+	ft_bzero(&reflected, sizeof(t_color));
+	if (intersection->shape->props.reflectiveness == 0 || remaining == 0)
+		return (reflected);
+	ray.origin = intersection->over_point;
+	ray.dir = intersection->reflect_vec;
+	arr.count = 0;
+	shape_idx = -1;
+	while (++shape_idx < scene->count.shapes)
+		intersect(&scene->shapes[shape_idx], &ray, &arr);
+	itx = hit(&arr);
+	if (itx != NULL)
+	{
+		prepare_computations(itx, &ray);
+		reflected = reflection_color(itx, scene, remaining, light_idx);
+	}
+	mult_color(&reflected, &reflected,
+		intersection->shape->props.reflectiveness);
+	return (reflected);
 }
 
-unsigned int	create_mlx_color(t_color *color)
+t_color	reflection_color(t_intersection *itx, t_scene *scene,
+		int remaining, int light_idx)
 {
-	return (clamp_color(color->a) << 24 | clamp_color(color->r) << 16
-		| clamp_color(color->g) << 8 | clamp_color(color->b));
+	t_color			final_color;
+	t_color			light_color;
+	t_color			reflected;
+
+	ft_bzero(&final_color, sizeof(t_color));
+	light_color = glear(itx, scene, light_idx);
+	reflected = cast_reflection_ray(scene, itx, remaining - 1, light_idx);
+	add_colors(&final_color, &final_color, &light_color);
+	add_colors(&final_color, &final_color, &reflected);
+	return (final_color);
 }

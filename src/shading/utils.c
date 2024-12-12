@@ -1,46 +1,49 @@
 #include "miniRT.h"
 
-void mat4_multiply(t_vector *res, const t_mat4 *mat,
-    const t_vector *vec)
+double	vec_magnitude(const t_vector *vec)
 {
-    res->x = vec->x * (*mat)[0][0] + vec->y * (*mat)[0][1] \
-            + vec->z * (*mat)[0][2] + vec->w * (*mat)[0][3];
-    res->y = vec->x * (*mat)[1][0] + vec->y * (*mat)[1][1] \
-            + vec->z * (*mat)[1][2] + vec->w * (*mat)[1][3];
-    res->z = vec->x * (*mat)[2][0] + vec->y * (*mat)[2][1] \
-            + vec->z * (*mat)[2][2] + vec->w * (*mat)[2][3];
-    res->w = vec->x * (*mat)[3][0] + vec->y * (*mat)[3][1] \
-            + vec->z * (*mat)[3][2] + vec->w * (*mat)[3][3];
+	return (sqrt(vec->x * vec->x + vec->y * vec->y \
+			+ vec->z * vec->z));
 }
 
-void cylindrical_map(double *x, double *y, t_vector *comp)
+bool	is_shadow(t_scene *scene, int light_idx, t_vector *itx_point,
+			double *angle)
 {
-        double res;
+	double			distance;
+	int				i;
+	t_ray			ray;
+	t_intersections	arr;
+	t_intersection	*itx;
 
-        res = atan2(comp->x, comp->z);
-        *x = 1 - (res / (2 * M_PI) + 0.5);
-        *y = comp->y - floor(comp->y);
+	sub_vector(&ray.dir, &scene->lights[light_idx].position, itx_point);
+	distance = vec_magnitude(&ray.dir);
+	scale_vector(&ray.dir, &ray.dir, 1 / distance);
+	ray.origin = *itx_point;
+	if (check_spotlight(scene, light_idx, &ray, angle) == true)
+		return (true);
+	i = -1;
+	arr.count = 0;
+	while (++i < scene->count.shapes)
+		intersect(&scene->shapes[i], &ray, &arr);
+	itx = hit(&arr);
+	if (itx && itx->time < distance)
+		return (true);
+	return (false);
 }
 
-void sub_vec(t_vector *res, const t_vector *vec1, const t_vector *vec2)
+t_color	coloring(int hex_color)
 {
-        res->x = vec1->x - vec2->x;
-        res->y = vec1->y - vec2->y;
-        res->z = vec1->z - vec2->z;
-        res->y = vec1->w - vec2->w;
+	t_color	color;
+
+	color.a = 0;
+	color.r = ((unsigned char *)&hex_color)[2] / 255.0f;
+	color.g = ((unsigned char *)&hex_color)[1] / 255.0f;
+	color.b = ((unsigned char *)&hex_color)[0] / 255.0f;
+	return (color);
 }
 
-void	normalize_vec(t_vector *vec)
+unsigned int	create_mlx_color(t_color *color)
 {
-	scale_vec(vec, vec, 1 / vec_magnitude(vec));
-	vec->w = 0;
-}
-
-void scale_vec(t_vector *res, t_vector *v, double scale)
-{
-        res->x = scale * res->x;
-        res->x = scale * res->x;
-        res->x = scale * res->x;
-        res->x = scale * res->x;
-
+	return (clamp_color(color->a) << 24 | clamp_color(color->r) << 16
+		| clamp_color(color->g) << 8 | clamp_color(color->b));
 }
