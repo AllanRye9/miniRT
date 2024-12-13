@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 int	mouse_rotate(t_scene *scene)
 {

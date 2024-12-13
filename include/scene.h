@@ -13,7 +13,7 @@
 #ifndef SCENE_H
 # define SCENE_H
 
-# include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+# include "../include/miniRT.h"
 # include "parsing.h"
 
 typedef struct s_ambient

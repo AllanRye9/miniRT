@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 bool	is_whitespace(const char c)
 {

@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 void	cylindrical_map(double *u, double *v, t_vector *point)
 {

@@ -13,7 +13,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 # include "color.h"
-# include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+# include "../include/miniRT.h"
 
 typedef enum e_shape_type
 {

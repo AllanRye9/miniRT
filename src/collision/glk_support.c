@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 static void	fill_vtx(t_vector *vtx)
 {

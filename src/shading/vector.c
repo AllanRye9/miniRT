@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 void sub_vector(t_vector *res, const t_vector *vec1, const t_vector *vec2)
 {

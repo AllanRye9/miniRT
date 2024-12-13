@@ -18,16 +18,10 @@ static int	read_file(int argc, char *argv[])
 	int		fd;
 
 	if (argc != 2)
-	{
-		printf("Please provide the correct arguments\n");
-		return (-1);
-	}
+		return (invalid_argument(), -1);
 	file_name = argv[1];
 	if (ft_strncmp(&file_name[ft_strlen(file_name) - 3], ".rt", 3) != 0)
-	{
-		printf("Provide the file with .rt format\n");
-		return (-1);
-	}
+		return (wrong_file_format(), -1);
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
 	{

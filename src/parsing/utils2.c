@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 char *ft_strtrim_free(char *s1, char *set)
 {

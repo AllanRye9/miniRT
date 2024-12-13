@@ -48,3 +48,13 @@ bool	mem_error(t_error_flags *err)
 {
 	return (ft_memchr(err, 1, sizeof(t_error_flags)));
 }
+
+void invalid_argument(void)
+{
+	ft_putendl_fd("Please provide the correct arguments", 2);
+}
+
+void wrong_file_format(void)
+{
+	ft_putendl_fd("Provide .rt file format", 2);
+}

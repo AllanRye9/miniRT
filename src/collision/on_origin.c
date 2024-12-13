@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 t_vector	triple_cross_product(t_vector *v1, t_vector *v2,
 	const t_vector *v3)

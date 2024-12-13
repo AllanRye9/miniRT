@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 void	parse_spotlight_props2(t_light *light, char **splitted, t_scene *scene)
 {

@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 bool	print_ambient_light_error(t_ambient_err *err, const char *line,
 			int line_num)

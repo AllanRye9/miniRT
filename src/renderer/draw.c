@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 void	draw_shape_type(t_scene *scene, t_shape *shape, t_vector *proj_origin)
 {

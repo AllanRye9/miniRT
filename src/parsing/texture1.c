@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 int	read_rest_of_header(char *buff, int *w, int *h, int fd)
 {

@@ -115,6 +115,8 @@ typedef struct s_parsing_err_flag
 	bool 				setting_err;
 } t_err_flag;
 
+void		invalid_argument(void);
+void		wrong_file_format(void);
 bool 		print_ambient_light_error(t_ambient_err *err, const char *line,
 							   int line_num);
 bool 		print_light_error(t_light_errors *err, const char *line, int line_num);

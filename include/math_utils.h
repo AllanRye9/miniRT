@@ -13,7 +13,7 @@
 #ifndef MATH_UTILS_H
 # define MATH_UTILS_H
 
-# include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+# include "../include/miniRT.h"
 
 double	min(double a, double b);
 double	max(double a, double b);

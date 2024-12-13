@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/minRT/include/miniRT.h"
+#include "../include/miniRT.h"
 
 // returns true if printed
 bool	print_color_error(t_color_error *err, const char *line, int line_num,
