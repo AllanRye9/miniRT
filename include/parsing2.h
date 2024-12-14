@@ -79,4 +79,6 @@ char 		*ft_strtrim_free(char *s1, char *set);
 char		**ft_split_whitespace(char *line);
 void 		mat4_multiply(t_vector *res, const t_mat4 *mat,
     		const t_vector *vec);
+void		free_and_update1(char **rgb,t_color *color, t_color_error *errs);
+void		free_and_update2(t_vector *position, double *res, char	**coords);
 # endif

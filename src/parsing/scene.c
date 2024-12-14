@@ -1,4 +1,4 @@
-#include "../include/miniRT.h"
+#include "include/miniRT.h"
 
 bool check_element_count(t_scene *scene)
 {
@@ -70,10 +70,10 @@ t_scene *check_elements(t_scene *scene)
 
 t_scene *parse_scene(int fd)
 {
-	size_t line_count;
-	t_scene *scene;
-	char *line;
-	bool success;
+	size_t		line_count;
+	t_scene		*scene;
+	char		*line;
+	bool		status;
 
 	line_count = 1;
 	scene = ft_calloc(1, sizeof(t_scene));
@@ -81,13 +81,14 @@ t_scene *parse_scene(int fd)
 		return (NULL);
 	line = get_next_line(fd);
 	if (!line)
-		return (free(line), ft_putstr_fd("FD - encountered and Error", 2), -1);
+		return (free(line), ft_putstr_fd("FD - encountered \
+				and Error", 2), -1);
 	while (line != NULL)
 	{
 		if (skip_line(&line, fd, &line_count) == true)
 			continue;
-		success = parse_line(scene, line, &line_count, fd);
-		if (success == false)
+		status = parse_line(scene, line, &line_count, fd);
+		if (status == false)
 			return (get_next_line(-1), NULL);
 		line = get_next_line(fd);
 		line_count++;

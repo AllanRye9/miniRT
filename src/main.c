@@ -24,10 +24,7 @@ static int	read_file(int argc, char *argv[])
 		return (wrong_file_format(), -1);
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
-	{
-		printf("Not able to open the file %s\n", file_name);
-		return (-1);
-	}
+		return (opening_file_failed(file_name), -1);
 	return (fd);
 }
 

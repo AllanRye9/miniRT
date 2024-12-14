@@ -34,11 +34,7 @@ void	parse_color(t_color *color, const char *str, t_color_error *errs)
 			errs->others = true;
 		res[i] = ft_atol(rgb[i], &status) / 255.0f;
 	}
-	free_2d_array(rgb);
-	color->r = res[0];
-	color->g = res[1];
-	color->b = res[2];
-	check_color_range(color, errs);
+	free_and_update1(rgb, color, errs);
 }
 
 void	parse_coordinates(t_vector *position, const char *str, bool *status)
@@ -61,11 +57,7 @@ void	parse_coordinates(t_vector *position, const char *str, bool *status)
 		if (!is_num(coords[i], true) || *status == false)
 			*status = false;
 	}
-	free_2d_array(coords);
-	position->x = res[0];
-	position->y = res[1];
-	position->z = res[2];
-	position->w = 1;
+	free_and_update2(position, res, coords);
 }
 
 void	check_orientation_vector(t_vector *orientation, t_orient_error *err)

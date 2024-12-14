@@ -58,3 +58,9 @@ void wrong_file_format(void)
 {
 	ft_putendl_fd("Provide .rt file format", 2);
 }
+
+void opening_file_failed(char *file_name)
+{
+	ft_putendl_fd("Opening file failed", 2);
+	ft_printf("%s", file_name);
+}

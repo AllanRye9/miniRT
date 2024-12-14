@@ -6,10 +6,7 @@ bool	parse_ambient(t_scene *scene, char **splitted)
 
 	status = true;
 	if (split_count(splitted) != 3)
-	{
-		scene->error_flag.ambient.other = true;
-		return (false);
-	}
+		return (scene->error_flag.ambient.other = true, false);
 	scene->ambient.intensity = ft_atof(splitted[1], &status);
 	if (status == false || scene->ambient.intensity < 0.0
 		|| scene->ambient.intensity > 1.0)

@@ -62,22 +62,22 @@ char **ft_split_whitespace(char *line)
     char    **arr;
     int     i;
     int     word_start;
-    int     word_count;
+    int     index;
 
     arr = (char *)malloc(sizeof(char) * (count_words(line) + 1));
     if (!arr)
         return (NULL);
     i = 0;
     word_start = 0;
-    word_count = 0;
+    index = 0;
     while(line[i])
     {
-        if (is_whitespace(line) && line[i] != '\0')
+        if (is_whitespace(line[i]) && line[i] != '\0')
             i++;
         if (line[i] == '\0')
             break;
-        if (!is_whitespace(line) && line[i] != '\0')
+        if (!is_whitespace(line[i]) && line[i] != '\0')
             i++;
-        arr[word_count] = create_string(line, word_start, i - 1);
+        arr[index] = create_string(line, word_start, i - 1);
     }
 }
