@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	compute_ray_plane_intersection(t_colmath *col_math,
 	t_cy_collision_data *cy_data, t_shape *plane)

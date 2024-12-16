@@ -1,4 +1,4 @@
-#include "include/miniRT.h"
+#include "miniRT.h"
 
 bool check_element_count(t_scene *scene)
 {

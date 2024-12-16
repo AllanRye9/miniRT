@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 static int	atof_split(char c)
 {

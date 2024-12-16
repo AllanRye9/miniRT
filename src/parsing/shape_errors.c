@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	print_sphere_error(t_shape_errors *err, const char *line, int line_num)
 {

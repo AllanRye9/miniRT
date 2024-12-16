@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	handle_sim_orientation(t_tetrahedron_data *data,
 	t_simplex *simplex, t_vector *dir)

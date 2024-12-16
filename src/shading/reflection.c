@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 void	reflect_vector(t_vector *res, t_vector *in_vector, t_vector *normal)
 {

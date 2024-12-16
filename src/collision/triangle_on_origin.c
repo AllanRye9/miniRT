@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	check_triangle_orientation(t_simplex *simplex, t_vector *dir,
 	t_triangleData *tdata)

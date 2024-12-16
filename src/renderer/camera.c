@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 void	transform_view(t_mat4 *result, const t_vector *from, const t_vector *up,
 		const t_vector *forward)

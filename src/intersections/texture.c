@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 t_vector	normal_at(const t_shape *shape, const t_vector *itx_point)
 {

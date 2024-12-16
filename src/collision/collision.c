@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	collided(t_scene *scene, bool r, int depth,
 		t_shape *t)

@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	check_value(const char *key, const char *val, double min, double max)
 {

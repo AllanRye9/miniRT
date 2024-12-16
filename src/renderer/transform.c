@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 void	multiply_transform(t_shape *shape, t_mat4 *scale, t_mat4 *rot,
 		t_mat4 *translate)

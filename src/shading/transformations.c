@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	intersect(t_shape *shape, const t_ray *ray, t_intersections *xs)
 {

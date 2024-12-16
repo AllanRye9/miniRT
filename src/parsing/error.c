@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 bool	print_shape_error(t_shape *shape, t_shape_errors *error, const char *line,
 			int line_num)

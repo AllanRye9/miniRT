@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 double	vec_magnitude(const t_vector *vec)
 {

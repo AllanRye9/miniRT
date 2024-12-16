@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 void	check_color_range(t_color *color, t_color_error *err)
 {
@@ -60,9 +61,10 @@ void	parse_coordinates(t_vector *position, const char *str, bool *status)
 	free_and_update2(position, res, coords);
 }
 
+//1- Miss matched struct data 
 void	check_orientation_vector(t_vector *orientation, t_orient_error *err)
 {
-	if (err->others == true)
+	if (err->other == true)
 		return ;
 	if (orientation->x < -1 || orientation->x > 1)
 		err->x = true;

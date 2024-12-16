@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 t_color	shade_point(t_intersections *arr, t_scene *scene, t_ray *ray)
 {

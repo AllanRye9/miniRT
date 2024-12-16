@@ -1,4 +1,5 @@
-#include "../include/miniRT.h"
+#include "miniRT.h"
+
 
 void cube_map_right(double *x, double *y, t_vector *vec)
 {
