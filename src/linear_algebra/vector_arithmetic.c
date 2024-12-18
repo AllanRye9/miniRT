@@ -12,7 +12,6 @@
 
 #include "miniRT.h"
 
-
 void	add_vector(t_vector *result, const t_vector *v1, const t_vector *v2)
 {
 	result->x = v1->x + v2->x;

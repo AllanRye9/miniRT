@@ -12,7 +12,6 @@
 
 #include "miniRT.h"
 
-
 void	normalize_vector(t_vector *vect)
 {
 	scale_vector(vect, vect, 1 / vector_magnitude(vect));

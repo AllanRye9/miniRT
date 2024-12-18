@@ -1,6 +1,5 @@
 #include "miniRT.h"
 
-
 void mapping_right(double *x, double *y, t_vector *p)
 {
     *x = (fmod(1 - p->z, 2.0) / 2.0);

@@ -39,7 +39,7 @@ void	matrix_rotate_xaxis(t_mat2 *mat, double r);
 void	matrix_rotate_yaxis(t_mat2 *mat, double r);
 void	matrix_rotate_axis(t_mat4 *rot_mat, const t_vector *ax, double angle);
 void	add_vector(t_vector *result, const t_vector *v1, const t_vector *v2);
-void	sub_vectortor(t_vector *result, const t_vector *v1, const t_vector *v2);
+void	sub_vector(t_vector *result, const t_vector *v1, const t_vector *v2);
 void	scale_vector(t_vector *result, const t_vector *v, double scale);
 void	negate_vector(t_vector *result, const t_vector *v);
 void	normalize_vector(t_vector *vect);
