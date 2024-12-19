@@ -13,9 +13,8 @@
 #ifndef INTERACTIONS_H
 # define INTERACTIONS_H
 
-# include "scene.h"
 # include <stdbool.h>
-# include "mathRT.h"
+# include "miniRT.h"
 
 typedef struct s_scene	t_scene;
 typedef struct s_ray	t_ray;

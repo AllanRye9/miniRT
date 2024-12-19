@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 static void	resolve_sphere_sphere(t_shape *shape1, t_shape *shape2,

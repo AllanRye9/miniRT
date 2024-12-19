@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 t_vector	cylinder_normal(const t_shape *shape, const t_vector *itx_point)
@@ -121,7 +121,7 @@ t_vector	sphere_normal(t_vector *normal, const t_shape *shape,
 	t_vector	world_normal;
 
 	mat_vec_mult(normal, &shape->inv_transf, itx_point);
-	normalize_vec(normal);
+	normalize_vector(normal);
 	normal->w = 0;
 	if (shape->normal_tex != NULL)
 		return (normal_map(normal, shape, itx_point));

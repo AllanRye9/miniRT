@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	scale_cube_sides(t_scene *scene, t_shape *shape)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 int	sign(double num)
@@ -61,7 +61,7 @@ t_vector	cone_furthest_point(const t_vector *dir, t_shape *cone)
 	ft_bzero(&up_vector, sizeof(t_vector));
 	up_vector.y = 1;
 	mat_vec_mult(&cone_normal, &cone->transf, &up_vector);
-	normalize_vec(&cone_normal);
+	normalize_vector(&cone_normal);
 	if (fabs(dot_product(&cone_normal, dir)) > 1)
 		exit(1);
 	scale_vector(&w, &cone_normal, -dot_product(&cone_normal, dir));

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	free_scene(t_scene *scene)
@@ -23,7 +23,7 @@ void	free_scene(t_scene *scene)
 		mlx_destroy_image(scene->disp->mlx, scene->disp->render_img);
 		mlx_destroy_image(scene->disp->mlx, scene->disp->edit_img);
 		mlx_destroy_window(scene->disp->mlx, scene->disp->win);
-		mlx_destroy_display(scene->disp->mlx);
+		// mlx_destroy_display(scene->disp->mlx);
 		free(scene->disp->mlx);
 	}
 	free_textures(scene);

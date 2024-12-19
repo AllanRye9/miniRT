@@ -13,7 +13,9 @@
 #ifndef SCENE_H
 # define SCENE_H
 
-# include "../include/miniRT.h"
+# include "miniRT.h"
+# include "camera.h"
+# include "interactions.h"
 # include "parsing.h"
 
 typedef struct s_ambient
@@ -22,6 +24,17 @@ typedef struct s_ambient
 	t_color	color;
 }	t_ambient;
 
+typedef struct s_mouse
+{
+	bool	active;
+	bool	toggle;
+	int		prev_x;
+	int		prev_y;
+	int		x;
+	int		y;
+	int		key;
+}	t_mouse;
+
 typedef struct s_el_count
 {
 	int		ambience;
@@ -29,14 +42,6 @@ typedef struct s_el_count
 	int		lights;
 	int		shapes;
 }	t_el_count;
-
-typedef struct s_color_error
-{
-	bool	r;
-	bool	g;
-	bool	b;
-	bool	others;
-}	t_color_error;
 
 typedef struct s_settings
 {
@@ -70,27 +75,6 @@ typedef struct s_look
 	int			step_amount;
 }	t_look;
 
-typedef struct s_mouse
-{
-	bool	active;
-	bool	toggle;
-	int		prev_x;
-	int		prev_y;
-	int		x;
-	int		y;
-	int		key;
-}	t_mouse;
-
-typedef struct s_error_flag
-{
-	t_ambient_err		ambient;
-	t_cam_errors		cam;
-	t_light_errors		light;
-	t_shape_errors		shape;
-	bool				unknown_identifier;
-	bool				settings_err;
-}	t_error_flag;
-
 typedef struct s_scene
 {
 	t_ambient		ambient;
@@ -105,8 +89,10 @@ typedef struct s_scene
 	int				light_idx;
 	t_look			look_at;
 	t_mouse			mouse;
-	t_error_flag	error_flag;
+	t_error_flags	error_flag;
 }	t_scene;
+
+
 
 void 			cylindrical_map(double *x, double *y, t_vector *comp);
 void			cubicle_mapping(double *x, double *y, t_vector *p);
@@ -115,4 +101,6 @@ void 			mapping_left(double *x, double *y, t_vector *p);
 void 			mapping_up(double *x, double *y, t_vector *p);
 void 			mapping_down(double *x, double *y, t_vector *p);
 void 			mapping_front(double *x, double *y, t_vector *p);
+bool			is_toggle_key(int key, t_scene *scene);
+void			render_marker(t_scene *scene, int x, int y, int color);
 #endif

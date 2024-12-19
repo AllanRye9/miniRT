@@ -14,6 +14,13 @@
 #define LIGHTS_H
 
 # include "mathRT.h"
+# include "miniRT.h"
+
+typedef enum s_light_type
+{
+	POINT,
+	SPOT
+} t_light_type;
 
 typedef struct s_light
 {
@@ -26,11 +33,5 @@ typedef struct s_light
 	double			intensity;
 	double			theta;
 }	t_light;
-
-typedef enum s_light_type
-{
-	POINT,
-	SPOT
-} t_light_type;
 
 #endif

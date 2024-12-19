@@ -13,6 +13,7 @@
 #ifndef MATHRT_H
 # define MATHRT_H
 
+# include "miniRT.h"
 # define RAD_TO_DEG 57.2957795131
 # define DEG_TO_RAD 0.01745329252
 # define EPSILON 0.001f
@@ -29,13 +30,15 @@ typedef struct s_vector
 	double	w;
 }	t_vector;
 
+int		color_diff(int c1, int c2);
+void	axis_angle(t_mat4 *rot_mat, const t_vector *ax, double angle);
 void	matrix_multiply(t_mat4 *result, const t_mat4 *m1, const t_mat4 *m2);
 void	mat_vec_mult(t_vector *result, const t_mat4 *mat, const t_vector *vec);
 void	identity_matrix(t_mat4 *mat);
 void	tanspose_matrix(t_mat4 *mat);
 void	matrix_scaling(t_mat4 *mat, double x, double y, double z);
 void	matrix_translation(t_mat4 *mat, double x, double y, double z);
-void	matrix_rotate_xaxis(t_mat2 *mat, double r);
+void	matrix_rotate_xaxis(t_mat4 *mat, double r);
 void	matrix_rotate_yaxis(t_mat2 *mat, double r);
 void	matrix_rotate_axis(t_mat4 *rot_mat, const t_vector *ax, double angle);
 void	add_vector(t_vector *result, const t_vector *v1, const t_vector *v2);
@@ -48,5 +51,5 @@ double	dot_product(const t_vector *v1, const t_vector *v2);
 void	cross_product(t_vector *result, const t_vector *v1, const t_vector *v2);
 double	vec_distance(const t_vector *v1, const t_vector *v2);
 void	inverse_matrix(t_mat4 *result, const t_mat4 *matrix);
-
+double	vec_magnitude(const t_vector *vec);
 #endif

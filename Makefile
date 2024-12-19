@@ -14,7 +14,6 @@ NAME = miniRT
 
 CC = cc
 
-
 CFLAGS = -Wall -Wextra -Werror
 
 MLX_PATH = mlx/
@@ -71,7 +70,6 @@ SRC_DIR = src/renderer/init_display.c \
 		src/math/min_max.c \
 		src/shading/color_operations.c \
 		src/shading/vector.c \
-		src/shading/cube_faces.c \
 		src/shading/cube_mapping.c \
 		src/shading/reflection.c \
 		src/shading/shape_texture.c \

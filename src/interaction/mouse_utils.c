@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	drag_along_plane(t_scene *scene, t_ray *mouse_selection)
@@ -38,7 +38,7 @@ void	drag_along_plane(t_scene *scene, t_ray *mouse_selection)
 	scene->shapes[scene->shape_idx].origin = position_on_plane;
 	if (scene->settings.collisions == true)
 		collided(scene, true, 10, &scene->shapes[scene->shape_idx]);
-	calc_transforms(scene);
+	calc_transform(scene);
 	render_scene(scene);
 }
 

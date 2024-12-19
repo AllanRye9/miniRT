@@ -12,8 +12,9 @@
 
 #ifndef SHAPE_H
 #define SHAPE_H
-# include "color.h"
-# include "../include/miniRT.h"
+
+# include "miniRT.h"
+# include "mathRT.h"
 
 typedef enum e_shape_type
 {
@@ -66,11 +67,9 @@ typedef struct s_shape
 	t_mat4 			**diffuse_tex;
 	t_mat4 			**normal_tex;
 	t_color 		**diffuse_texs;
-	t_color 		**normal_tex;
 	int 			tex_width;
 	int 			text_height;
 	int 			tex_tile;
 	unsigned int 	mlx_color;
 } t_shape;
-
 #endif

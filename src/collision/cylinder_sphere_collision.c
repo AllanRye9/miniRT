@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 bool	calculate_cylinder_normal(t_cy_collision_data *data, t_shape *cylinder)
@@ -21,21 +21,21 @@ bool	calculate_cylinder_normal(t_cy_collision_data *data, t_shape *cylinder)
 	up_vector.y = 1;
 	up_vector.z = 0;
 	up_vector.w = 0;
-	mat_vec_multiply(&data->cylinder_normal, &cylinder->transf, &up_vector);
+	mat4_multiply(&data->cylinder_normal, &cylinder->transf, &up_vector);
 	if (fabs(vec_magnitude(&data->cylinder_normal)) < 0.001)
 		return (false);
-	normalize_vec(&data->cylinder_normal);
+	normalize_vector(&data->cylinder_normal);
 	return (true);
 }
 
 void	calculate_caps(t_cy_collision_data *data, t_shape *cylinder)
 {
-	scale_vec(&data->top_cap_center, &data->cylinder_normal,
+	scale_vector(&data->top_cap_center, &data->cylinder_normal,
 		cylinder->props.height / 2);
-	add_vec(&data->top_cap_center, &data->top_cap_center, &cylinder->origin);
-	scale_vec(&data->bottom_cap_center, &data->cylinder_normal,
+	add_vector(&data->top_cap_center, &data->top_cap_center, &cylinder->origin);
+	scale_vector(&data->bottom_cap_center, &data->cylinder_normal,
 		-cylinder->props.height / 2);
-	add_vec(&data->bottom_cap_center, &data->bottom_cap_center,
+	add_vector(&data->bottom_cap_center, &data->bottom_cap_center,
 		&cylinder->origin);
 }
 
@@ -58,9 +58,9 @@ bool	check_caps_collision(t_cy_collision_data *col_data,
 		col_data->resolution = col_data->cylinder_normal;
 		if (inputs->resolve)
 		{
-			scale_vec(&col_data->resolution, &col_data->resolution,
+			scale_vector(&col_data->resolution, &col_data->resolution,
 				inputs->sphere->props.radius - sp_data->v_cap_distance - 0.001);
-			add_vec(&inputs->sphere->origin, &inputs->sphere->origin,
+			add_vector(&inputs->sphere->origin, &inputs->sphere->origin,
 				&col_data->resolution);
 		}
 		return (true);
@@ -70,9 +70,9 @@ bool	check_caps_collision(t_cy_collision_data *col_data,
 
 bool	check_side_collision(t_cy_collision_data *col_data,
 	t_cy_sp_data *sp_data, t_collision_inputs *inputs, double radius_sum) {
-	scale_vec(&sp_data->center_delta, &col_data->cylinder_normal,
+	scale_vector(&sp_data->center_delta, &col_data->cylinder_normal,
 		-sp_data->v_dist);
-	add_vec(&sp_data->center_adjusted, &inputs->cylinder->origin,
+	add_vector(&sp_data->center_adjusted, &inputs->cylinder->origin,
 		&sp_data->center_delta);
 	sp_data->dist = vec_distance(&sp_data->center_adjusted,
 			&inputs->sphere->origin);
@@ -80,15 +80,15 @@ bool	check_side_collision(t_cy_collision_data *col_data,
 	{
 		sub_vec(&col_data->resolution, &sp_data->center_adjusted,
 			&inputs->sphere->origin);
-		negate_vec(&col_data->resolution, &col_data->resolution);
+		negate_vector(&col_data->resolution, &col_data->resolution);
 		if (vec_magnitude(&col_data->resolution) < 0.001)
 			return (false);
-		normalize_vec(&col_data->resolution);
+		normalize_vector(&col_data->resolution);
 		if (inputs->resolve)
 		{
-			scale_vec(&col_data->resolution, &col_data->resolution,
+			scale_vector(&col_data->resolution, &col_data->resolution,
 				radius_sum - sp_data->dist - 0.001);
-			add_vec(&inputs->sphere->origin, &inputs->sphere->origin,
+			add_vector(&inputs->sphere->origin, &inputs->sphere->origin,
 				&col_data->resolution);
 		}
 		return (true);
@@ -97,7 +97,7 @@ bool	check_side_collision(t_cy_collision_data *col_data,
 }
 
 bool	cylinder_sphere_collision(t_shape *cylinder, t_shape *sphere,
-	bool cylinder_sphere, bool resolve)
+		bool resolve)
 {
 	t_cy_collision_data	col_data;
 	t_cy_sp_data		sp_data;

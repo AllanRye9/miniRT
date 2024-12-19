@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	project_on_screen(t_scene *scene, t_shape *shape)
@@ -27,8 +27,9 @@ void	project_on_screen(t_scene *scene, t_shape *shape)
 				p_from_origin.y * scene->settings.disp_h, 0x00ffff);
 		mlx_put_image_to_window(scene->disp->mlx, scene->disp->win,
 			scene->disp->display_img, 0, 0);
-		render_ray(scene, p_from_origin.x * scene->settings.disp_w,
-			p_from_origin.y * scene->settings.disp_h, p_from_origin.z);
+		//	render_ray function declaration and defination not found.
+		// 	render_ray(scene, p_from_origin.x * scene->settings.disp_w,
+		// 	p_from_origin.y * scene->settings.disp_h, p_from_origin.z);
 	}
 }
 

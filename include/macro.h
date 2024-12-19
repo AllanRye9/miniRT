@@ -3,10 +3,7 @@
 
 # include <stddef.h>
 # include <stdbool.h>
-# include "mathRT.h"
-# include "color.h"
-# include "shape.h"
-# include "scene.h"
+# include "miniRT.h"
 # include <math.h>
 
 # define RED "\033[31m"

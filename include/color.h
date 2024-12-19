@@ -13,6 +13,8 @@
 #ifndef COLOR_H
 # define COLOR_H
 
+# include "miniRT.h"
+
 typedef struct s_color
 {
 	double	r;

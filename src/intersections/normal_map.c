@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 t_vector	normal_from_texture(const t_shape *shape, const t_vector *itx_point)
@@ -52,7 +52,7 @@ void	get_tb(t_vector *normal, t_vector *tb)
 		cross_product(&tb[0], normal, &z_up);
 	normalize_vector(&tb[0]);
 	cross_product(&tb[1], normal, &tb[0]);
-	normalitorze_vector(&tb[1]);
+	normalize_vector(&tb[1]);
 }
 
 t_vector	normal_map(t_vector *normal, const t_shape *shape,

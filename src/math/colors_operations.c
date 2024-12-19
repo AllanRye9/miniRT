@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 void	add_colors(t_color *res, const t_color *c1, const t_color *c2)
 {
@@ -38,4 +38,20 @@ void	blend_colors(t_color *res, const t_color *c1, const t_color *c2)
 	res->r = c1->r * c2->r;
 	res->g = c1->g * c2->g;
 	res->b = c1->b * c2->b;
+}
+
+int	color_diff(int c1, int c2)
+{
+	int				r_diff;
+	int				g_diff;
+	int				b_diff;
+	unsigned char	*col1;
+	unsigned char	*col2;
+
+	col1 = (unsigned char *)&c1;
+	col2 = (unsigned char *)&c2;
+	r_diff = abs(col1[2] - col2[2]);
+	g_diff = abs(col1[1] - col2[1]);
+	b_diff = abs(col1[0] - col2[0]);
+	return (r_diff + g_diff + b_diff);
 }

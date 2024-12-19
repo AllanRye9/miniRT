@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/mathRT.h"
 
 void	inverse_matrix(t_mat4 *result, const t_mat4 *matrix)
 {

@@ -1,6 +1,6 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
-void	normalize_vec(t_vector *vec)
+void	normalize_vector(t_vector *vec)
 {
 	scale_vector(vec, vec, 1 / vec_magnitude(vec));
 	vec->w = 0;

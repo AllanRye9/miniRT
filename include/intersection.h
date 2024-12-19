@@ -13,10 +13,9 @@
 #ifndef INTERSECTION_H
 # define INTERSECTION_H
 
-# include "mathRT.h"
 # include <stdbool.h>
-# include "shape.h"
-# include "camera.h"
+# include "miniRT.h"
+# include "render.h"
 
 typedef struct s_ray
 {
@@ -67,4 +66,8 @@ t_vector		cone_normal(const t_shape *shape, const t_vector *itx_point);
 t_vector		cylinder_normal(const t_shape *shape, const t_vector *itx_point);
 t_vector		normal_map(t_vector *normal, const t_shape *shape, const t_vector *itx_point);
 t_vector		normal_at(const t_shape *shape, const t_vector *itx_point);
+void			prepare_computations(t_intersection *intersection,
+				t_ray *ray);
+void			super_sampling(t_thread_data *tdata, t_intersection	*arr, 
+				int i, double x);
 #endif

@@ -1,9 +1,9 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
-void	check_color_range(t_color *color, t_color_error *err)
+void	check_color_range(t_color *color, t_color_err *err)
 {
-	if (err->others == true)
+	if (err->other == true)
 		return ;
 	if (color->r > 1 || color->r < 0)
 		err->r = true;
@@ -13,7 +13,7 @@ void	check_color_range(t_color *color, t_color_error *err)
 		err->b = true;
 }
 
-void	parse_color(t_color *color, const char *str, t_color_error *errs)
+void	parse_color(t_color *color, const char *str, t_color_err *errs)
 {
 	char	**rgb;
 	double	res[3];
@@ -24,7 +24,7 @@ void	parse_color(t_color *color, const char *str, t_color_error *errs)
 	rgb = ft_split(str, ',');
 	if (!rgb || count_commas(str) != 2 || split_count(rgb) != 3)
 	{
-		errs->others = true;
+		errs->other = true;
 		free_2d_array(rgb);
 		return ;
 	}
@@ -32,9 +32,12 @@ void	parse_color(t_color *color, const char *str, t_color_error *errs)
 	while (rgb[++i] != NULL)
 	{
 		if (!is_num(rgb[i], false) || status == false)
-			errs->others = true;
+			errs->other = true;
 		res[i] = ft_atol(rgb[i], &status) / 255.0f;
 	}
+	color->r = res[0];
+	color->g = res[1];
+	color->b = res[2];
 	free_and_update1(rgb, color, errs);
 }
 

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	matrix_scaling(t_mat4 *mat, double x, double y, double z)
@@ -34,7 +34,7 @@ void	matrix_translation(t_mat4 *mat, double x, double y, double z)
 	(*mat)[3][3] = 1;
 }
 
-void	matrix_rotate_xaxis(t_mat2 *mat, double r)
+void	matrix_rotate_xaxis(t_mat4 *mat, double r)
 {
 	ft_bzero(mat, sizeof(t_mat4));
 	(*mat)[0][0] = 1;

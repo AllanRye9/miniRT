@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
-
+#include "../include/miniRT.h"
 
 static int	read_file(int argc, char *argv[])
 {
@@ -68,10 +67,10 @@ int	main(int argc, char *argv[])
 	if (!scene)
 		return (close(fd), free_scene(scene), EXIT_FAILURE);
 	close(fd);
-	init_seettings(&scene->settings);
+	init_settings(&scene->settings);
 	init_display(&dsply, &scene->settings);
 	if (dsply.mlx == NULL)
 		return (close(fd), free_scene(scene), EXIT_FAILURE);
-	scene_init(&scene, &dsply);
+	scene_init(scene, &dsply);
 	mlx_loop(dsply.mlx);
 }

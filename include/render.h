@@ -13,8 +13,8 @@
 #ifndef RENDER_H
 # define RENDER_H
 
+# include "miniRT.h"
 # include "intersection.h"
-# include "lights.h"
 
 # define NUM_THREADS 16
 # define REFLECTION_DEPTH 1
@@ -54,4 +54,7 @@ bool		is_shadow(t_scene *scene, int light_idx, t_vector *itx_point,
 void		sub_vec(t_vector *res, const t_vector *vec1, const t_vector *vec2);
 void		fill_v(t_thread_data *tdata, int th);
 void		fill_h(t_thread_data *tdata, int th);
+bool		get_specular_and_diffuse(t_scene *scene, int light_idx,
+			t_intersection *itx, t_glear *phong);
+void		reflect_vector(t_vector *res, t_vector *in_vector, t_vector *normal);
 #endif

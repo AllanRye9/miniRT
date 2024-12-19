@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 void mapping_right(double *x, double *y, t_vector *p)
 {
@@ -43,6 +43,8 @@ void cubicle_mapping(double *x, double*y, t_vector *p)
     double abs_z;
     double cord;
 
+    abs_y = 0.0;
+    abs_z = 0.0;
     abs_x = fabs(p->x);
     abs_x = fabs(p->x);
     abs_x = fabs(p->x);

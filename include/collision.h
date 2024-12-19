@@ -13,8 +13,8 @@
 #ifndef COLLISION_H
 # define COLLISION_H
 
-# include "scene.h"
-# include "shape.h"
+# include "miniRT.h"
+
 # define MAX_SIMPLEX_SIZE 4
 
 typedef struct s_scene	t_scene;
@@ -122,7 +122,7 @@ void		handle_secondary_plane_case(t_cy_collision_data *cy_data,
 void		cylinder_plane_collision_resolution(t_shape *cylinder,
 				t_shape *plane);
 bool		cylinder_sphere_collision(t_shape *cylinder, t_shape *sphere,
-				bool cylinder_sphere, bool resolve);
+			bool resolve);
 t_vector	cube_furthest_point(const t_vector *dir, const t_shape *box);
 void		fill_vtx0(t_vector *vtx);
 void		fill_vtx1(t_vector *vtx);
@@ -146,4 +146,6 @@ void		exec_thread(t_thread_data *tdata, t_scene *scene, void *func);
 void		init_thread_data(t_thread_data *tdata, t_scene *scene);
 bool		check_spotlight(t_scene *scene, int light_idx, t_ray *ray,
 			double *angle);
+bool		gjk(t_shape *s1, t_shape *s2);
+bool		sphere_plane_collision(t_shape *sphere, const t_shape *plane);
 #endif

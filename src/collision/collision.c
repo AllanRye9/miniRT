@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 bool	collided(t_scene *scene, bool r, int depth,
@@ -39,4 +39,16 @@ bool	collided(t_scene *scene, bool r, int depth,
 	if (collided(scene, false, 0, NULL) == true && depth > 0)
 		collided(scene, true, depth - 1, NULL);
 	return (did_collide);
+}
+
+//Added this 
+bool	sphere_plane_collision(t_shape *sphere, const t_shape *plane)
+{
+	t_vector	normal;
+	normal = plane->orientation;
+	normal.w = 0;
+	double distance = (dot_product(&normal, &sphere->origin) - plane->props.distance_from_origin);
+	if (fabs(distance) < sphere->props.radius)
+		return (true);
+	return (false);
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 static void	resolve_resolution(t_vector *resolution, t_box_axes *ba)
@@ -19,7 +19,7 @@ static void	resolve_resolution(t_vector *resolution, t_box_axes *ba)
 	{
 		*resolution = ba->res_axis;
 		normalize_vector(resolution);
-		scale_vec(resolution, resolution, ba->res_distance + 0.0001);
+		scale_vector(resolution, resolution, ba->res_distance + 0.0001);
 	}
 }
 

@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 static int	atof_split(char c)
@@ -56,7 +56,7 @@ double ft_atol(char *str, bool *status)
 
     i = 0;
     sign  = 1;
-    status = true;
+    *status = true;
     while(is_whitespace(str[i]))
         i++;
     if (ft_strcmp(&str[i], "-9223372036854775808"))

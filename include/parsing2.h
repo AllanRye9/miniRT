@@ -1,24 +1,22 @@
 # ifndef PARSING2_H
 # define PARSING2_H
 
-# include "macro.h"
-# include "camera.h"
-# include "parsing.h"
+# include "miniRT.h"
 
 double		ft_atol(char *str, bool *status);
 long		atol_helper(char *str, int i, bool *status);
 double		ft_atof(char *p, bool *status);
 char		**ft_split_whitespace(char *line);
-bool 		print_color_error(t_color_error *err, const char *line, int line_num,
+bool 		print_color_error(t_color_err *err, const char *line, int line_num,
 					char *element);
-bool 		print_orient_error(t_orient_error *err, const char *line, int line_num);
+bool 		print_orient_error(t_orient_err *err, const char *line, int line_num);
 void 		parse_orientation(t_vector *orientation, const char *str,
-					t_orient_error *err);
-void 		check_color_range(t_color *color, t_color_error *err);
-void 		parse_color(t_color *color, const char *str, t_color_error *errs);
+					t_orient_err *err);
+void 		check_color_range(t_color *color, t_color_err *err);
+void 		parse_color(t_color *color, const char *str, t_color_err *errs);
 void 		parse_coordinates(t_vector *position, const char *str, bool *status);
-void 		check_orientation_vector(t_vector *orientation, t_orient_error *err);
-bool 		print_cam_error(t_cam_errors *err, const char *line, int line_num);
+void 		check_orientation_vector(t_vector *orientation, t_orient_err *err);
+bool 		print_cam_error(t_cam_err *err, const char *line, int line_num);
 void 		parse_light_props(t_scene *scene, t_light *light, char **splitted);
 void 		parse_light(t_scene *scene, char **splitted);
 bool 		parse_ambient_props(t_scene *scene);
@@ -79,6 +77,6 @@ char 		*ft_strtrim_free(char *s1, char *set);
 char		**ft_split_whitespace(char *line);
 void 		mat4_multiply(t_vector *res, const t_mat4 *mat,
     		const t_vector *vec);
-void		free_and_update1(char **rgb,t_color *color, t_color_error *errs);
+void		free_and_update1(char **rgb,t_color *color, t_color_err *errs);
 void		free_and_update2(t_vector *position, double *res, char	**coords);
 # endif

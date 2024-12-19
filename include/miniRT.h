@@ -23,17 +23,17 @@
 # include <semaphore.h>
 # include <signal.h>
 # include "libft.h"
+# include "color.h"
+# include "shape.h"
+# include "lights.h"
 # include <stdio.h>
 # include "display.h"
-# include "color.h"
-# include "lights.h"
-# include "shape.h"
 # include "scene.h"
 # include "parsing.h"
 # include "parsing2.h"
 # include "interactions.h"
 # include "../mlx/mlx.h"
-# include "mathRT.h"
+# include "display.h"
 # include "display.h"
 # include "camera.h"
 # include "intersection.h"
@@ -41,6 +41,7 @@
 # include "math_utils.h"
 # include "collision.h"
 # include "macro.h"
+# include "mathRT.h"
 # define EPSILON 0.001f
 
 #endif

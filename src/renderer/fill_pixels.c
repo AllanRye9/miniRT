@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	fill_skippedpixelh(double x, double y, t_thread_data *tdata, int th)
@@ -23,6 +23,7 @@ void	fill_skippedpixelh(double x, double y, t_thread_data *tdata, int th)
 	i = get_color(tdata, x + 2, y);
 	if (color_diff(i, j) > th)
 	{
+		//super_sampling function is missing created a demo for it.
 		if (tdata->scene->settings.supersampling == true)
 			super_sampling(tdata, &arr, x - 1, y);
 		super_sampling(tdata, &arr, x, y);

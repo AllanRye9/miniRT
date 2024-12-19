@@ -13,8 +13,7 @@
 #ifndef CAMERA_H
 # define CAMERA_H
 
-# include "mathRT.h"
-# include "parsing.h"
+# include "miniRT.h"
 
 typedef struct s_camera
 {
@@ -37,7 +36,6 @@ typedef struct s_orient_error
 	bool			fov_other;
 	bool			fov_range;
 	bool			up_vector;
-	t_orient_error	dir;
 }t_orient_error;
 
 typedef struct s_cam_errors

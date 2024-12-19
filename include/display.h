@@ -13,6 +13,8 @@
 #ifndef DISPLAY_H
 # define DISPLAY_H
 
+# include "miniRT.h"
+
 typedef struct s_display
 {
 	void		*mlx;

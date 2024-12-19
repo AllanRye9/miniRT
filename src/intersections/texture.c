@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 t_vector	normal_at(const t_shape *shape, const t_vector *itx_point)
@@ -59,6 +59,6 @@ t_vector	get_texture_coords(const t_shape *shape, double u, double v,
 	normal->x = 2 * normal_coords.r - 1;
 	normal->y = 2 * normal_coords.g - 1;
 	normal->z = 2 * normal_coords.b - 1;
-	normalize_vec(normal);
+	normalize_vector(normal);
 	return (*normal);
 }

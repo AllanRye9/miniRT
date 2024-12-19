@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 static bool	handle_parallel_case(t_cy_collision_data *cy_data,
@@ -25,8 +25,8 @@ static bool	handle_parallel_case(t_cy_collision_data *cy_data,
 		return (false);
 	cy_data->resolution = plane->orientation;
 	dist = fabs(dot_product(&cy_data->cap_center, &plane->orientation));
-	scale_vec(&cy_data->resolution, &cy_data->resolution, dist + 0.001);
-	add_vec(&cylinder->origin, &cylinder->origin, &cy_data->resolution);
+	scale_vector(&cy_data->resolution, &cy_data->resolution, dist + 0.001);
+	add_vector(&cylinder->origin, &cylinder->origin, &cy_data->resolution);
 	return (true);
 }
 
@@ -67,7 +67,7 @@ static bool	get_cylinder_normal(t_vector *cylinder_normal, t_shape *cylinder)
 	up_vector.y = 0;
 	up_vector.z = 0;
 	up_vector.w = 0;
-	mat_vec_multiply(cylinder_normal, &cylinder->transf, &up_vector);
+	mat4_multiply(cylinder_normal, &cylinder->transf, &up_vector);
 	if (vector_magnitude(cylinder_normal) < 0.001)
 		return (false);
 	normalize_vector(cylinder_normal);

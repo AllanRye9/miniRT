@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	render_shape_info(t_scene *scene)
@@ -66,12 +66,10 @@ void	scale_adjacent(t_thread_data *tdata)
 					+ (h * tdata->width + w) * tdata->scene->disp->bpp);
 		}
 	}
-	return (NULL);
 }
 
 void	renderwith_threads(t_thread_data *tdata)
 {
-	t_intersection	arr;
 	int				x;
 	int				y;
 	int				line;
@@ -91,7 +89,6 @@ void	renderwith_threads(t_thread_data *tdata)
 	}
 	fill_h(tdata, 25);
 	fill_v(tdata, 25);
-	return (NULL);
 }
 
 void	render_scene(t_scene *scene)

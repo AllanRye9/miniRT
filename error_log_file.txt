@@ -1,0 +1,1201 @@
+In file included from src/renderer/init_display.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/transform.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/render_shape.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/init_setting.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/draw.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/orientation.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/fill_pixels.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/renderer/fill_pixels.c:36:26: error: implicit declaration of function 'mix_color' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                set_color(tdata, x, y, mix_color(i, j, 2.0 / 3.0));
+                                       ^
+src/renderer/fill_pixels.c:55:6: error: implicit declaration of function 'color_difference' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        if (color_difference(i, j) > th)
+            ^
+src/renderer/fill_pixels.c:64:26: error: implicit declaration of function 'mix_color' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                set_color(tdata, x, y, mix_color(i, j, 2.0 / 3.0));
+                                       ^
+4 errors generated.
+In file included from src/renderer/projection.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/render_scene.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/camera.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/renderer/threads.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/renderer/threads.c:25:17: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                tdata[i].addr = scene->settings.render_w;
+                              ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+src/renderer/threads.c:45:49: error: unused parameter 'scene' [-Werror,-Wunused-parameter]
+void    exec_thread(t_thread_data *tdata, t_scene *scene, void *func)
+                                                   ^
+3 errors generated.
+In file included from src/intersections/normal.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/intersections/texture.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/intersections/texture.c:57:16: error: assigning to 't_color' (aka 'struct s_color') from incompatible type 't_mat4' (aka 'double [4][4]')
+        normal_coords = shape->normal_tex[(int)u][(int)v];
+                      ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+In file included from src/intersections/normal_map.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/intersections/normal_map.c:27:3: error: implicit declaration of function 'spherical_map' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                spherical_map(&u, &v, &shape_point);
+                ^
+src/intersections/normal_map.c:35:3: error: implicit declaration of function 'cubical_map' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                cubical_map(&u, &v, &shape_point);
+                ^
+3 errors generated.
+In file included from src/parsing/utils2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/texture2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/shape2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/shape2.c:88:3: error: incompatible pointer types passing 't_orient_error *' (aka 'struct s_orient_error *') to parameter of type 't_orient_err *' (aka 'struct s_orient_err *') [-Werror,-Wincompatible-pointer-types]
+                &scene->error_flag.shape.orient);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:14:20: note: passing argument to parameter 'err' here
+                                        t_orient_err *err);
+                                                      ^
+2 errors generated.
+In file included from src/parsing/shape_errors.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/shape_errors.c:50:4: error: too many arguments to function call, expected 3, have 4
+                        "plane orientation")
+                        ^~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:12:1: note: 'print_orient_error' declared here
+bool            print_orient_error(t_orient_err *err, const char *line, int line_num);
+^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdbool.h:15:14: note: expanded from macro 'bool'
+#define bool _Bool
+             ^
+src/parsing/shape_errors.c:69:4: error: too many arguments to function call, expected 3, have 4
+                        "cylinder orientation") && err->orient.other)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:12:1: note: 'print_orient_error' declared here
+bool            print_orient_error(t_orient_err *err, const char *line, int line_num);
+^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdbool.h:15:14: note: expanded from macro 'bool'
+#define bool _Bool
+             ^
+src/parsing/shape_errors.c:95:4: error: too many arguments to function call, expected 3, have 4
+                        "cone orientation") && err->orient.other)
+                        ^~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:12:1: note: 'print_orient_error' declared here
+bool            print_orient_error(t_orient_err *err, const char *line, int line_num);
+^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdbool.h:15:14: note: expanded from macro 'bool'
+#define bool _Bool
+             ^
+4 errors generated.
+In file included from src/parsing/settings2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/settings2.c:30:10: error: implicit declaration of function 'int_to_color' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        return (int_to_color(hex_color));
+                ^
+src/parsing/settings2.c:30:9: error: returning 'int' from a function with incompatible result type 't_color' (aka 'struct s_color')
+        return (int_to_color(hex_color));
+               ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/parsing/settings2.c:41:3: error: implicit declaration of function 'free_texture' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                free_texture(shape, shape->diffuse_tex);
+                ^
+src/parsing/settings2.c:41:3: note: did you mean 'free_textures'?
+/Users/oallan/Desktop/miniRT/include/interactions.h:96:7: note: 'free_textures' declared here
+void            free_textures(t_scene *scene);
+                ^
+src/parsing/settings2.c:42:22: error: incompatible pointer types assigning to 't_mat4 **' (aka 'double (**)[4][4]') from 't_color **' (aka 'struct s_color **') [-Werror,-Wincompatible-pointer-types]
+                shape->diffuse_tex = parse_texture(key_val[1], shape);
+                                   ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/parsing/settings2.c:48:3: error: implicit declaration of function 'free_texture' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                free_texture(shape, shape->normal_tex);
+                ^
+src/parsing/settings2.c:49:21: error: incompatible pointer types assigning to 't_mat4 **' (aka 'double (**)[4][4]') from 't_color **' (aka 'struct s_color **') [-Werror,-Wincompatible-pointer-types]
+                shape->normal_tex = parse_texture(key_val[1], shape);
+                                  ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7 errors generated.
+In file included from src/parsing/utils1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/scene.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/scene.c:84:10: error: incompatible integer to pointer conversion returning 'int' from a function with result type 't_scene *' (aka 'struct s_scene *') [-Werror,-Wint-conversion]
+                return (free(line), ft_putstr_fd("FD - encountered and Error", 2), -1);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+In file included from src/parsing/texture1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/settings1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/shape1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/shape1.c:38:3: error: incompatible pointer types passing 't_orient_error *' (aka 'struct s_orient_error *') to parameter of type 't_orient_err *' (aka 'struct s_orient_err *') [-Werror,-Wincompatible-pointer-types]
+                &scene->error_flag.shape.orient);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:14:20: note: passing argument to parameter 'err' here
+                                        t_orient_err *err);
+                                                      ^
+2 errors generated.
+In file included from src/parsing/spotlight.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/spotlight.c:46:3: error: incompatible pointer types passing 't_orient_error *' (aka 'struct s_orient_error *') to parameter of type 't_orient_err *' (aka 'struct s_orient_err *') [-Werror,-Wincompatible-pointer-types]
+                &scene->error_flag.light.orient);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:14:20: note: passing argument to parameter 'err' here
+                                        t_orient_err *err);
+                                                      ^
+2 errors generated.
+In file included from src/parsing/utils4.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/utils4.c:60:2: error: implicit declaration of function 'dec_num' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        dec_num(i[2], i[1], decimal[0], str);
+        ^
+src/parsing/utils4.c:61:2: error: implicit declaration of function 'point_num' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        point_num(num, decimal[1], i[1], str);
+        ^
+3 errors generated.
+In file included from src/parsing/elements1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/attributes2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/attributes2.c:4:6: error: conflicting types for 'parse_orientation'
+void    parse_orientation(t_vector *orientation, const char *str,
+        ^
+/Users/oallan/Desktop/miniRT/include/parsing2.h:13:8: note: previous declaration is here
+void            parse_orientation(t_vector *orientation, const char *str,
+                ^
+src/parsing/attributes2.c:17:8: error: no member named 'others' in 'struct s_orient_error'; did you mean 'other'?
+                err->others = true;
+                     ^~~~~~
+                     other
+/Users/oallan/Desktop/miniRT/include/camera.h:34:9: note: 'other' declared here
+        bool                    other;
+                                ^
+src/parsing/attributes2.c:25:9: error: no member named 'others' in 'struct s_orient_error'; did you mean 'other'?
+                        err->others = true;
+                             ^~~~~~
+                             other
+/Users/oallan/Desktop/miniRT/include/camera.h:34:9: note: 'other' declared here
+        bool                    other;
+                                ^
+src/parsing/attributes2.c:31:40: error: incompatible pointer types passing 't_orient_error *' (aka 'struct s_orient_error *') to parameter of type 't_orient_err *' (aka 'struct s_orient_err *') [-Werror,-Wincompatible-pointer-types]
+        check_orientation_vector(orientation, err);
+                                              ^~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:18:70: note: passing argument to parameter 'err' here
+void            check_orientation_vector(t_vector *orientation, t_orient_err *err);
+                                                                              ^
+5 errors generated.
+In file included from src/parsing/settings_error.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/error.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/error.c:10:11: error: implicit declaration of function 'print_triangle_error' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (print_triangle_error(error, line, line_num));
+                        ^
+src/parsing/error.c:35:22: error: incompatible pointer types passing 't_cam_errors *' (aka 'struct s_cam_errors *') to parameter of type 't_cam_err *' (aka 'struct s_cam_err *') [-Werror,-Wincompatible-pointer-types]
+        if (print_cam_error(&flags->cam, line, line_num))
+                            ^~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:19:35: note: passing argument to parameter 'err' here
+bool            print_cam_error(t_cam_err *err, const char *line, int line_num);
+                                           ^
+3 errors generated.
+In file included from src/parsing/settings_validation2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/settings_validation2.c:25:25: error: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        parsed_value = ft_atof(val, &status);
+                               ^~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:8:23: note: passing argument to parameter 'p' here
+double          ft_atof(char *p, bool *status);
+                              ^
+2 errors generated.
+In file included from src/parsing/elements2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/elements2.c:41:47: error: incompatible pointer types passing 't_orient_error *' (aka 'struct s_orient_error *') to parameter of type 't_orient_err *' (aka 'struct s_orient_err *') [-Werror,-Wincompatible-pointer-types]
+        parse_orientation(&scene->cam.dir, split[2], &scene->error_flag.cam.dir);
+                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:14:20: note: passing argument to parameter 'err' here
+                                        t_orient_err *err);
+                                                      ^
+2 errors generated.
+In file included from src/parsing/attribute_errors.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/attribute_errors.c:20:6: error: conflicting types for 'print_orient_error'
+bool    print_orient_error(t_orient_err *err, const char *line, int line_num,
+        ^
+/Users/oallan/Desktop/miniRT/include/parsing2.h:12:8: note: previous declaration is here
+bool            print_orient_error(t_orient_err *err, const char *line, int line_num);
+                ^
+2 errors generated.
+In file included from src/parsing/utils3.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/parsing/element_errors.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/element_errors.c:25:6: error: conflicting types for 'print_cam_error'
+bool    print_cam_error(t_cam_errors *err, const char *line, int line_num)
+        ^
+/Users/oallan/Desktop/miniRT/include/parsing2.h:19:8: note: previous declaration is here
+bool            print_cam_error(t_cam_err *err, const char *line, int line_num);
+                ^
+src/parsing/element_errors.c:30:4: error: too many arguments to function call, expected 3, have 4
+                        "camera orientation") && err->dir.others)
+                        ^~~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:12:1: note: 'print_orient_error' declared here
+bool            print_orient_error(t_orient_err *err, const char *line, int line_num);
+^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdbool.h:15:14: note: expanded from macro 'bool'
+#define bool _Bool
+             ^
+src/parsing/element_errors.c:30:38: error: no member named 'others' in 'struct s_orient_error'; did you mean 'other'?
+                        "camera orientation") && err->dir.others)
+                                                          ^~~~~~
+                                                          other
+/Users/oallan/Desktop/miniRT/include/camera.h:34:9: note: 'other' declared here
+        bool                    other;
+                                ^
+src/parsing/element_errors.c:67:4: error: too many arguments to function call, expected 3, have 4
+                        "spotlight orientation") && err->orient.others == true)
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/oallan/Desktop/miniRT/include/parsing2.h:12:1: note: 'print_orient_error' declared here
+bool            print_orient_error(t_orient_err *err, const char *line, int line_num);
+^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdbool.h:15:14: note: expanded from macro 'bool'
+#define bool _Bool
+             ^
+src/parsing/element_errors.c:67:44: error: no member named 'others' in 'struct s_orient_error'; did you mean 'other'?
+                        "spotlight orientation") && err->orient.others == true)
+                                                                ^~~~~~
+                                                                other
+/Users/oallan/Desktop/miniRT/include/camera.h:34:9: note: 'other' declared here
+        bool                    other;
+                                ^
+6 errors generated.
+In file included from src/parsing/attributes1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/attributes1.c:68:6: error: conflicting types for 'check_orientation_vector'
+void    check_orientation_vector(t_vector *orientation, t_orient_error *err)
+        ^
+/Users/oallan/Desktop/miniRT/include/parsing2.h:18:8: note: previous declaration is here
+void            check_orientation_vector(t_vector *orientation, t_orient_err *err);
+                ^
+src/parsing/attributes1.c:73:8: error: no member named 'x' in 'struct s_orient_error'
+                err->x = true;
+                ~~~  ^
+src/parsing/attributes1.c:75:8: error: no member named 'y' in 'struct s_orient_error'
+                err->y = true;
+                ~~~  ^
+src/parsing/attributes1.c:77:8: error: no member named 'z' in 'struct s_orient_error'
+                err->z = true;
+                ~~~  ^
+src/parsing/attributes1.c:79:8: error: no member named 'zero' in 'struct s_orient_error'
+                err->zero = true;
+                ~~~  ^
+6 errors generated.
+In file included from src/parsing/settings_validation1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/parsing/settings_validation1.c:29:7: error: implicit declaration of function 'is_space' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (is_space(line[i]) == false)
+                    ^
+src/parsing/settings_validation1.c:29:7: note: did you mean 'isspace'?
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_ctype.h:267:1: note: 'isspace' declared here
+isspace(int _c)
+^
+2 errors generated.
+In file included from src/parsing/settings3.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/math/min_max.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/shading/color_operations.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/shading/vector.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/shading/vector.c:9:6: error: conflicting types for 'scale_vector'
+void scale_vector(t_vector *res, t_vector *v, double scale)
+     ^
+/Users/oallan/Desktop/miniRT/include/mathRT.h:46:6: note: previous declaration is here
+void    scale_vector(t_vector *result, const t_vector *v, double scale);
+        ^
+2 errors generated.
+In file included from src/shading/cube_mapping.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/shading/reflection.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/shading/shape_texture.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/shading/shape_texture.c:46:3: error: implicit declaration of function 'spherical_map' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                spherical_map(&u, &v, &shape_point);
+                ^
+src/shading/shape_texture.c:48:3: error: implicit declaration of function 'cubical_map' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                cubical_map(&u, &v, &shape_point);
+                ^
+3 errors generated.
+In file included from src/shading/utils.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/shading/utils.c:48:10: error: implicit declaration of function 'clamp_color' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        return (clamp_color(color->a) << 24 | clamp_color(color->r) << 16
+                ^
+2 errors generated.
+In file included from src/shading/modification2.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/shading/patterns.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/shading/transformations.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/shading/transformations.c:11:11: error: implicit declaration of function 'intersect_sphere_fast' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (intersect_sphere_fast(ray, xs, shape));
+                        ^
+src/shading/transformations.c:13:11: error: implicit declaration of function 'intersect_plane_fast' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (intersect_plane_fast(ray, shape, xs));
+                        ^
+src/shading/transformations.c:13:11: note: did you mean 'intersect_sphere_fast'?
+src/shading/transformations.c:11:11: note: 'intersect_sphere_fast' declared here
+                return (intersect_sphere_fast(ray, xs, shape));
+                        ^
+src/shading/transformations.c:14:2: error: implicit declaration of function 'transform_ray' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        transform_ray(&transf_ray, ray, shape);
+        ^
+src/shading/transformations.c:16:11: error: implicit declaration of function 'intersect_cylinder' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (intersect_cylinder(&transf_ray, shape, xs));
+                        ^
+src/shading/transformations.c:16:11: note: did you mean 'parse_cylinder'?
+/Users/oallan/Desktop/miniRT/include/parsing2.h:53:8: note: 'parse_cylinder' declared here
+void            parse_cylinder(t_scene *scene, t_shape *shape, char **splitted);
+                ^
+src/shading/transformations.c:18:11: error: implicit declaration of function 'intersect_cone' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (intersect_cone(&transf_ray, shape, xs));
+                        ^
+src/shading/transformations.c:20:11: error: implicit declaration of function 'intersect_cube' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (intersect_cube(shape, &transf_ray, xs));
+                        ^
+src/shading/transformations.c:20:11: note: did you mean 'intersect_cone'?
+src/shading/transformations.c:18:11: note: 'intersect_cone' declared here
+                return (intersect_cone(&transf_ray, shape, xs));
+                        ^
+7 errors generated.
+In file included from src/shading/modification1.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/shading/matrix.c:1:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/linear_algebra/inverse_matrix.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/mathRT.h:16:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:27:
+/Users/oallan/Desktop/miniRT/include/shape.h:49:2: error: unknown type name 't_vector'
+        t_vector                cyl_normal;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:51:2: error: unknown type name 't_vector'
+        t_vector                rot;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:52:2: error: unknown type name 't_vector'
+        t_vector                scale;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:61:2: error: unknown type name 't_vector'
+        t_vector                origin;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:62:2: error: unknown type name 't_vector'
+        t_vector                orientation;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:63:2: error: unknown type name 't_mat4'
+        t_mat4                  transf;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:64:2: error: unknown type name 't_mat4'
+        t_mat4                  inv_transf;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:65:2: error: unknown type name 't_mat4'
+        t_mat4                  norm_transf;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:66:2: error: unknown type name 't_mat4'
+        t_mat4                  added_rots;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:67:2: error: unknown type name 't_mat4'
+        t_mat4                  **diffuse_tex;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:68:2: error: unknown type name 't_mat4'
+        t_mat4                  **normal_tex;
+        ^
+In file included from src/linear_algebra/inverse_matrix.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/mathRT.h:16:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:28:
+/Users/oallan/Desktop/miniRT/include/lights.h:28:2: error: unknown type name 't_vector'
+        t_vector                position;
+        ^
+/Users/oallan/Desktop/miniRT/include/lights.h:29:2: error: unknown type name 't_vector'
+        t_vector                direction;
+        ^
+/Users/oallan/Desktop/miniRT/include/lights.h:30:2: error: unknown type name 't_vector'
+        t_vector                init_direction;
+        ^
+/Users/oallan/Desktop/miniRT/include/lights.h:31:2: error: unknown type name 't_mat4'
+        t_mat4                  added_rots;
+        ^
+In file included from src/linear_algebra/inverse_matrix.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/mathRT.h:16:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:31:
+In file included from /Users/oallan/Desktop/miniRT/include/scene.h:17:
+/Users/oallan/Desktop/miniRT/include/camera.h:20:2: error: unknown type name 't_vector'
+        t_vector        pos;
+        ^
+/Users/oallan/Desktop/miniRT/include/camera.h:21:2: error: unknown type name 't_vector'
+        t_vector        dir;
+        ^
+/Users/oallan/Desktop/miniRT/include/camera.h:26:2: error: unknown type name 't_mat4'
+        t_mat4          transform;
+        ^
+/Users/oallan/Desktop/miniRT/include/camera.h:27:2: error: unknown type name 't_mat4'
+        t_mat4          inv_trans;
+        ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from src/linear_algebra/matrix_transformation.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/linear_algebra/matrix_transformation.c:52:2: error: array index 2 is past the end of the array (which contains 2 elements) [-Werror,-Warray-bounds]
+        (*mat)[0][2] = sin(r);
+        ^         ~
+src/linear_algebra/matrix_transformation.c:54:3: error: array index 2 is past the end of the array (which contains 2 elements) [-Werror,-Warray-bounds]
+        (*mat)[2][0] = -sin(r);
+         ^     ~
+src/linear_algebra/matrix_transformation.c:55:2: error: array index 2 is past the end of the array (which contains 2 elements) [-Werror,-Warray-bounds]
+        (*mat)[2][2] = cos(r);
+        ^         ~
+src/linear_algebra/matrix_transformation.c:55:3: error: array index 2 is past the end of the array (which contains 2 elements) [-Werror,-Warray-bounds]
+        (*mat)[2][2] = cos(r);
+         ^     ~
+src/linear_algebra/matrix_transformation.c:56:2: error: array index 3 is past the end of the array (which contains 2 elements) [-Werror,-Warray-bounds]
+        (*mat)[3][3] = 1;
+        ^         ~
+src/linear_algebra/matrix_transformation.c:56:3: error: array index 3 is past the end of the array (which contains 2 elements) [-Werror,-Warray-bounds]
+        (*mat)[3][3] = 1;
+         ^     ~
+7 errors generated.
+In file included from src/linear_algebra/matrix_operation.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/linear_algebra/vector_arithmetic.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/linear_algebra/determinant_matrix.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/mathRT.h:16:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:27:
+/Users/oallan/Desktop/miniRT/include/shape.h:49:2: error: unknown type name 't_vector'
+        t_vector                cyl_normal;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:51:2: error: unknown type name 't_vector'
+        t_vector                rot;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:52:2: error: unknown type name 't_vector'
+        t_vector                scale;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:61:2: error: unknown type name 't_vector'
+        t_vector                origin;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:62:2: error: unknown type name 't_vector'
+        t_vector                orientation;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:63:2: error: unknown type name 't_mat4'
+        t_mat4                  transf;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:64:2: error: unknown type name 't_mat4'
+        t_mat4                  inv_transf;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:65:2: error: unknown type name 't_mat4'
+        t_mat4                  norm_transf;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:66:2: error: unknown type name 't_mat4'
+        t_mat4                  added_rots;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:67:2: error: unknown type name 't_mat4'
+        t_mat4                  **diffuse_tex;
+        ^
+/Users/oallan/Desktop/miniRT/include/shape.h:68:2: error: unknown type name 't_mat4'
+        t_mat4                  **normal_tex;
+        ^
+In file included from src/linear_algebra/determinant_matrix.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/mathRT.h:16:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:28:
+/Users/oallan/Desktop/miniRT/include/lights.h:28:2: error: unknown type name 't_vector'
+        t_vector                position;
+        ^
+/Users/oallan/Desktop/miniRT/include/lights.h:29:2: error: unknown type name 't_vector'
+        t_vector                direction;
+        ^
+/Users/oallan/Desktop/miniRT/include/lights.h:30:2: error: unknown type name 't_vector'
+        t_vector                init_direction;
+        ^
+/Users/oallan/Desktop/miniRT/include/lights.h:31:2: error: unknown type name 't_mat4'
+        t_mat4                  added_rots;
+        ^
+In file included from src/linear_algebra/determinant_matrix.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/mathRT.h:16:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:31:
+In file included from /Users/oallan/Desktop/miniRT/include/scene.h:17:
+/Users/oallan/Desktop/miniRT/include/camera.h:20:2: error: unknown type name 't_vector'
+        t_vector        pos;
+        ^
+/Users/oallan/Desktop/miniRT/include/camera.h:21:2: error: unknown type name 't_vector'
+        t_vector        dir;
+        ^
+/Users/oallan/Desktop/miniRT/include/camera.h:26:2: error: unknown type name 't_mat4'
+        t_mat4          transform;
+        ^
+/Users/oallan/Desktop/miniRT/include/camera.h:27:2: error: unknown type name 't_mat4'
+        t_mat4          inv_trans;
+        ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from src/linear_algebra/vector_operation.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/setup_hooks.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/mouse.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/interaction/mouse.c:31:3: error: implicit declaration of function 'calc_transforms' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                calc_transforms(scene);
+                ^
+src/interaction/mouse.c:31:3: note: did you mean 'calc_transform'?
+/Users/oallan/Desktop/miniRT/include/render.h:36:7: note: 'calc_transform' declared here
+void            calc_transform(t_scene *scene);
+                ^
+src/interaction/mouse.c:44:2: error: implicit declaration of function 'ray_from_cam' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        ray_from_cam(&mouse_selection, &scene->cam,
+        ^
+src/interaction/mouse.c:92:2: error: implicit declaration of function 'ray_from_cam' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        ray_from_cam(&mouse_selection, &scene->cam,
+        ^
+4 errors generated.
+In file included from src/interaction/hook_rotate.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/interaction/hook_rotate.c:43:23: error: incompatible pointer types passing 't_mat4 *' (aka 'double (*)[4][4]') to parameter of type 't_mat2 *' (aka 'double (*)[2][2]') [-Werror,-Wincompatible-pointer-types]
+                matrix_rotate_yaxis(&rot, deg);
+                                    ^~~~
+/Users/oallan/Desktop/miniRT/include/mathRT.h:42:34: note: passing argument to parameter 'mat' here
+void    matrix_rotate_yaxis(t_mat2 *mat, double r);
+                                    ^
+src/interaction/hook_rotate.c:45:23: error: incompatible pointer types passing 't_mat4 *' (aka 'double (*)[4][4]') to parameter of type 't_mat2 *' (aka 'double (*)[2][2]') [-Werror,-Wincompatible-pointer-types]
+                matrix_rotate_yaxis(&rot, -deg);
+                                    ^~~~
+/Users/oallan/Desktop/miniRT/include/mathRT.h:42:34: note: passing argument to parameter 'mat' here
+void    matrix_rotate_yaxis(t_mat2 *mat, double r);
+                                    ^
+3 errors generated.
+In file included from src/interaction/ray_intersection.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/toggle_key.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/lookat_animation.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/hook_move.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/scale_change.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/toggle_shape.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/key_press.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/loop_hook_transform.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/lookat.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/free_textures.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/interaction/free_textures.c:38:35: error: incompatible pointer types passing 't_mat4 **' (aka 'double (**)[4][4]') to parameter of type 't_color **' (aka 'struct s_color **') [-Werror,-Wincompatible-pointer-types]
+                free_texture(&scene->shapes[i], scene->shapes[i].diffuse_tex);
+                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/interaction/free_textures.c:16:45: note: passing argument to parameter 'texture' here
+void    free_texture(t_shape *shape, t_color **texture)
+                                               ^
+src/interaction/free_textures.c:39:35: error: incompatible pointer types passing 't_mat4 **' (aka 'double (**)[4][4]') to parameter of type 't_color **' (aka 'struct s_color **') [-Werror,-Wincompatible-pointer-types]
+                free_texture(&scene->shapes[i], scene->shapes[i].normal_tex);
+                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/interaction/free_textures.c:16:45: note: passing argument to parameter 'texture' here
+void    free_texture(t_shape *shape, t_color **texture)
+                                               ^
+3 errors generated.
+In file included from src/interaction/camera_controls.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/free_utils.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/mouse_utils.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/interaction/mouse_utils.c:25:2: error: implicit declaration of function 'ray_from_cam' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        ray_from_cam(mouse_selection, &scene->cam,
+        ^
+src/interaction/mouse_utils.c:37:2: error: implicit declaration of function 'ray_position' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        ray_position(&position_on_plane, mouse_selection, t);
+        ^
+src/interaction/mouse_utils.c:49:3: error: implicit declaration of function 'rotate_y' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                rotate_y(scene, &scene->shapes[scene->shape_idx].added_rots,
+                ^
+src/interaction/mouse_utils.c:54:3: error: implicit declaration of function 'rotate_y' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                rotate_y(scene, &scene->shapes[scene->shape_idx].added_rots,
+                ^
+src/interaction/mouse_utils.c:59:3: error: implicit declaration of function 'rotate_x' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                rotate_x(scene, &scene->shapes[scene->shape_idx].added_rots,
+                ^
+src/interaction/mouse_utils.c:64:3: error: implicit declaration of function 'rotate_x' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                rotate_x(scene, &scene->shapes[scene->shape_idx].added_rots,
+                ^
+7 errors generated.
+In file included from src/interaction/lights.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/interaction/lights.c:32:3: error: implicit declaration of function 'rotate_x' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                rotate_x(scene, &scene->lights[scene->light_idx].added_rots,
+                ^
+src/interaction/lights.c:35:3: error: implicit declaration of function 'rotate_y' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                rotate_y(scene, &scene->lights[scene->light_idx].added_rots,
+                ^
+src/interaction/lights.c:35:3: note: did you mean 'rotate_x'?
+src/interaction/lights.c:32:3: note: 'rotate_x' declared here
+                rotate_x(scene, &scene->lights[scene->light_idx].added_rots,
+                ^
+3 errors generated.
+In file included from src/interaction/shape.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/interaction/loop_hook.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/fill_vtx1.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/intersection_compute.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/check_collision.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/collision/check_collision.c:20:3: error: implicit declaration of function 'sphere_sphere_collision_resolution' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                sphere_sphere_collision_resolution(shape2, shape1);
+                ^
+src/collision/check_collision.c:20:3: note: did you mean 'cylinder_plane_collision_resolution'?
+/Users/oallan/Desktop/miniRT/include/collision.h:122:7: note: 'cylinder_plane_collision_resolution' declared here
+void            cylinder_plane_collision_resolution(t_shape *cylinder,
+                ^
+src/collision/check_collision.c:29:3: error: implicit declaration of function 'box_box_collision' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                box_box_collision(shape2, shape1, true);
+                ^
+src/collision/check_collision.c:41:14: error: implicit declaration of function 'sphere_box_collision' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                collided = sphere_box_collision(shape1, shape2, false, resolve);
+                           ^
+src/collision/check_collision.c:41:14: note: did you mean 'sphere_plane_collision'?
+/Users/oallan/Desktop/miniRT/include/collision.h:150:7: note: 'sphere_plane_collision' declared here
+bool            sphere_plane_collision(t_shape *sphere, const t_shape *plane);
+                ^
+src/collision/check_collision.c:45:14: error: implicit declaration of function 'cylinder_cylinder_collision' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                collided = cylinder_cylinder_collision(shape1, shape2, false);
+                           ^
+src/collision/check_collision.c:45:14: note: did you mean 'cylinder_sphere_collision'?
+/Users/oallan/Desktop/miniRT/include/collision.h:124:7: note: 'cylinder_sphere_collision' declared here
+bool            cylinder_sphere_collision(t_shape *cylinder, t_shape *sphere,
+                ^
+src/collision/check_collision.c:48:14: error: implicit declaration of function 'box_box_collision' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                collided = box_box_collision(shape1, shape2, false);
+                           ^
+src/collision/check_collision.c:53:14: error: implicit declaration of function 'cone_cone_collision' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                collided = cone_cone_collision(shape1, shape2, false);
+                           ^
+src/collision/check_collision.c:53:14: note: did you mean 'check_collision'?
+/Users/oallan/Desktop/miniRT/include/collision.h:118:7: note: 'check_collision' declared here
+bool            check_collision(t_shape *shape1, t_shape *shape2, bool resolve,
+                ^
+src/collision/check_collision.c:65:14: error: implicit declaration of function 'sphere_sphere_collision' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                collided = sphere_sphere_collision(shape1, shape2);
+                           ^
+src/collision/check_collision.c:65:14: note: did you mean 'sphere_plane_collision'?
+/Users/oallan/Desktop/miniRT/include/collision.h:150:7: note: 'sphere_plane_collision' declared here
+bool            sphere_plane_collision(t_shape *sphere, const t_shape *plane);
+                ^
+src/collision/check_collision.c:73:4: error: implicit declaration of function 'sphere_plane_collision_resolution' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        sphere_plane_collision_resolution(shape1, shape2);
+                        ^
+src/collision/check_collision.c:73:4: note: did you mean 'cylinder_plane_collision_resolution'?
+/Users/oallan/Desktop/miniRT/include/collision.h:122:7: note: 'cylinder_plane_collision_resolution' declared here
+void            cylinder_plane_collision_resolution(t_shape *cylinder,
+                ^
+src/collision/check_collision.c:77:14: error: implicit declaration of function 'cylinder_plane_collision' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                collided = cylinder_plane_collision(shape1, shape2);
+                           ^
+src/collision/check_collision.c:77:14: note: did you mean 'cylinder_sphere_collision'?
+/Users/oallan/Desktop/miniRT/include/collision.h:124:7: note: 'cylinder_sphere_collision' declared here
+bool            cylinder_sphere_collision(t_shape *cylinder, t_shape *sphere,
+                ^
+10 errors generated.
+In file included from src/collision/cylindrical_plane_collision.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/fill_vtx2.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/glk_support.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/gjk.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/sameshape_collision.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/collision/sameshape_collision.c:53:6: error: redefinition of 'box_box_collision'
+bool    box_box_collision(t_shape *box1, t_shape *box2, bool resolve)
+        ^
+src/collision/sameshape_collision.c:28:6: note: previous definition is here
+bool    box_box_collision(t_shape *box1, t_shape *box2, bool resolve)
+        ^
+2 errors generated.
+In file included from src/collision/on_origin.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/secondary_plane.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/collision/secondary_plane.c:32:2: error: implicit declaration of function 'ray_position' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        ray_position(&col_math->point_on_splane, &col_math->ray, col_math->t);
+        ^
+src/collision/secondary_plane.c:55:70: error: unused parameter 'cy_data' [-Werror,-Wunused-parameter]
+void    resolve_parallel_case(t_colmath *col_math, t_cy_collision_data *cy_data,
+                                                                        ^
+3 errors generated.
+In file included from src/collision/test_box_overlap.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/collision.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/tetrahedron_on_origin.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/collision/tetrahedron_on_origin.c:39:11: error: implicit declaration of function 'traingle_on_origin' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (traingle_on_origin(simplex, dir));
+                        ^
+src/collision/tetrahedron_on_origin.c:39:11: note: did you mean 'triangle_on_origin'?
+/Users/oallan/Desktop/miniRT/include/collision.h:138:7: note: 'triangle_on_origin' declared here
+bool            triangle_on_origin(t_simplex *simplex, t_vector *dir);
+                ^
+2 errors generated.
+In file included from src/collision/triangle_on_origin.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/collision/triangle_on_origin.c:74:11: error: implicit declaration of function 'line_contains_origin' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (line_contains_origin(simplex, dir));
+                        ^
+src/collision/triangle_on_origin.c:74:11: note: did you mean 'line_on_origin'?
+/Users/oallan/Desktop/miniRT/include/collision.h:139:7: note: 'line_on_origin' declared here
+bool            line_on_origin(t_simplex *simplex, t_vector *dir);
+                ^
+2 errors generated.
+In file included from src/collision/cylinder_sphere_collision.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+In file included from src/collision/test_box_axes.c:13:
+In file included from /Users/oallan/Desktop/miniRT/include/miniRT.h:39:
+In file included from /Users/oallan/Desktop/miniRT/include/intersection.h:18:
+/Users/oallan/Desktop/miniRT/include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+src/collision/test_box_axes.c:34:2: error: implicit declaration of function 'calculate_center_distance' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        calculate_center_distance(&ba, b1, b2);
+        ^
+src/collision/test_box_axes.c:34:2: note: did you mean 'compute_center_distance'?
+/Users/oallan/Desktop/miniRT/include/collision.h:113:7: note: 'compute_center_distance' declared here
+void            compute_center_distance(t_box_axes *ba, t_shape *b1, t_shape *b2);
+                ^
+2 errors generated.
+In file included from src/main.c:13:
+In file included from src/../include/miniRT.h:39:
+In file included from src/../include/intersection.h:18:
+src/../include/render.h:58:4: error: unknown type name 't_intersection'
+                        t_intersection *itx, t_glear *phong);
+                        ^
+1 error generated.
+make: *** [miniRT] Error 1

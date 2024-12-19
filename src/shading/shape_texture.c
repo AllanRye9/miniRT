@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	cylindrical_map(double *u, double *v, t_vector *point)
@@ -35,7 +35,7 @@ t_color	get_texture_color(t_intersection *itx)
 	double		u;
 	double		v;
 
-	mat_vec_multiply(&shape_point, &itx->shape->inv_transf, &itx->point);
+	mat4_multiply(&shape_point, &itx->shape->inv_transf, &itx->point);
 	if (itx->shape->type == CYLINDER || itx->shape->type == CONE)
 	{
 		shape_point.y /= itx->shape->props.height;
@@ -82,7 +82,7 @@ bool	get_specular_and_diffuse(t_scene *scene, int light_idx,
 
 	spotlight_angle = 0;
 	sub_vec(&light_v, &scene->lights[light_idx].position, &itx->over_point);
-	normalize_vec(&light_v);
+	normalize_vector(&light_v);
 	itx->normal.w = 0;
 	light_dot_normal = dot_product(&light_v, &itx->normal);
 	if (light_dot_normal < 0 || is_shadow(scene, light_idx, &itx->over_point,

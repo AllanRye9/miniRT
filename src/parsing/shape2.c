@@ -1,5 +1,4 @@
-#include "miniRT.h"
-
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 void	init_shape(t_shape *shape, t_scene *scene)
 {

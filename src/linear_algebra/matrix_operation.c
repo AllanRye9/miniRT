@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	matrix_multiply(t_mat4 *result, const t_mat4 *m1, const t_mat4 *m2)
@@ -83,4 +83,24 @@ void	tanspose_matrix(t_mat4 *mat)
 		}
 		row++;
 	}
+}
+
+void	axis_angle(t_mat4 *rot_mat, const t_vector *ax, double angle)
+{
+	(*rot_mat)[0][0] = cos(angle) + ax->x * ax->x * (1 - cos(angle));
+	(*rot_mat)[0][1] = ax->x * ax->y * (1 - cos(angle)) - ax->z * sin(angle);
+	(*rot_mat)[0][2] = ax->x * ax->z * (1 - cos(angle)) + ax->y * sin(angle);
+	(*rot_mat)[0][3] = 0;
+	(*rot_mat)[1][0] = ax->x * ax->y * (1 - cos(angle)) + ax->z * sin(angle);
+	(*rot_mat)[1][1] = cos(angle) + ax->y * ax->y * (1 - cos(angle));
+	(*rot_mat)[1][2] = ax->y * ax->z * (1 - cos(angle)) - ax->x * sin(angle);
+	(*rot_mat)[1][3] = 0;
+	(*rot_mat)[2][0] = ax->z * ax->x * (1 - cos(angle)) - ax->y * sin(angle);
+	(*rot_mat)[2][1] = ax->z * ax->y * (1 - cos(angle)) + ax->x * sin(angle);
+	(*rot_mat)[2][2] = cos(angle) + ax->z * ax->z * (1 - cos(angle));
+	(*rot_mat)[2][3] = 0;
+	(*rot_mat)[3][0] = 0;
+	(*rot_mat)[3][1] = 0;
+	(*rot_mat)[3][2] = 0;
+	(*rot_mat)[3][3] = 1;
 }

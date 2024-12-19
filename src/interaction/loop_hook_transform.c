@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 void	collide_after_transform(t_scene *scene)
@@ -22,7 +22,7 @@ void	collide_after_transform(t_scene *scene)
 			|| scene->keys_held.left || scene->keys_held.plus
 			|| scene->keys_held.minus || scene->keys_held.x
 			|| scene->keys_held.y || scene->keys_held.z))
-		collide(scene, true, 10, &scene->shapes[scene->shape_idx]);
+		collided(scene, true, 10, &scene->shapes[scene->shape_idx]);
 }
 
 void	transform_object(t_scene *scene)

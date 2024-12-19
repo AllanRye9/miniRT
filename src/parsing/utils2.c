@@ -1,4 +1,4 @@
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 char *ft_strtrim_free(char *s1, char *set)
@@ -19,7 +19,7 @@ void free_2d_array(char **arr)
 
     i = 0;
     if (!arr)
-        return (NULL);
+        return ;
     while(arr[i] != NULL)
     {
         free(arr[i]);
@@ -36,12 +36,12 @@ int count_words(char *line)
     count = 0;
     while(line[i])
     {
-        while(is_whitespace(line) && line[i] != '\0')
+        while(is_whitespace(line[i]) && line[i] != '\0')
             i++;
         if (line[i] == '\0')
             break;
         count++;
-        while(!is_whitespace(line) && line[i] != '\0')
+        while(!is_whitespace(line[i]) && line[i] != '\0')
             i++;
     }
     return (count);
@@ -65,7 +65,7 @@ char **ft_split_whitespace(char *line)
     int     word_start;
     int     index;
 
-    arr = (char *)malloc(sizeof(char) * (count_words(line) + 1));
+    arr = (char **)malloc(sizeof(char*) * (count_words(line) + 1));
     if (!arr)
         return (NULL);
     i = 0;

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
 
 
 int	mouse_rotate(t_scene *scene)
@@ -27,7 +27,7 @@ int	mouse_rotate(t_scene *scene)
 	{
 		rotate_along_mouse_axis(scene);
 		if (scene->settings.collisions == true)
-			collide(scene, true, 10, &scene->shapes[scene->shape_idx]);
+			collided(scene, true, 10, &scene->shapes[scene->shape_idx]);
 		calc_transforms(scene);
 		render_scene(scene);
 	}
