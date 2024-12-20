@@ -20,26 +20,3 @@ bool	intersect(t_shape *shape, const t_ray *ray, t_intersections *xs)
 		return (intersect_cube(shape, &transf_ray, xs));
 	return (false);
 }
-
-t_intersection	*hit(t_intersections *xs)
-{
-	double	min_time;
-	int		i;
-	int		idx;
-
-	i = 0;
-	idx = 0;
-	min_time = INFINITY;
-	while (i < xs->count)
-	{
-		if (xs->arr[i].time >= 0 && xs->arr[i].time < min_time)
-		{
-			min_time = xs->arr[i].time;
-			idx = i;
-		}
-		i++;
-	}
-	if (min_time == INFINITY)
-		return (NULL);
-	return (&xs->arr[idx]);
-}

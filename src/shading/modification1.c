@@ -44,7 +44,7 @@ t_color	glear(t_intersection *itx, t_scene *scene, int light_idx)
 {
 	t_glear			glear;
 	t_color			result;
-	t_color			shape_color;	
+	t_color			shape_color;
 	const double	light_dist = vec_distance(&itx->point, \
 			&scene->lights[light_idx].position);
 	const double	attenuation = (100 * scene->lights[light_idx].intensity \

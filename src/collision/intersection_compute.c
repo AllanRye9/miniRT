@@ -12,7 +12,6 @@
 
 #include "include/miniRT.h"
 
-
 void	ray_position(t_vector *pos, const t_ray *ray, double time)
 {
 	pos->x = ray->dir.x * time + ray->origin.x;
