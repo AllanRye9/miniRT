@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
+#include "include/miniRT.h"
 
 
 int	close_window(t_scene *scene)

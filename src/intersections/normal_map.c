@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
+#include "include/miniRT.h"
 
 
 t_vector	normal_from_texture(const t_shape *shape, const t_vector *itx_point)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
+#include "include/miniRT.h"
 
 t_color	render_pixel(double x, double y, t_intersections *arr,
 	t_thread_data *tdata)

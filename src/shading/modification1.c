@@ -1,5 +1,4 @@
-#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
-
+#include "include/miniRT.h"
 
 void mult_color(t_color *res, const t_color *color, double pres)
 {
@@ -50,7 +49,6 @@ t_color	glear(t_intersection *itx, t_scene *scene, int light_idx)
 			&scene->lights[light_idx].position);
 	const double	attenuation = (100 * scene->lights[light_idx].intensity \
 			- light_dist) / (100 * scene->lights[light_idx].intensity - 1);
-
 	shape_color = get_shape_color(itx);
 	blend_colors(&glear.effective_color, &shape_color,
 		&scene->lights[light_idx].color);
@@ -64,8 +62,6 @@ t_color	glear(t_intersection *itx, t_scene *scene, int light_idx)
 		mult_color(&glear.diffuse, &glear.diffuse, attenuation);
 		mult_color(&glear.specular, &glear.specular, attenuation);
 	}
-	result.r += glear.diffuse.r + glear.specular.r;
-	result.g += glear.diffuse.g + glear.specular.g;
-	result.b += glear.diffuse.b + glear.specular.b;
+	glear_diffusion(result, glear);
 	return (result);
 }

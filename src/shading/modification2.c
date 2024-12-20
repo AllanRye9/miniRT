@@ -1,4 +1,4 @@
-#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
+#include "include/miniRT.h"
 
 
 t_color	shade_point(t_intersections *arr, t_scene *scene, t_ray *ray)
@@ -44,4 +44,11 @@ bool	check_spotlight(t_scene *scene, int light_idx, t_ray *ray,
 		}
 	}
 	return (false);
+}
+
+void glear_diffusion(t_color result, t_glear glear)
+{
+	result.r += glear.diffuse.r + glear.specular.r;
+	result.g += glear.diffuse.g + glear.specular.g;
+	result.b += glear.diffuse.b + glear.specular.b;
 }

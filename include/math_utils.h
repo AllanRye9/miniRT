@@ -22,7 +22,6 @@ double	min_with_three(double n1, double n2, double n3);
 void	add_colors(t_color *res, const t_color *c1, const t_color *c2);
 void	mult_color(t_color *res, const t_color *color, double val);
 void	sub_colors(t_color *res, const t_color *c1, const t_color *c2);
-void	blend_colors(t_color *res, const t_color *c1, const t_color *c2);
 int		get_color(t_thread_data *tdata, int x, int y);
 void	set_color(t_thread_data *tdata, int x, int y, int color);
 char	*ftoa(double num);

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
+#include "include/miniRT.h"
 
 
 void	matrix_multiply(t_mat4 *result, const t_mat4 *m1, const t_mat4 *m2)

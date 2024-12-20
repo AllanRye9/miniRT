@@ -1,5 +1,4 @@
-#include "/Users/oallan/Desktop/miniRT/include/miniRT.h"
-
+#include "include/miniRT.h"
 
 int get_color(t_thread_data *w, int x, int y)
 {

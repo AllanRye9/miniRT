@@ -25,14 +25,15 @@ typedef struct s_color
 
 typedef struct s_glear
 {
-	t_color	effective_color;
-	t_color	diffuse;
-	t_color	specular;
-	t_color	ambient;
-}		t_glear;
+	t_color		effective_color;
+	t_color		diffuse;
+	t_color		specular;
+	t_color		ambient;
+}	t_glear;
 
 t_color			coloring(int hex_color);
-void 			blend_colors(t_color *res, const t_color *c1, const t_color *c2);
+void			blend_colors(t_color *res, const t_color *c1, const t_color *c2);
 void			mult_color(t_color *res, const t_color *color, double pres);
 void			add_colors(t_color *res , const t_color *c1, const t_color *c2);
+void			glear_diffusion(t_color result, t_glear glear);
 #endif
