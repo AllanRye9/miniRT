@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../src/includes/libft.h"
+#include "../src/include/libft.h"
 
 static int	ft_matchset(char c, char const *set)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../src/includes/libft.h"
+#include "../src/include/libft.h"
 
 static void	free_strings(size_t i, char **strings)
 {

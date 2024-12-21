@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../src/includes/libft.h"
+#include "../src/include/libft.h"
 
 static int	ft_cmp(const char *s1, const char *s2, size_t len)
 {
