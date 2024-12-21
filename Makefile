@@ -156,9 +156,8 @@ $(NAME): $(OBJECTS)
 
 clean:
 	@make -C $(MLX_PATH) clean
-	@make -C $(FT_PRINTF_PATH) clean
 	@make -C $(LIBFT_PATH) clean
-	@rm -f $(OBJECTS)
+	# removing objects files from here ...
 	@echo $(R)Removed [$(OBJECTS)]$(X)
 
 fclean: clean

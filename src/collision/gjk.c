@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/miniRT.h"
+#include"../include/miniRT.h"
 
 
 int	sign(double num)

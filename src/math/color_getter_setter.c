@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/miniRT.h"
+#include"../include/miniRT.h"
 
 void	set_color(t_thread_data *tdata, int x, int y, int color)
 {

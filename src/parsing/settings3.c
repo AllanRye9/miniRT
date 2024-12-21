@@ -1,4 +1,4 @@
-#include "include/miniRT.h"
+#include"../include/miniRT.h"
 
 
 bool	parse_split_settings(t_scene *scene, char **settings)

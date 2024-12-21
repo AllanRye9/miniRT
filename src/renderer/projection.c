@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/miniRT.h"
+#include"../include/miniRT.h"
 
 
 void	render_marker(t_scene *scene, int x, int y, int color)

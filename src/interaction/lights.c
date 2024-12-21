@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/miniRT.h"
+#include"../include/miniRT.h"
 
 
 t_vector	*sphere_mod(t_vector *vec, double phi, double theta, double r)

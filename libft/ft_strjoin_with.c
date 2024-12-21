@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../src/includes/libft.h"
 
 char	*ft_strjoin_with(char const *s1, char const *s2, char c)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../src/includes/libft.h"
 
 static void	*ft_handle_clr(t_list **head, void (*del)(void *))
 {

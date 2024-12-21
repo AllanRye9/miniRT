@@ -1,4 +1,4 @@
-#include "include/miniRT.h"
+#include"../include/miniRT.h"
 
 
 void	parse_light_props(t_scene *scene, t_light *light, char **splitted)

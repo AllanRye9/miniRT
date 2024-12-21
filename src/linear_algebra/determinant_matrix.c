@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/oallan/Desktop/miniRT/include/mathRT.h"
+#include "../include/mathRT.h"
 
 double	det4(const t_mat4 *matrix)
 {

@@ -32,7 +32,7 @@
 # include "parsing.h"
 # include "parsing2.h"
 # include "interactions.h"
-# include "../mlx/mlx.h"
+# include "../../mlx/mlx.h"
 # include "display.h"
 # include "display.h"
 # include "camera.h"

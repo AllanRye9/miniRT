@@ -16,6 +16,8 @@
 # include "mathRT.h"
 # include "miniRT.h"
 
+typedef struct s_vector t_vector;
+
 typedef enum s_light_type
 {
 	POINT,

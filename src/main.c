@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "include/miniRT.h"
 
 static int	read_file(int argc, char *argv[])
 {

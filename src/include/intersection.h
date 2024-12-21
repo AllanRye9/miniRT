@@ -68,6 +68,8 @@ t_vector		normal_map(t_vector *normal, const t_shape *shape, const t_vector *itx
 t_vector		normal_at(const t_shape *shape, const t_vector *itx_point);
 void			prepare_computations(t_intersection *intersection,
 				t_ray *ray);
+bool			get_specular_and_diffuse(t_scene *scene, int light_idx,
+				t_intersection *itx, t_glear *phong);
 void			super_sampling(t_thread_data *tdata, t_intersection	*arr, 
 				int i, double x);
 #endif

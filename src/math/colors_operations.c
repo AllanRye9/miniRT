@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/miniRT.h"
+#include"../include/miniRT.h"
 
 void	add_colors(t_color *res, const t_color *c1, const t_color *c2)
 {
