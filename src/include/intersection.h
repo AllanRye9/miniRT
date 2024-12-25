@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:15:09 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 19:27:11 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 18:05:02 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,6 @@ bool			get_specular_and_diffuse(t_scene *scene, int light_idx,
 				t_intersection *itx, t_glear *phong);
 void			super_sampling(t_thread_data *tdata, t_intersection	*arr, 
 				int i, double x);
+void			cylindrical_map(double *u, double *v, t_vector *point);
+void			spherical_map(double *u, double *v, t_vector *point);
 #endif

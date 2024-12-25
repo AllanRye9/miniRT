@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:59:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 17:04:10 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 18:53:39 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,7 @@ typedef struct s_camera
 	double		theta;
 }t_camera;
 
-typedef struct s_orient_error
-{
-	bool			other;
-	bool			coords;
-	bool			fov_other;
-	bool			fov_range;
-	bool			up_vector;
-}t_orient_error;
+typedef struct s_orient_err t_orient_err;
 
 typedef struct s_cam_errors
 {
@@ -45,7 +38,7 @@ typedef struct s_cam_errors
 	bool			fov_other;
 	bool			fov_range;
 	bool			up_vector;
-	t_orient_error	dir;
+	t_orient_err	dir;
 }t_cam_errors;
 
 void			initialize_matrix(t_mat4 *mat, double x, double y, double z);

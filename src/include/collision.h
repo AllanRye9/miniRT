@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 21:19:20 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 13:42:49 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ bool		handle_simplex(t_simplex *sim, t_vector *dir);
 bool		collided(t_scene *scene, bool r, int depth,
 				t_shape *t);
 void		render_scene(t_scene *scene);
-void		exec_thread(t_thread_data *tdata, t_scene *scene, void *func);
+void		exec_thread(t_thread_data *tdata, void *func);
 void		init_thread_data(t_thread_data *tdata, t_scene *scene);
 bool		check_spotlight(t_scene *scene, int light_idx, t_ray *ray,
 			double *angle);

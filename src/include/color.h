@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:07:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 17:09:54 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 13:20:38 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,8 @@ void			blend_colors(t_color *res, const t_color *c1, const t_color *c2);
 void			mult_color(t_color *res, const t_color *color, double pres);
 void			add_colors(t_color *res , const t_color *c1, const t_color *c2);
 void			glear_diffusion(t_color result, t_glear glear);
+int				mix_color(int c1, int c2, double mix);
+int				color_difference(int c1, int c2);
+unsigned int	create_mlx_color(t_color *color);
+t_color			int_to_color(int hex_color);
 #endif

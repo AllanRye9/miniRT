@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:30:27 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 20:39:53 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 13:59:08 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,7 @@ typedef struct s_shape
 	t_mat4 			norm_transf;
 	t_mat4 			added_rots;
 	t_mat4 			**diffuse_tex;
-	t_mat4 			**normal_tex;
-	t_color 		**diffuse_texs;
+	t_color 		**normal_tex;
 	int 			tex_width;
 	int 			text_height;
 	int 			tex_tile;

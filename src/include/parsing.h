@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:13:45 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/21 20:28:13 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 18:52:29 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ typedef struct s_shape_err
 	bool 			side_len_range;
 	bool 			other;
 	t_color_err 	color;
-	t_orient_error 	orient;
+	t_orient_err 	orient;
 } t_shape_err;
 
 void		invalid_argument(void);

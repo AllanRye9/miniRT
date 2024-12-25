@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 12:22:05 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 21:18:56 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 13:42:35 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	init_thread_data(t_thread_data *tdata, t_scene *scene)
 	{
 		tdata[i].height = scene->settings.render_h;
 		tdata[i].width = scene->settings.render_w;
-		tdata[i].addr = scene->settings.render_w;
+		tdata[i].addr = scene->disp->render_addr;
 		if (scene->settings.edit_mode == true)
 		{
 			tdata[i].height = scene->settings.edit_h;
@@ -42,7 +42,7 @@ void	init_thread_data(t_thread_data *tdata, t_scene *scene)
 	}
 }
 
-void	exec_thread(t_thread_data *tdata, t_scene *scene, void *func)
+void	exec_thread(t_thread_data *tdata, void *func)
 {
 	pthread_t	threads[NUM_THREADS];
 	int			i;

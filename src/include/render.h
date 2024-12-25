@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 17:32:03 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 14:07:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,5 @@ void		sub_vec(t_vector *res, const t_vector *vec1, const t_vector *vec2);
 void		fill_v(t_thread_data *tdata, int th);
 void		fill_h(t_thread_data *tdata, int th);
 void		reflect_vector(t_vector *res, t_vector *in_vector, t_vector *normal);
+
 #endif

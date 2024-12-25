@@ -73,12 +73,23 @@ char **ft_split_whitespace(char *line)
     index = 0;
     while(line[i])
     {
-        if (is_whitespace(line[i]) && line[i] != '\0')
+        while (is_whitespace(line[i]) && line[i] != '\0')
             i++;
         if (line[i] == '\0')
             break;
-        if (!is_whitespace(line[i]) && line[i] != '\0')
+		word_start = i;
+        while (!is_whitespace(line[i]) && line[i] != '\0')
             i++;
         arr[index] = create_string(line, word_start, i - 1);
+		if (arr[index] == NULL)
+		{
+			while (index > 0)
+				free(arr[--index]);
+			free(arr);
+			return (NULL);
+		}
+		index++;
     }
+	arr[index] = NULL;
+	return (arr);
 }

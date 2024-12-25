@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:02:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 10:01:41 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/25 13:43:14 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,7 @@ void	renderwith_threads(t_thread_data *tdata)
 {
 	int				x;
 	int				y;
-	int				line;
 
-	line = 0;
 	y = tdata->y_start;
 	while (y < tdata->y_end)
 	{
@@ -84,7 +82,6 @@ void	renderwith_threads(t_thread_data *tdata)
 			set_color(tdata, x, y, 0);
 			x += 3;
 		}
-		line++;
 		y += 3;
 	}
 	fill_h(tdata, 25);
@@ -96,8 +93,8 @@ void	render_scene(t_scene *scene)
 	t_thread_data	tdata[NUM_THREADS];
 
 	init_thread_data(tdata, scene);
-	exec_thread(tdata, scene, renderwith_threads);
-	exec_thread(tdata, scene, scale_adjacent);
+	exec_thread(tdata, renderwith_threads);
+	exec_thread(tdata, scale_adjacent);
 	mlx_put_image_to_window(scene->disp->mlx, scene->disp->win,
 		scene->disp->display_img, 0, 0);
 	if (scene->settings.light_mode == true)

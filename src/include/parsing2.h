@@ -9,7 +9,7 @@ double		ft_atof(char *p, bool *status);
 char		**ft_split_whitespace(char *line);
 bool 		print_color_error(t_color_err *err, const char *line, int line_num,
 					char *element);
-bool 		print_orient_error(t_orient_err *err, const char *line, int line_num);
+bool 		print_orient_error(t_orient_err *err, const char *line, int line_num, char *element);
 void 		parse_orientation(t_vector *orientation, const char *str,
 					t_orient_err *err);
 void 		check_color_range(t_color *color, t_color_err *err);
