@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2024/12/26 19:40:08 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/12/26 19:46:49 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,10 +107,10 @@ SRC_DIR = src/renderer/init_display.c \
 		src/collision/fill_vtx1.c \
 		src/collision/intersection_compute.c \
 		src/collision/check_collision.c \
-		src/collision/cylindricalplane_collision.c \
-		src/collision/closest_point_on_box.c
+		src/collision/cylinderplane_collision.c \
+		src/collision/closest_point_on_box.c \
 		src/collision/sphere_box_collision.c \
-		src/collision/cy_p_collision.c \
+		src/collision/cy_p_collision_res.c \
 		src/collision/fill_vtx2.c \
 		src/collision/glk_support.c \
 		src/collision/gjk.c \
