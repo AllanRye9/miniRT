@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:28:47 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 21:32:23 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 13:22:13 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,15 +92,14 @@ typedef struct s_scene
 	t_error_flags	error_flag;
 }	t_scene;
 
-
-
-void 			cylindrical_map(double *x, double *y, t_vector *comp);
+void			cylindrical_map(double *x, double *y, t_vector *comp);
 void			cubicle_mapping(double *x, double *y, t_vector *p);
-void 			mapping_right(double *x, double *y, t_vector *p);
-void 			mapping_left(double *x, double *y, t_vector *p);
-void 			mapping_up(double *x, double *y, t_vector *p);
-void 			mapping_down(double *x, double *y, t_vector *p);
-void 			mapping_front(double *x, double *y, t_vector *p);
+void			mapping_right(double *x, double *y, t_vector *p);
+void			mapping_left(double *x, double *y, t_vector *p);
+void			mapping_up(double *x, double *y, t_vector *p);
+void			mapping_down(double *x, double *y, t_vector *p);
+void			mapping_front(double *x, double *y, t_vector *p);
 bool			is_toggle_key(int key, t_scene *scene);
 void			render_marker(t_scene *scene, int x, int y, int color);
+
 #endif

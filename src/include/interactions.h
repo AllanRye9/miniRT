@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:39:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 11:56:56 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 12:18:42 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 typedef struct s_scene	t_scene;
 typedef struct s_ray	t_ray;
 
-typedef struct s_keys
+typedef struct s_keys	t_keys;
+struct s_keys
 {
 	bool	w;
 	bool	a;
@@ -40,7 +41,7 @@ typedef struct s_keys
 	bool	y;
 	bool	z;
 	bool	o;
-}	t_keys;
+};
 
 # define CAM_SPEED 0.5
 # define ESC 53

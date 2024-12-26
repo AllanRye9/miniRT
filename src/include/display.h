@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:10:14 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/29 12:07:14 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 12:18:48 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include "miniRT.h"
 
-typedef struct s_display
+typedef struct s_display	t_display;
+struct s_display
 {
 	void		*mlx;
 	void		*win;
@@ -28,6 +29,6 @@ typedef struct s_display
 	int			bpp;
 	int			line_len;
 	int			endian;
-}		t_display;
+};
 
 #endif

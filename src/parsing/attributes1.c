@@ -65,7 +65,7 @@ void	parse_coordinates(t_vector *position, const char *str, bool *status)
 }
 
 //1- Miss matched struct data 
-void	check_orientation_vector(t_vector *orientation, t_orient_error *err)
+void	check_orientation_vector(t_vector *orientation, t_orient_err *err)
 {
 	if (err->other == true)
 		return ;

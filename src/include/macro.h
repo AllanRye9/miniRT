@@ -1,4 +1,16 @@
-# ifndef MACRO_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   macro.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/26 13:08:28 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/12/26 13:08:31 by sbartoul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef MACRO_H
 # define MACRO_H
 
 # include <stddef.h>
@@ -13,10 +25,6 @@
 # define GREEN "\033[32m"
 # define LIGHT_MAX 20
 # define SHAPE_MAX 100
-
-#ifndef M_PI 
- #define M_PI        3.14159265358979323846264338327950288
-#endif
 
 # define GENERIC_ERROR "\033[33mError with parsing %s on \
 line #%d\n\n\033[31m->\t%s\n\n"
@@ -130,4 +138,4 @@ are BLUE, RED, PURPLE, GREEN, YELLOW, PINK, BLACK, GRAY\n\033[0m"
 # define INVALID_PROPERTY_RANGE "\033[33mError with parsing this property \
 \n\033[31m->\t%s : %s\n\033[33m%s has to be between %.2f and %.2f\n\033[0m"
 
-# endif
+#endif

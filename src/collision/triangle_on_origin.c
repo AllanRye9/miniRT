@@ -6,15 +6,14 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 23:02:17 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 16:33:39 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 13:05:41 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	check_triangle_orientation(t_simplex *simplex, t_vector *dir,
-	t_triangleData *tdata)
+	t_triangledata *tdata)
 {
 	cross_product(&tdata->pbc_pc, &tdata->pbc, &tdata->pc);
 	if (dot_product(&tdata->pbc_pc, &tdata->po) > 0)
@@ -35,7 +34,7 @@ bool	check_triangle_orientation(t_simplex *simplex, t_vector *dir,
 }
 
 bool	handle_line_interaction(t_simplex *simplex, t_vector *dir,
-	t_triangleData *data)
+	t_triangledata *data)
 {
 	t_vector	temp;
 
@@ -64,7 +63,7 @@ bool	handle_line_interaction(t_simplex *simplex, t_vector *dir,
 
 bool	triangle_on_origin(t_simplex *simplex, t_vector *dir)
 {
-	t_triangleData	tdata;
+	t_triangledata	tdata;
 
 	sub_vector(&tdata.pb, &simplex->arr[1], &simplex->arr[0]);
 	sub_vector(&tdata.pc, &simplex->arr[2], &simplex->arr[0]);

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 16:45:43 by oallan            #+#    #+#             */
-/*   Updated: 2024/11/20 18:02:54 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 12:14:11 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
 # endif
-
-typedef struct s_minishell	t_minishell;
 
 typedef struct s_list
 {
