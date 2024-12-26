@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 13:04:32 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 19:23:45 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,4 +156,15 @@ bool		check_spotlight(t_scene *scene, int light_idx, t_ray *ray,
 				double *angle);
 bool		gjk(t_shape *s1, t_shape *s2);
 bool		sphere_plane_collision(t_shape *sphere, const t_shape *plane);
+bool		cylinder_plane_collision(t_shape *cylinder, t_shape *plane);
+void		sphere_plane_collision_resolution(t_shape *sphere, t_shape *plane);
+bool		sphere_sphere_collision(const t_shape *sphere1,
+				const t_shape *sphere2);
+bool		box_box_collision(t_shape *box1, t_shape *box2, bool resolve);
+bool		cone_cone_collision(t_shape *co1, t_shape *co2);
+bool		cylinder_cylinder_collision(t_shape *cyl1, t_shape *cyl2);
+t_vector	closest_point_on_box(const t_vector *point, const t_shape *box);
+bool		sphere_box_collision(t_shape *box, t_shape *sphere,
+				bool box_sphere, bool resolve);
+
 #endif

@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:22:38 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/04 12:17:09 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 18:03:45 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	compute_ray_plane_intersection(t_colmath *col_math,
 	t_cy_collision_data *cy_data, t_shape *plane)
@@ -52,7 +51,7 @@ void	resolve_non_parallel_case(t_colmath *col_math,
 	add_vector(&cylinder->origin, &cylinder->origin, &col_math->resolution);
 }
 
-void	resolve_parallel_case(t_colmath *col_math, t_cy_collision_data *cy_data,
+void	resolve_parallel_case(t_colmath *col_math,
 	t_shape *cylinder, t_shape *plane)
 {
 	sub_vec(&col_math->center_to_point, &plane->origin, &cylinder->origin);
@@ -72,5 +71,5 @@ void	handle_secondary_plane_case(t_cy_collision_data *cy_data,
 	if (compute_ray_plane_intersection(&col_math, cy_data, plane))
 		resolve_non_parallel_case(&col_math, cy_data, cylinder, plane);
 	else
-		resolve_parallel_case(&col_math, cy_data, cylinder, plane);
+		resolve_parallel_case(&col_math, cylinder, plane);
 }

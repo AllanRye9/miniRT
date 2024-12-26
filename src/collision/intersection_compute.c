@@ -6,11 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:23:08 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 10:24:18 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 18:07:47 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
 void	ray_position(t_vector *pos, const t_ray *ray, double time)
 {

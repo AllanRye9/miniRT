@@ -6,12 +6,26 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 17:28:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/03 22:55:17 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 19:29:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
+void	sphere_sphere_collision_resolution(t_shape *sphere1, t_shape *sphere2)
+{
+	t_vector	dir;
+	double		dist;
+
+	sub_vector(&dir, &sphere1->origin, &sphere2->origin);
+	dist = vector_magnitude(&dir);
+	if (dist < 0.001)
+		return ;
+	normalize_vector(&dir);
+	scale_vector(&dir, &dir, dist - (sphere1->props.radius
+			+ sphere2->props.radius) - 0.001);
+	add_vector(&sphere2->origin, &sphere2->origin, &dir);
+}
 
 static void	resolve_sphere_sphere(t_shape *shape1, t_shape *shape2,
 	t_shape *transformed_shape)
@@ -42,7 +56,7 @@ static bool	handle_complex_collision(t_shape *shape1, t_shape *shape2,
 	else if (shape1->type == CUBE && shape1->type == SPHERE)
 		collided = sphere_box_collision(shape2, shape1, true, resolve);
 	else if (shape1->type == CYLINDER && shape2->type == CYLINDER)
-		collided = cylinder_cylinder_collision(shape1, shape2, false);
+		collided = cylinder_cylinder_collision(shape1, shape2);
 	else if (shape1->type == CUBE && shape2->type == CUBE)
 	{
 		collided = box_box_collision(shape1, shape2, false);
@@ -50,7 +64,7 @@ static bool	handle_complex_collision(t_shape *shape1, t_shape *shape2,
 			box_box_collision_resolution(shape1, shape2, transformed_shape);
 	}
 	else if (shape1->type == CONE && shape2->type == CONE)
-		collided = cone_cone_collision(shape1, shape2, false);
+		collided = cone_cone_collision(shape1, shape2);
 	return (collided);
 }
 

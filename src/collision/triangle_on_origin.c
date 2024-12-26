@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 23:02:17 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 13:05:41 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 15:46:28 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,6 @@ bool	triangle_on_origin(t_simplex *simplex, t_vector *dir)
 	negate_vector(&tdata.po, &simplex->arr[0]);
 	cross_product(&tdata.pbc, &tdata.pb, &tdata.pc);
 	if (check_triangle_orientation(simplex, dir, &tdata))
-		return (line_contains_origin(simplex, dir));
+		return (line_on_origin(simplex, dir));
 	return (handle_line_interaction(simplex, dir, &tdata));
 }

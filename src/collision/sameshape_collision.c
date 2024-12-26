@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:25:45 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/03 23:27:34 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 18:51:46 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,9 @@ bool	cone_cone_collision(t_shape *co1, t_shape *co2)
 	return (false);
 }
 
-bool	box_box_collision(t_shape *box1, t_shape *box2, bool resolve)
+bool	cylinder_cylinder_collision(t_shape *cyl1, t_shape *cyl2)
 {
-	t_vector	resolution;
-
-	if (resolve == true)
-	{
-		if (test_box_axes(box1, box2, &resolution) == true)
-		{
-			add_vector(&box2->origin, &box2->origin, &resolution);
-			return (true);
-		}
-	}
+	if (gjk(cyl1, cyl2) == true)
+		return (true);
 	return (false);
 }

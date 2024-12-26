@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:15:09 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 13:30:46 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 18:08:28 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,6 @@ void			super_sampling(t_thread_data *tdata, t_intersection	*arr,
 					int i, double x);
 void			cylindrical_map(double *u, double *v, t_vector *point);
 void			spherical_map(double *u, double *v, t_vector *point);
+void			ray_position(t_vector *pos, const t_ray *ray, double time);
+
 #endif

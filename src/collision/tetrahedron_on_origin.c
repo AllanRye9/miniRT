@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 12:10:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 18:07:05 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 15:48:53 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ bool	handle_sim_orientation(t_tetrahedron_data *data,
 		temp = simplex->arr[1];
 		simplex->arr[1] = simplex->arr[3];
 		simplex->arr[2] = temp;
-		return (traingle_on_origin(simplex, dir));
+		return (triangle_on_origin(simplex, dir));
 	}
 	return (true);
 }

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:59:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 11:40:59 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 15:23:03 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define CAMERA_H
 
 # include "miniRT.h"
+# include "parsing.h"
 
-typedef struct s_camera	t_camera;
+typedef struct s_camera			t_camera;
 struct s_camera
 {
 	t_vector	pos;
@@ -30,7 +31,7 @@ struct s_camera
 	double		theta;
 };
 
-typedef struct s_cam_errors	t_cam_errors;
+typedef struct s_cam_errors		t_cam_errors;
 struct s_cam_errors
 {
 	bool			other;

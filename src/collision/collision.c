@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:49:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 18:52:24 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 18:45:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,20 @@ bool	collided(t_scene *scene, bool r, int depth,
 	if (collided(scene, false, 0, NULL) == true && depth > 0)
 		collided(scene, true, depth - 1, NULL);
 	return (did_collide);
+}
+
+void	sphere_plane_collision_resolution(t_shape *sphere, t_shape *plane)
+{
+	t_vector	resolution;
+	t_vector	origin_to_plane;
+	double		distance;
+
+	sub_vec(&origin_to_plane, &sphere->origin, &plane->origin);
+	distance = sphere->props.radius - fabs(dot_product(
+				&origin_to_plane, &plane->orientation));
+	resolution = plane->orientation;
+	scale_vec(&resolution, &resolution, distance + 0.001);
+	add_vec(&sphere->origin, &sphere->origin, &resolution);
 }
 
 //Added this 
