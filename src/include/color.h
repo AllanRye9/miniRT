@@ -14,7 +14,6 @@
 # define COLOR_H
 
 # include "miniRT.h"
-# include "shape.h"
 
 typedef struct s_color	t_color;
 struct s_color
