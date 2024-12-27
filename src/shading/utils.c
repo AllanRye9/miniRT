@@ -42,9 +42,3 @@ t_color	coloring(int hex_color)
 	color.b = ((unsigned char *)&hex_color)[0] / 255.0f;
 	return (color);
 }
-
-unsigned int	create_mlx_color(t_color *color)
-{
-	return (clamp_color(color->a) << 24 | clamp_color(color->r) << 16
-		| clamp_color(color->g) << 8 | clamp_color(color->b));
-}

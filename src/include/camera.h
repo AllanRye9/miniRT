@@ -6,15 +6,14 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:59:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 15:23:03 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 13:54:18 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAMERA_H
 # define CAMERA_H
 
-# include "miniRT.h"
-# include "parsing.h"
+# include "mathRT.h"
 
 typedef struct s_camera			t_camera;
 struct s_camera
@@ -31,16 +30,4 @@ struct s_camera
 	double		theta;
 };
 
-typedef struct s_cam_errors		t_cam_errors;
-struct s_cam_errors
-{
-	bool			other;
-	bool			coords;
-	bool			fov_other;
-	bool			fov_range;
-	bool			up_vector;
-	t_orient_err	dir;
-};
-
-void			initialize_matrix(t_mat4 *mat, double x, double y, double z);
 #endif

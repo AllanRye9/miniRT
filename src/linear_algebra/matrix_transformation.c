@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:42:31 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/27 21:23:03 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 22:38:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	matrix_rotate_xaxis(t_mat4 *mat, double r)
 	(*mat)[3][3] = 1;
 }
 
-void	matrix_rotate_yaxis(t_mat2 *mat, double r)
+void	matrix_rotate_yaxis(t_mat4 *mat, double r)
 {
 	ft_bzero(mat, sizeof(t_mat4));
 	(*mat)[0][0] = cos(r);

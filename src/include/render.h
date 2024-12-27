@@ -6,15 +6,20 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 13:21:24 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 14:24:49 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RENDER_H
 # define RENDER_H
 
-# include "miniRT.h"
 # include "intersection.h"
+# include "lights.h"
+# include "scene.h"
+# include "mathRT.h"
+# include "display.h"
+# include "scene.h"
+# include "camera.h"
 
 # define NUM_THREADS 16
 # define REFLECTION_DEPTH 1
@@ -35,9 +40,7 @@ typedef struct s_thread_data
 
 void		calc_transform(t_scene *scene);
 void		calc_cam_transform(t_scene *scene);
-void		init_settings(t_settings *settings);
 void		calculate_orientation(t_mat4 *rot_transform, t_shape *shape);
-void		init_display(t_display *display, t_settings *settings);
 void		camera_init(t_camera *camera, t_scene *scene);
 void		project_rays_on_screen(t_scene *scene);
 void		render_scene(t_scene *scene);

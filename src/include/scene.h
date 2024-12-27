@@ -6,17 +6,22 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:28:47 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 13:22:13 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 14:24:58 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCENE_H
 # define SCENE_H
 
-# include "miniRT.h"
 # include "camera.h"
 # include "interactions.h"
 # include "parsing.h"
+# include "mathRT.h"
+# include "lights.h"
+# include <semaphore.h>
+# include "display.h"
+# include "intersection.h"
+# include <stdbool.h>
 
 typedef struct s_ambient
 {
@@ -101,5 +106,7 @@ void			mapping_down(double *x, double *y, t_vector *p);
 void			mapping_front(double *x, double *y, t_vector *p);
 bool			is_toggle_key(int key, t_scene *scene);
 void			render_marker(t_scene *scene, int x, int y, int color);
+void			init_settings(t_settings *settings);
+void			init_display(t_display *display, t_settings *settings);
 
 #endif

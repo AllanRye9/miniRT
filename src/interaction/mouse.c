@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 14:53:43 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/10 17:26:55 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 22:40:15 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 int	mouse_rotate(t_scene *scene)
 {
@@ -28,7 +27,7 @@ int	mouse_rotate(t_scene *scene)
 		rotate_along_mouse_axis(scene);
 		if (scene->settings.collisions == true)
 			collided(scene, true, 10, &scene->shapes[scene->shape_idx]);
-		calc_transforms(scene);
+		calc_transform(scene);
 		render_scene(scene);
 	}
 	return (0);

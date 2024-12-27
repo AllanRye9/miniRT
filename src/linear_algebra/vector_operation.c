@@ -6,11 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 22:21:52 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/27 23:04:58 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 22:26:43 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
 void	normalize_vector(t_vector *vect)
 {
@@ -36,7 +36,7 @@ void	cross_product(t_vector *result, const t_vector *v1, const t_vector *v2)
 	result->w = 0;
 }
 
-double	vec_distance(const t_vector *v1, const t_vector *v2)
+double	vector_distance(const t_vector *v1, const t_vector *v2)
 {
 	t_vector	sub;
 

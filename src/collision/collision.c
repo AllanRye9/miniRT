@@ -6,11 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:49:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 18:45:57 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 22:23:24 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
 
 bool	collided(t_scene *scene, bool r, int depth,
@@ -47,21 +47,24 @@ void	sphere_plane_collision_resolution(t_shape *sphere, t_shape *plane)
 	t_vector	origin_to_plane;
 	double		distance;
 
-	sub_vec(&origin_to_plane, &sphere->origin, &plane->origin);
+	sub_vector(&origin_to_plane, &sphere->origin, &plane->origin);
 	distance = sphere->props.radius - fabs(dot_product(
 				&origin_to_plane, &plane->orientation));
 	resolution = plane->orientation;
-	scale_vec(&resolution, &resolution, distance + 0.001);
-	add_vec(&sphere->origin, &sphere->origin, &resolution);
+	scale_vector(&resolution, &resolution, distance + 0.001);
+	add_vector(&sphere->origin, &sphere->origin, &resolution);
 }
 
 //Added this 
 bool	sphere_plane_collision(t_shape *sphere, const t_shape *plane)
 {
 	t_vector	normal;
+	double		distance;
+
 	normal = plane->orientation;
 	normal.w = 0;
-	double distance = (dot_product(&normal, &sphere->origin) - plane->props.distance_from_origin);
+	distance = (dot_product(&normal, &sphere->origin)
+			- plane->props.distance_from_origin);
 	if (fabs(distance) < sphere->props.radius)
 		return (true);
 	return (false);

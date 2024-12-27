@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 19:06:01 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 19:30:20 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 22:28:34 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ bool	sphere_box_collision(t_shape *box, t_shape *sphere, bool box_sphere,
 		{
 			sub_vector(&resolution, &sphere->origin, &point_on_box);
 			if (vector_magnitude(&resolution) < 0.0001)
-				return ;
+				return (true);
 			normalize_vector(&resolution);
 			distance = vector_distance(&point_on_box, &sphere->origin);
 			scale_vector(&resolution, &resolution, sphere->props.radius

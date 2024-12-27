@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:39:19 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 12:14:00 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 13:34:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include "mathRT.h"
 # include "miniRT.h"
-
-typedef struct s_vector	t_vector;
 
 typedef enum s_light_type
 {

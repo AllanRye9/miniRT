@@ -1,5 +1,16 @@
-#include"../include/miniRT.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   transformations.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/27 14:43:05 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/12/27 14:43:08 by sbartoul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "../include/miniRT.h"
 
 bool	intersect(t_shape *shape, const t_ray *ray, t_intersections *xs)
 {

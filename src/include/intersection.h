@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:15:09 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 18:08:28 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 14:52:29 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,14 @@ void			super_sampling(t_thread_data *tdata, t_intersection	*arr,
 void			cylindrical_map(double *u, double *v, t_vector *point);
 void			spherical_map(double *u, double *v, t_vector *point);
 void			ray_position(t_vector *pos, const t_ray *ray, double time);
+bool			intersect_cylinder(const t_ray *ray, t_shape *shape,
+					t_intersections *xs);
+bool			intersect_plane_fast(const t_ray *ray, t_shape *plane,
+					t_intersections *xs);
+bool			intersect_cube(t_shape *shape, t_ray *ray, t_intersections *xs);
+bool			intersect_sphere_fast(const t_ray *ray, t_intersections *xs,
+					t_shape *sphere);
+bool			intersect_cone(const t_ray *ray, t_shape *shape,
+					t_intersections *xs);
 
 #endif

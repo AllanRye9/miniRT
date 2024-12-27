@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2024/12/26 19:46:49 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/12/27 14:58:30 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,6 @@ SRC_DIR = src/renderer/init_display.c \
 		src/renderer/render_scene.c \
 		src/renderer/camera.c \
 		src/renderer/threads.c \
-		src/intersections/normal.c \
-		src/intersections/texture.c \
-		src/intersections/normal_map.c \
 		src/parsing/utils2.c \
 		src/parsing/texture2.c \
 		src/parsing/shape2.c \
@@ -104,6 +101,12 @@ SRC_DIR = src/renderer/init_display.c \
 		src/interaction/lights.c \
 		src/interaction/shape.c \
 		src/interaction/loop_hook.c \
+		src/intersections/cylinder_intersection.c \
+		src/intersections/intersections.c \
+		src/intersections/normal_map.c \
+		src/intersections/normal.c \
+		src/intersections/texture.c \
+		src/intersections/cone_intersections.c \
 		src/collision/fill_vtx1.c \
 		src/collision/intersection_compute.c \
 		src/collision/check_collision.c \

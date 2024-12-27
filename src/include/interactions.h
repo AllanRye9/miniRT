@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:39:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 12:18:42 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 13:35:37 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,6 @@ void		toggle_edit_mode(int key, t_scene *scene);
 void		handle_color_change(int key, t_scene *scene, t_color *color);
 void		rest_press(int key, t_scene *scene);
 void		light_controls(t_scene *scene);
-t_vector	*sphere_mod(t_vector *vec, double phi, double theta, double r);
 void		move_object_v(t_scene *scene, t_shape *shape);
 void		move_object_h(t_scene *scene, t_shape *shape);
 void		move_object_fwd(t_scene *scene, t_shape *shape);
@@ -116,5 +115,6 @@ void		look_at(t_scene *scene, t_shape *shape);
 void		camera_controls(t_scene *scene);
 void		rotate_object(t_scene *scene);
 void		scale_cube_sides(t_scene *scene, t_shape *shape);
+void		ray_from_cam(t_ray *ray, const t_camera *cam, double x, double y);
 
 #endif

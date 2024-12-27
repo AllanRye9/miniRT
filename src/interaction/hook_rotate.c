@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   loop_hook_rotate.c                                 :+:      :+:    :+:   */
+/*   hook_rotate.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 17:17:53 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/10 17:24:52 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/26 22:33:03 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	rotate_x(t_scene *scene, t_mat4 *rot_mat, double deg)
 {
