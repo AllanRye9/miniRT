@@ -69,3 +69,15 @@ double ft_atol(char *str, bool *status)
     }
     return (atol_helper(str, i, status));
 }
+
+void free_texture(t_shape *shape, t_color **color)
+{
+    int i;
+
+    if (color == NULL)
+        return (0);
+    i = -1;
+    while(++i < shape->text_height)
+        free(color[i]);
+    free(color);
+}

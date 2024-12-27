@@ -28,10 +28,10 @@ INCLUDE_DIR := "../include"
 all: $(NAME) bonus
 
 $(NAME): $(OBJS)
-	@ar -rcs $@ $^
+	@libtool -static -o $@ $^
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	@ar -rcs $(NAME) $^
+	@libtool -static -o $(NAME) $^
 
 clean:
 	@rm -f $(OBJS) $(OBJS_BONUS)

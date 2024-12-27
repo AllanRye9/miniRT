@@ -32,7 +32,7 @@ struct s_glear
 	t_color		specular;
 	t_color		ambient;
 };
-
+void			free_texture(t_shape *shape, t_color **color);
 t_color			coloring(int hex_color);
 void			blend_colors(t_color *res, const t_color *c1,
 					const t_color *c2);

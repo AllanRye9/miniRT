@@ -19,6 +19,7 @@ void	fill_skippedpixelh(double x, double y, t_thread_data *tdata, int th)
 	int				j;
 	t_intersection	arr;
 
+	j = 0;
 	i = get_color(tdata, x - 1, y);
 	i = get_color(tdata, x + 2, y);
 	if (color_diff(i, j) > th)

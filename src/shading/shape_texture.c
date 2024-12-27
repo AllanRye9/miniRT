@@ -45,7 +45,7 @@ t_color	get_texture_color(t_intersection *itx)
 	else if (itx->shape->type == SPHERE)
 		spherical_map(&u, &v, &shape_point);
 	else
-		cubical_map(&u, &v, &shape_point);
+		cubicle_map(&u, &v, &shape_point);
 	if (u < 0 || v < 0)
 		return (itx->shape->props.color);
 	return (texture_mapping(itx, u, v));

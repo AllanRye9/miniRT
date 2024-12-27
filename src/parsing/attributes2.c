@@ -22,7 +22,7 @@ void	parse_orientation(t_vector *orientation, const char *str,
 	{
 		res[i] = ft_atof(xyz[i], &status);
 		if (status == false || !is_num(xyz[i], true))
-			err->others = true;
+			err->other = true;
 	}
 	free_2d_array(xyz);
 	orientation->x = res[0];
