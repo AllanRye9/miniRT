@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:41:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 19:10:29 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:15:21 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	free_textures(t_scene *scene)
 	i = -1;
 	while (++i < scene->count.shapes && scene->shapes != NULL)
 	{
-		free_textures(&scene->shapes[i], scene->shapes[i].diffuse_tex);
-		free_textures(&scene->shapes[i], scene->shapes[i].normal_tex);
+		free_texture(&scene->shapes[i], scene->shapes[i].diffuse_tex);
+		free_texture(&scene->shapes[i], scene->shapes[i].normal_tex);
 	}
 }
