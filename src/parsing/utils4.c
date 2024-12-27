@@ -35,6 +35,47 @@ void free_and_update2(t_vector *position, double *res, char	**coords)
     free_2d_array(coords);
 }
 
+static char	*dec_num(int is_negative, int len, int decimal, char *str)
+{
+	int	i;
+
+	i = 0;
+	if (is_negative)
+		str[0] = '-';
+	if (decimal == 0)
+		len = 1;
+	i = len - 1 + is_negative;
+	while (i >= is_negative)
+	{
+		str[i] = (decimal % 10) + '0';
+		decimal /= 10;
+		i--;
+	}
+	return (str);
+}
+
+static char	*point_num(double num, int start, int len, char *str)
+{
+	int	decimal;
+	int	i;
+
+	decimal = 0;
+	len = ft_strlen(str);
+	str[len] = '.';
+	num = num - (double)decimal;
+	num = num - (double)start;
+	num = fabs(num) * 100;
+	decimal = (int)num;
+	i = 1;
+	while (i >= 0)
+	{
+		str[i + len + 1] = (decimal % 10) + '0';
+		decimal /= 10;
+		i--;
+	}
+	return (str);
+}
+
 char	*ftoa(double num)
 {
 	char	*str;

@@ -81,7 +81,7 @@ t_scene *parse_scene(int fd)
 		return (NULL);
 	line = get_next_line(fd);
 	if (!line)
-		return (free(line), ft_putstr_fd("FD - encountered and Error", 2), -1);
+		return (free(line), ft_putstr_fd("FD - encountered and Error", 2), NULL);
 	while (line != NULL)
 	{
 		if (skip_line(&line, fd, &line_count) == true)

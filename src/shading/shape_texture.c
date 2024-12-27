@@ -26,7 +26,7 @@ t_color texture_mapping(t_intersection *p, double h, double w)
     }
     if(h >= p->shape->text_height || w >= p->shape->tex_width)
         return (p->shape->props.color);
-    return (p->shape->diffuse_texs[(int)h][(int)w]);
+    return (p->shape->diffuse_tex[(int)h][(int)w]);
 }
 
 t_color	get_texture_color(t_intersection *itx)
@@ -45,7 +45,7 @@ t_color	get_texture_color(t_intersection *itx)
 	else if (itx->shape->type == SPHERE)
 		spherical_map(&u, &v, &shape_point);
 	else
-		cubicle_map(&u, &v, &shape_point);
+		cubicle_mapping(&u, &v, &shape_point);
 	if (u < 0 || v < 0)
 		return (itx->shape->props.color);
 	return (texture_mapping(itx, u, v));

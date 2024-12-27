@@ -14,13 +14,13 @@ static int	atof_split(char c)
 	return (i);
 }
 
-static void handle_error(char *p, bool *status)
+static void handle_error(const char *p, bool *status)
 {
     if (*p != '\0' && !ft_isdigit(*p) && !is_whitespace(*p))
         *status = false;
 }
 
-double ft_atof(char *p, bool *status)
+double ft_atof(const char *p, bool *status)
 {
     double  j;
     double  y;
@@ -75,7 +75,7 @@ void free_texture(t_shape *shape, t_color **color)
     int i;
 
     if (color == NULL)
-        return (0);
+        return ;
     i = -1;
     while(++i < shape->text_height)
         free(color[i]);

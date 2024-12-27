@@ -37,7 +37,7 @@ void	parse_camera(t_scene *scene, char **split)
 	}
 	parse_coordinates(&scene->cam.pos, split[1], &status);
 	if (mem_error(&scene->error_flag) == false && status == false)
-		scene->error_flag.cam.coords = true;
+		scene->error_flag.cam.coord = true;
 	parse_orientation(&scene->cam.dir, split[2], &scene->error_flag.cam.dir);
 	if (mem_error(&scene->error_flag))
 		return ;

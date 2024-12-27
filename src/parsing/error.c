@@ -6,8 +6,6 @@ bool	print_shape_error(t_shape *shape, t_shape_errors *error, const char *line,
 {
 	if (shape->type == SPHERE)
 		return (print_sphere_error(error, line, line_num));
-    if (shape->type == TRIANGLE)
-		return (print_triangle_error(error, line, line_num));
 	if (shape->type == CUBE)
 		return (print_cube_error(error, line, line_num));
 	if (shape->type == PLANE)

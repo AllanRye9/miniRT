@@ -22,12 +22,12 @@ bool	print_ambient_light_error(t_ambient_err *err, const char *line,
 	return (ft_memchr(err, 1, sizeof(t_ambient_err)));
 }
 
-bool	print_cam_error(t_cam_errors *err, const char *line, int line_num)
+bool	print_cam_error(t_cam_err *err, const char *line, int line_num)
 {
-	if (err->coords)
+	if (err->coord)
 		printf(GENERIC_ERROR, "camera origin", line_num, line);
 	else if (print_orient_error(&err->dir, line, line_num,
-			"camera orientation") && err->dir.others)
+			"camera orientation") && err->dir.other)
 		printf(CAMERA_SYNTAX);
 	else if (err->up_vector)
 	{
@@ -42,9 +42,9 @@ bool	print_cam_error(t_cam_errors *err, const char *line, int line_num)
 	}
 	else if (err->other)
 		printf(GENERIC_ERROR, "camera", line_num, line);
-	if (err->coords || err->fov_other || err->other)
+	if (err->coord || err->fov_other || err->other)
 		printf(CAMERA_SYNTAX);
-	return (ft_memchr(err, 1, sizeof(t_cam_errors)));
+	return (ft_memchr(err, 1, sizeof(t_cam_err)));
 }
 
 // returns true if printed
@@ -64,7 +64,7 @@ bool	print_light_error(t_light_errors *err, const char *line, int line_num)
 			"light color") && err->other)
 		printf(LIGHT_SYNTAX);
 	else if (print_orient_error(&err->orient, line, line_num,
-			"spotlight orientation") && err->orient.others == true)
+			"spotlight orientation") && err->orient.other == true)
 		printf(SPOTLIGHT_SYNTAX);
 	else if (err->angle_other)
 		printf(GENERIC_ERROR""SPOTLIGHT_SYNTAX, "spotlight beam width",

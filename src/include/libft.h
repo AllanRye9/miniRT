@@ -46,6 +46,7 @@ int			ft_isalpha(int c);
 int			ft_isalnum(int c);
 int			ft_lstsize(t_list *lst);
 int			ft_atoi_base(const char *str, int base);
+int			ft_isspace(char c);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);

@@ -2,7 +2,7 @@
 
 
 void	parse_orientation(t_vector *orientation, const char *str,
-			t_orient_error *err)
+			t_orient_err *err)
 {
 	double	res[3];
 	char	**xyz;
@@ -14,7 +14,7 @@ void	parse_orientation(t_vector *orientation, const char *str,
 	if (xyz == NULL || count_commas(str) != 2 || split_count(xyz) != 3)
 	{
 		free_2d_array(xyz);
-		err->others = true;
+		err->other = true;
 		return ;
 	}
 	i = -1;
