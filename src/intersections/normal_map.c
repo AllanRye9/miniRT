@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:30:58 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 10:34:25 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 18:08:06 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 t_vector	normal_from_texture(const t_shape *shape, const t_vector *itx_point)
 {
@@ -32,7 +31,7 @@ t_vector	normal_from_texture(const t_shape *shape, const t_vector *itx_point)
 		cylindrical_map(&u, &v, &shape_point);
 	}
 	else
-		cubicle_map(&u, &v, &shape_point);
+		cubicle_mapping(&u, &v, &shape_point);
 	if (u < 0 || v < 0)
 		return (normal);
 	return (get_texture_coords(shape, u, v, &normal));

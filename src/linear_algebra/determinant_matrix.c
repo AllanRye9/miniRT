@@ -6,11 +6,21 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 11:38:43 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 14:33:19 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 18:52:38 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/mathRT.h"
+
+static double	cofactor3(const t_mat3 *mat3, int row, int col)
+{
+	t_mat2	mat2;
+
+	submat3(&mat2, mat3, row, col);
+	if ((row + col) % 2 == 1)
+		return (det2(&mat2));
+	return (-det2(&mat2));
+}
 
 void	submat4(t_mat3 *res, const t_mat4 *mat, int row, int col)
 {
@@ -36,6 +46,13 @@ void	submat4(t_mat3 *res, const t_mat4 *mat, int row, int col)
 		}
 		i_sub++;
 	}
+}
+
+double	det3(const t_mat3 *mat3)
+{
+	return (cofactor3(mat3, 0, 0) * (*mat3)[0][0]
+			+ cofactor3(mat3, 0, 1) * (*mat3)[0][1]
+			+ cofactor3(mat3, 0, 2) * (*mat3)[0][2]);
 }
 
 double	cofactor4(const t_mat4 *mat4, int row, int col)

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:25:55 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/25 13:59:16 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:59:02 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,13 @@ t_vector	get_texture_coords(const t_shape *shape, double u, double v,
 	normal->z = 2 * normal_coords.b - 1;
 	normalize_vector(normal);
 	return (*normal);
+}
+
+void	ft_swapd(double *a, double *b)
+{
+	double	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

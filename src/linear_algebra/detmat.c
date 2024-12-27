@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_textures.c                                    :+:      :+:    :+:   */
+/*   detmat.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 09:41:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 18:47:06 by sbartoul         ###   ########.fr       */
+/*   Created: 2024/12/27 18:52:20 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/12/27 18:53:05 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/miniRT.h"
+#include "../include/mathRT.h"
 
-void	free_texture(t_shape *shape, t_color **texture)
+double	det2(const t_mat2 *mat)
 {
-	int	i;
-
-	if (texture == NULL)
-		return ;
-	i = 0;
-	while (i < shape->text_height)
-	{
-		free(texture[i]);
-		i++;
-	}
-	free(texture);
+	return ((*mat)[0][0] * (*mat)[1][1] - (*mat)[0][1] * (*mat)[1][0]);
 }
 
-void	free_textures(t_scene *scene)
+void	submat3(t_mat2 *res, const t_mat3 *mat, int row, int col)
 {
 	int	i;
+	int	j;
+	int	i_sub;
+	int	j_sub;
 
 	i = -1;
-	while (++i < scene->count.shapes && scene->shapes != NULL)
+	i_sub = 0;
+	while (++i < 3)
 	{
-		free_texture(&scene->shapes[i], scene->shapes[i].diffuse_tex);
-		free_texture(&scene->shapes[i], scene->shapes[i].normal_tex);
+		if (i == row)
+			continue ;
+		j_sub = 0;
+		j = 0;
+		while (j < 3)
+		{
+			if (j == col)
+				j++;
+			else
+				(*res)[i_sub][j_sub++] = (*mat)[i][j++];
+		}
+		i_sub++;
 	}
 }

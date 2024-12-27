@@ -6,14 +6,14 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:07:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 12:19:45 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:56:40 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLOR_H
 # define COLOR_H
 
-# include "miniRT.h"
+typedef struct s_shape	t_shape;
 
 typedef struct s_color	t_color;
 struct s_color
@@ -32,6 +32,7 @@ struct s_glear
 	t_color		specular;
 	t_color		ambient;
 };
+
 void			free_texture(t_shape *shape, t_color **color);
 t_color			coloring(int hex_color);
 void			blend_colors(t_color *res, const t_color *c1,
@@ -43,4 +44,5 @@ int				mix_color(int c1, int c2, double mix);
 int				color_difference(int c1, int c2);
 unsigned int	create_mlx_color(t_color *color);
 t_color			int_to_color(int hex_color);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:15:09 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 14:52:29 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:59:28 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ bool			intersect_sphere_fast(const t_ray *ray, t_intersections *xs,
 					t_shape *sphere);
 bool			intersect_cone(const t_ray *ray, t_shape *shape,
 					t_intersections *xs);
+void			ft_swapd(double *a, double *b);
 
 #endif

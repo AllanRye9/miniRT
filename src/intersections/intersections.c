@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:39:29 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 14:40:40 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 18:43:26 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ bool	intersect_cube(t_shape *shape, t_ray *ray, t_intersections *xs)
 	check_cube_axis(&tmin_vec.x, &tmax_vec.x, ray->origin.x, ray->dir.x);
 	check_cube_axis(&tmin_vec.y, &tmax_vec.y, ray->origin.y, ray->dir.y);
 	check_cube_axis(&tmin_vec.z, &tmax_vec.z, ray->origin.z, ray->dir.z);
-	tmin = max3(tmin_vec.x, tmin_vec.y, tmin_vec.z);
-	tmax = min3(tmax_vec.x, tmax_vec.y, tmax_vec.z);
+	tmin = max_with_three(tmin_vec.x, tmin_vec.y, tmin_vec.z);
+	tmax = min_with_three(tmax_vec.x, tmax_vec.y, tmax_vec.z);
 	if (tmin > tmax)
 		return (false);
 	xs->arr[xs->count].time = tmin;

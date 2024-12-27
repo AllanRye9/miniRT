@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 12:35:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 14:35:27 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 18:54:03 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,8 @@ void		rotate_object(t_scene *scene);
 void		initialize_matrix(t_mat4 *mat, double x, double y, double z);
 t_vector	*sphere_mod(t_vector *vec, double phi, double theta, double r);
 double		cofactor4(const t_mat4 *mat4, int row, int col);
+double		det4(const t_mat4 *matrix);
+double		det2(const t_mat2 *mat);
+void		submat3(t_mat2 *res, const t_mat3 *mat, int row, int col);
 
 #endif

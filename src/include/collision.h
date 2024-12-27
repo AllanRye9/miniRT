@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 19:23:45 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 18:56:00 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,5 +166,7 @@ bool		cylinder_cylinder_collision(t_shape *cyl1, t_shape *cyl2);
 t_vector	closest_point_on_box(const t_vector *point, const t_shape *box);
 bool		sphere_box_collision(t_shape *box, t_shape *sphere,
 				bool box_sphere, bool resolve);
+void		transform_ray(t_ray *transformed_ray, const t_ray *ray,
+				const t_shape *shape);
 
 #endif

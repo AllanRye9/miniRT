@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:30:27 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 22:36:49 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:53:18 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define SHAPE_H
 
 # include "color.h"
-# include "miniRT.h"
 # include "mathRT.h"
 
 typedef enum e_shape_type

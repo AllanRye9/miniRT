@@ -1,5 +1,16 @@
-#include"../include/miniRT.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   shape_texture.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/27 18:59:55 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/12/27 18:59:59 by sbartoul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "../include/miniRT.h"
 
 void	cylindrical_map(double *u, double *v, t_vector *point)
 {
@@ -10,23 +21,23 @@ void	cylindrical_map(double *u, double *v, t_vector *point)
 	*v = point->y - floor(point->y);
 }
 
-t_color texture_mapping(t_intersection *p, double h, double w)
+t_color	texture_mapping(t_intersection *p, double h, double w)
 {
-    if (p->shape->tex_tile != 0)
-    {
-        h = (int)floor(h * ((p->shape->text_height - 1) * (p->shape->tex_tile))) \
-        % (p->shape->text_height);
-        w = (int)floor(w * ((p->shape->tex_width - 1) * (p->shape->tex_tile))) \
-        % (p->shape->tex_width);
-    }
-    else
-    {
-        h = (int)floor(p->shape->text_height - 1);
-        w = (int)floor(p->shape->tex_width - 1);
-    }
-    if(h >= p->shape->text_height || w >= p->shape->tex_width)
-        return (p->shape->props.color);
-    return (p->shape->diffuse_texs[(int)h][(int)w]);
+	if (p->shape->tex_tile != 0)
+	{
+		h = (int)floor(h * ((p->shape->text_height - 1)
+					* (p->shape->tex_tile))) % (p->shape->text_height);
+		w = (int)floor(w * ((p->shape->tex_width - 1)
+					* (p->shape->tex_tile))) % (p->shape->tex_width);
+	}
+	else
+	{
+		h = (int)floor(p->shape->text_height - 1);
+		w = (int)floor(p->shape->tex_width - 1);
+	}
+	if (h >= p->shape->text_height || w >= p->shape->tex_width)
+		return (p->shape->props.color);
+	return (p->shape->diffuse_tex[(int)h][(int)w]);
 }
 
 t_color	get_texture_color(t_intersection *itx)
@@ -45,7 +56,7 @@ t_color	get_texture_color(t_intersection *itx)
 	else if (itx->shape->type == SPHERE)
 		spherical_map(&u, &v, &shape_point);
 	else
-		cubicle_map(&u, &v, &shape_point);
+		cubicle_mapping(&u, &v, &shape_point);
 	if (u < 0 || v < 0)
 		return (itx->shape->props.color);
 	return (texture_mapping(itx, u, v));
