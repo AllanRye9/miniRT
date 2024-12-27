@@ -13,6 +13,7 @@
 #ifndef SHAPE_H
 # define SHAPE_H
 
+# include "color.h"
 # include "miniRT.h"
 # include "mathRT.h"
 

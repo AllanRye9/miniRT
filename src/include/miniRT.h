@@ -23,8 +23,8 @@
 # include <semaphore.h>
 # include <signal.h>
 # include "libft.h"
-# include "color.h"
 # include "shape.h"
+# include "color.h"
 # include "lights.h"
 # include <stdio.h>
 # include "display.h"

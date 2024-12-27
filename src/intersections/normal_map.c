@@ -32,7 +32,7 @@ t_vector	normal_from_texture(const t_shape *shape, const t_vector *itx_point)
 		cylindrical_map(&u, &v, &shape_point);
 	}
 	else
-		cubical_map(&u, &v, &shape_point);
+		cubicle_map(&u, &v, &shape_point);
 	if (u < 0 || v < 0)
 		return (normal);
 	return (get_texture_coords(shape, u, v, &normal));
