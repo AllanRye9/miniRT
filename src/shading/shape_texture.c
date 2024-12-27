@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 18:59:55 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 18:59:59 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:10:00 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,21 @@ t_color	texture_mapping(t_intersection *p, double h, double w)
 	if (h >= p->shape->text_height || w >= p->shape->tex_width)
 		return (p->shape->props.color);
 	return (p->shape->diffuse_tex[(int)h][(int)w]);
+    if (p->shape->tex_tile != 0)
+    {
+        h = (int)floor(h * ((p->shape->text_height - 1) * (p->shape->tex_tile))) \
+        % (p->shape->text_height);
+        w = (int)floor(w * ((p->shape->tex_width - 1) * (p->shape->tex_tile))) \
+        % (p->shape->tex_width);
+    }
+    else
+    {
+        h = (int)floor(p->shape->text_height - 1);
+        w = (int)floor(p->shape->tex_width - 1);
+    }
+    if(h >= p->shape->text_height || w >= p->shape->tex_width)
+        return (p->shape->props.color);
+    return (p->shape->diffuse_tex[(int)h][(int)w]);
 }
 
 t_color	get_texture_color(t_intersection *itx)

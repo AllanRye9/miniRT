@@ -28,14 +28,6 @@ void	sub_vector(t_vector *result, const t_vector *v1, const t_vector *v2)
 	result->w = v1->w - v2->w;
 }
 
-void	scale_vector(t_vector *result, const t_vector *v, double scale)
-{
-	result->x = scale * v->x;
-	result->y = scale * v->y;
-	result->z = scale * v->z;
-	result->w = scale * v->w;
-}
-
 void	negate_vector(t_vector *result, const t_vector *v)
 {
 	result->x = -1 * v->x;

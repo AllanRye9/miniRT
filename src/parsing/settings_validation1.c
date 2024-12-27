@@ -26,7 +26,7 @@ bool	is_settings(const char *line)
 	{
 		if (line[i] == '{')
 			return (true);
-		if (is_space(line[i]) == false)
+		if (ft_isspace(line[i]) == false)
 			return (false);
 		i++;
 	}

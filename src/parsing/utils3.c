@@ -14,13 +14,13 @@ static int	atof_split(char c)
 	return (i);
 }
 
-static void handle_error(char *p, bool *status)
+static void handle_error(const char *p, bool *status)
 {
     if (*p != '\0' && !ft_isdigit(*p) && !is_whitespace(*p))
         *status = false;
 }
 
-double ft_atof(char *p, bool *status)
+double ft_atof(const char *p, bool *status)
 {
     double  j;
     double  y;

@@ -6,12 +6,15 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:07:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 17:56:40 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:11:05 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLOR_H
 # define COLOR_H
+
+# include "miniRT.h"
+# include "shape.h"
 
 typedef struct s_shape	t_shape;
 

@@ -17,7 +17,7 @@
 
 double		ft_atol(char *str, bool *status);
 long		atol_helper(char *str, int i, bool *status);
-double		ft_atof(char *p, bool *status);
+double		ft_atof(const char *p, bool *status);
 char		**ft_split_whitespace(char *line);
 bool		print_color_error(t_color_err *err, const char *line, int line_num,
 				char *element);
@@ -50,8 +50,7 @@ int			ft_strcmp_case(const char *s1, const char *s2);
 bool		is_settings(const char *line);
 bool		is_valid_key(const char *key);
 bool		is_valid_color(const char *color);
-bool		check_value(const char *key, const char *val, double min,
-				double max);
+bool		check_value(const char *key, const char *val, double min, double max);
 bool		is_valid_val(const char *key, const char *val);
 char		*get_settings_str(size_t *line_num, int fd, const char *set);
 bool		check_key_val_split(char **key_val, char **settings, int line_idx);

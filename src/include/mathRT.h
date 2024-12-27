@@ -50,7 +50,7 @@ void		add_vector(t_vector *result, const t_vector *v1,
 				const t_vector *v2);
 void		sub_vector(t_vector *result, const t_vector *v1,
 				const t_vector *v2);
-void		scale_vector(t_vector *result, const t_vector *v, double scale);
+void		scale_vector(t_vector *res, t_vector *v, double scale);
 void		negate_vector(t_vector *result, const t_vector *v);
 void		normalize_vector(t_vector *vect);
 double		vector_magnitude(const t_vector *v);
