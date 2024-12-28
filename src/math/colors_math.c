@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   colors_operations.c                                :+:      :+:    :+:   */
+/*   colors_math.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 12:29:14 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 12:30:05 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:49:49 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
 void	add_colors(t_color *res, const t_color *c1, const t_color *c2)
 {

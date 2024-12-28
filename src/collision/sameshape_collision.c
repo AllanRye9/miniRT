@@ -6,19 +6,18 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:25:45 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 18:51:46 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:52:26 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	sphere_sphere_collision(const t_shape *sphere1, const t_shape *sphere2)
 {
 	double		distance;
 	t_vector	center_diff;
 
-	sub_vec(&center_diff, &sphere1->origin, &sphere2->origin);
+	sub_vector(&center_diff, &sphere1->origin, &sphere2->origin);
 	distance = vector_magnitude(&center_diff);
 	if (distance <= (sphere1->props.radius + sphere2->props.radius))
 		return (true);

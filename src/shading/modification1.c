@@ -1,18 +1,4 @@
-#include"../include/miniRT.h"
-
-void mult_color(t_color *res, const t_color *color, double pres)
-{
-	res->r = color->r * pres;
-	res->g = color->g * pres;
-	res->b = color->b * pres;
-}
-
-void add_colors(t_color *res , const t_color *c1, const t_color *c2)
-{
-	res->r = c1->r + c2->r;
-	res->g = c1->g + c2->g;
-	res->b = c1->b + c2->b;
-}
+#include "../include/miniRT.h"
 
 t_color	get_ambient(t_scene *scene, t_color patter_color)
 {
@@ -45,7 +31,8 @@ t_color	glear(t_intersection *itx, t_scene *scene, int light_idx)
 	t_glear			glear;
 	t_color			result;
 	t_color			shape_color;
-	const double	light_dist = vec_distance(&itx->point, \
+
+	const double	light_dist = vector_distance(&itx->point, \
 			&scene->lights[light_idx].position);
 	const double	attenuation = (100 * scene->lights[light_idx].intensity \
 			- light_dist) / (100 * scene->lights[light_idx].intensity - 1);

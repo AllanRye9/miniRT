@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:22:38 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 18:03:45 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:52:55 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@ bool	compute_ray_plane_intersection(t_colmath *col_math,
 void	resolve_non_parallel_case(t_colmath *col_math,
 	t_cy_collision_data *cy_data, t_shape *cylinder, t_shape *plane)
 {
-	sub_vec(&col_math->dir, &col_math->point_on_splane, &cy_data->cap_center);
+	sub_vector(&col_math->dir, &col_math->point_on_splane,
+		&cy_data->cap_center);
 	if (vec_magnitude(&col_math->dir) < 0.001)
 		return ;
 	normalize_vector(&col_math->dir);
 	scale_vector(&col_math->dir, &col_math->dir, cylinder->props.radius + 0.01);
 	add_vector(&col_math->end_point, &cy_data->cap_center, &col_math->dir);
-	sub_vec(&col_math->plane_to_end_point, &col_math->end_point,
+	sub_vector(&col_math->plane_to_end_point, &col_math->end_point,
 		&plane->origin);
 	col_math->dist = fabs(dot_product(&col_math->plane_to_end_point,
 				&plane->orientation));
@@ -54,7 +55,7 @@ void	resolve_non_parallel_case(t_colmath *col_math,
 void	resolve_parallel_case(t_colmath *col_math,
 	t_shape *cylinder, t_shape *plane)
 {
-	sub_vec(&col_math->center_to_point, &plane->origin, &cylinder->origin);
+	sub_vector(&col_math->center_to_point, &plane->origin, &cylinder->origin);
 	col_math->dist = fabs(dot_product(&col_math->center_to_point,
 				&plane->orientation));
 	col_math->resolution = plane->orientation;

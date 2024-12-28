@@ -6,11 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 13:14:29 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 14:56:16 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:49:42 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "../include/miniRT.h"
 
 int	mix_color(int c1, int c2, double mix)
 {

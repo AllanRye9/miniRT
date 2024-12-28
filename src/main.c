@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 21:23:54 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 12:51:22 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,6 @@ static int	read_file(int argc, char *argv[])
 	if (fd == -1)
 		return (opening_file_failed(file_name), -1);
 	return (fd);
-}
-
-void	init_settings(t_settings *settings)
-{
-	settings->edit_scale = 0.55;
-	settings->render_scale = 2;
-	settings->disp_h = 720;
-	settings->disp_w = 1080;
-	settings->edit_w = 1080 * settings->edit_scale;
-	settings->edit_h = 720 * settings->edit_scale;
-	settings->render_h = 720 * settings->render_scale;
-	settings->render_w = 1080 * settings->render_scale;
-	settings->reflection_depth = REFLECTION_DEPTH;
-	settings->collisions = true;
 }
 
 void	scene_init(t_scene *scene, t_display *display)

@@ -6,11 +6,12 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 12:24:44 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 17:25:48 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 12:41:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
+#include "../include/intersection.h"
 
 t_color	render_pixel(double x, double y, t_intersections *arr,
 	t_thread_data *tdata)
@@ -27,7 +28,7 @@ t_color	render_pixel(double x, double y, t_intersections *arr,
 	arr->count = 0;
 	while (++shape_idx < scene->count.shapes)
 		intersect(&scene->shapes[shape_idx], &ray, arr);
-	color = shade_point(arr, scene, &ray); //shade_point is pending will do later
+	color = shade_point(arr, scene, &ray);
 	set_color(tdata, x, y, create_mlx_color(&color));
 	return (color);
 }

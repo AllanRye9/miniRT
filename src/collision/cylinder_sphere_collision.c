@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:37:35 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/04 23:17:33 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:55:12 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	calculate_caps(t_cy_collision_data *data, t_shape *cylinder)
 bool	check_caps_collision(t_cy_collision_data *col_data,
 	t_cy_sp_data *sp_data, t_collision_inputs *inputs)
 {
-	sub_vec(&sp_data->cap_to_sphere, &col_data->cap_center,
+	sub_vector(&sp_data->cap_to_sphere, &col_data->cap_center,
 		&inputs->sphere->origin);
 	sp_data->dist = vec_magnitude(&sp_data->cap_to_sphere);
 	sp_data->v_cap_distance = fabs(dot_product(&sp_data->cap_to_sphere,
@@ -74,11 +74,11 @@ bool	check_side_collision(t_cy_collision_data *col_data,
 		-sp_data->v_dist);
 	add_vector(&sp_data->center_adjusted, &inputs->cylinder->origin,
 		&sp_data->center_delta);
-	sp_data->dist = vec_distance(&sp_data->center_adjusted,
+	sp_data->dist = vector_distance(&sp_data->center_adjusted,
 			&inputs->sphere->origin);
 	if (sp_data->dist < radius_sum)
 	{
-		sub_vec(&col_data->resolution, &sp_data->center_adjusted,
+		sub_vector(&col_data->resolution, &sp_data->center_adjusted,
 			&inputs->sphere->origin);
 		negate_vector(&col_data->resolution, &col_data->resolution);
 		if (vec_magnitude(&col_data->resolution) < 0.001)
@@ -117,7 +117,7 @@ bool	cylinder_sphere_collision(t_shape *cylinder, t_shape *sphere,
 	col_data.cap_center = col_data.bottom_cap_center;
 	if (check_caps_collision(&col_data, &sp_data, &inputs))
 		return (true);
-	sub_vec(&sp_data.cylinder_to_sphere, &cylinder->origin, &sphere->origin);
+	sub_vector(&sp_data.cylinder_to_sphere, &cylinder->origin, &sphere->origin);
 	sp_data.v_dist = dot_product(&sp_data.cylinder_to_sphere,
 			&col_data.cylinder_normal);
 	if (check_side_collision(&col_data, &sp_data, &inputs, radius_sum))

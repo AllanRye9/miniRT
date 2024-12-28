@@ -61,5 +61,5 @@ void wrong_file_format(void)
 void opening_file_failed(char *file_name)
 {
 	ft_putendl_fd("Opening file failed", 2);
-	ft_printf("%s", file_name);
+	printf("%s", file_name);
 }

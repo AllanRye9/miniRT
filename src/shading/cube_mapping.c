@@ -36,7 +36,7 @@ void mapping_back(double *x, double *y, t_vector *p)
     *y = (fmod(1 + p->y, 2.0) / 2.0);
 }
 
-void cubicle_mappingping(double *x, double*y, t_vector *p)
+void cubicle_mapping(double *x, double*y, t_vector *p)
 {
     double abs_x;
     double abs_y;

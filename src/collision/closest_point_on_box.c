@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 19:19:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 19:32:32 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 12:04:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ double	clamp_distance(double distance, double scale)
 }
 
 void	project_point_to_axis(t_vector *closest,
-	const t_vector *point_to_center, const t_vector *axis, double scale)
+	const t_vector *point_to_center, t_vector *axis, double scale)
 {
 	t_vector	step;
 	double		distance;
 
 	distance = dot_product(point_to_center, axis);
 	distance = clamp_distance(distance, scale);
-	scale_vec(&step, axis, distance);
+	scale_vector(&step, axis, distance);
 	add_vector(closest, closest, &step);
 }
 

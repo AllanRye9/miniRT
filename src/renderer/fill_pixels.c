@@ -6,31 +6,29 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 18:33:40 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/08 20:53:12 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 12:29:50 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	fill_skippedpixelh(double x, double y, t_thread_data *tdata, int th)
 {
 	int				i;
 	int				j;
-	t_intersection	arr;
+	t_intersections	arr;
 
 	j = 0;
 	i = get_color(tdata, x - 1, y);
 	i = get_color(tdata, x + 2, y);
 	if (color_diff(i, j) > th)
 	{
-		//super_sampling function is missing created a demo for it.
 		if (tdata->scene->settings.supersampling == true)
-			super_sampling(tdata, &arr, x - 1, y);
-		super_sampling(tdata, &arr, x, y);
-		super_sampling(tdata, &arr, x + 1, y);
+			super_sample_pixel(x - 1, y, &arr, tdata);
+		super_sample_pixel(x, y, &arr, tdata);
+		super_sample_pixel(x + 1, y, &arr, tdata);
 		if (tdata->scene->settings.supersampling == true)
-			super_sampling(tdata, &arr, x + 2, y);
+			super_sample_pixel(x + 2, y, &arr, tdata);
 	}
 	else
 	{
@@ -43,22 +41,22 @@ void	fill_skippedpixelv(double x, double y, t_thread_data *tdata, int th)
 {
 	int				i;
 	int				j;
-	t_intersection	arr;
+	t_intersections	arr;
 
 	i = get_color(tdata, x, y - 1);
 	if (y + 2 >= tdata->y_end && y < tdata->y_end)
-		super_sampling(tdata, &arr, x, y);
+		super_sample_pixel(x, y, &arr, tdata);
 	if (y + 2 >= tdata->y_end && (y + 1) < tdata->y_end)
-		super_sampling(tdata, &arr, x, y + 1);
+		super_sample_pixel(x, y + 1, &arr, tdata);
 	if (y + 2 >= tdata->y_end)
 		return ;
 	j = get_color(tdata, x, y + 2);
 	if (color_difference(i, j) > th)
 	{
-		super_sampling(tdata, &arr, x, y - 1);
-		super_sampling(tdata, &arr, x, y);
-		super_sampling(tdata, &arr, x, y + 1);
-		super_sampling(tdata, &arr, x, y + 2);
+		super_sample_pixel(x, y - 1, &arr, tdata);
+		super_sample_pixel(x, y, &arr, tdata);
+		super_sample_pixel(x, y + 1, &arr, tdata);
+		super_sample_pixel(x, y + 2, &arr, tdata);
 	}
 	else
 	{

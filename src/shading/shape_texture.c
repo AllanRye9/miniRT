@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 18:59:55 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 19:14:31 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:53:45 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ bool	get_specular_and_diffuse(t_scene *scene, int light_idx,
 	double		spotlight_angle;
 
 	spotlight_angle = 0;
-	sub_vec(&light_v, &scene->lights[light_idx].position, &itx->over_point);
+	sub_vector(&light_v, &scene->lights[light_idx].position, &itx->over_point);
 	normalize_vector(&light_v);
 	itx->normal.w = 0;
 	light_dot_normal = dot_product(&light_v, &itx->normal);

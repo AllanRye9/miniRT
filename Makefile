@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2024/12/27 19:02:16 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/12/28 12:47:43 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC_DIR = src/renderer/init_display.c \
 		src/renderer/draw.c \
 		src/renderer/orientation.c \
 		src/renderer/fill_pixels.c \
+		src/renderer/super_sample.c \
 		src/renderer/projection.c \
 		src/renderer/render_scene.c \
 		src/renderer/camera.c \
@@ -64,8 +65,6 @@ SRC_DIR = src/renderer/init_display.c \
 		src/parsing/attributes1.c \
 		src/parsing/settings_validation1.c \
 		src/parsing/settings3.c \
-		src/math/min_max.c \
-		src/shading/color_operations.c \
 		src/shading/cube_mapping.c \
 		src/shading/reflection.c \
 		src/shading/shape_texture.c \
@@ -80,6 +79,7 @@ SRC_DIR = src/renderer/init_display.c \
 		src/linear_algebra/matrix_operation.c \
 		src/linear_algebra/vector_arithmetic.c \
 		src/linear_algebra/determinant_matrix.c \
+		src/linear_algebra/detmat.c \
 		src/linear_algebra/vector_operation.c \
 		src/interaction/setup_hooks.c \
 		src/interaction/mouse.c \
@@ -125,6 +125,10 @@ SRC_DIR = src/renderer/init_display.c \
 		src/collision/triangle_on_origin.c \
 		src/collision/cylinder_sphere_collision.c \
 		src/collision/test_box_axes.c \
+		src/math/color_getter_setter.c \
+		src/math/color_utils.c \
+		src/math/colors_math.c \
+		src/math/min_max.c \
 		src/main.c \
 
 Y = "\033[33m"

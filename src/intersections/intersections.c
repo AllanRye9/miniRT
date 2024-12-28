@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:39:29 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 18:43:26 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:53:33 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ bool	intersect_sphere_fast(const t_ray *ray, t_intersections *xs,
 	double		c;
 	double		h;
 
-	sub_vec(&oc, &ray->origin, &sphere->origin);
+	sub_vector(&oc, &ray->origin, &sphere->origin);
 	b = dot_product(&oc, &ray->dir);
 	c = dot_product(&oc, &oc) - sphere->props.radius_squared;
 	h = b * b - c;

@@ -6,14 +6,13 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 14:24:49 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 12:44:18 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RENDER_H
 # define RENDER_H
 
-# include "intersection.h"
 # include "lights.h"
 # include "scene.h"
 # include "mathRT.h"
@@ -23,6 +22,8 @@
 
 # define NUM_THREADS 16
 # define REFLECTION_DEPTH 1
+
+typedef struct s_intersections	t_intersections;
 
 typedef struct s_thread_data
 {
@@ -54,10 +55,10 @@ void		draw_shape_type(t_scene *scene, t_shape *shape,
 				t_vector *proj_origin);
 bool		is_shadow(t_scene *scene, int light_idx, t_vector *itx_point,
 				double *angle);
-void		sub_vec(t_vector *res, const t_vector *vec1, const t_vector *vec2);
 void		fill_v(t_thread_data *tdata, int th);
 void		fill_h(t_thread_data *tdata, int th);
 void		reflect_vector(t_vector *res, t_vector *in_vector,
 				t_vector *normal);
+t_color		shade_point(t_intersections *arr, t_scene *scene, t_ray *ray);
 
 #endif

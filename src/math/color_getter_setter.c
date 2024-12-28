@@ -6,11 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 12:34:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 12:35:31 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:49:36 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
 void	set_color(t_thread_data *tdata, int x, int y, int color)
 {

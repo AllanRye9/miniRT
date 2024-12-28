@@ -67,5 +67,5 @@ double ft_atol(char *str, bool *status)
             sign *= -1;
         i++;
     }
-    return (atol_helper(str, i, status));
+    return (atol_helper(str, i, status) * sign);
 }
