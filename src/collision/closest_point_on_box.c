@@ -41,7 +41,7 @@ void	project_point_to_axis(t_vector *closest,
 
 	distance = dot_product(point_to_center, axis);
 	distance = clamp_distance(distance, scale);
-	scale_vector(&step, axis, distance);
+	scale_vec(&step, axis, distance);
 	add_vector(closest, closest, &step);
 }
 

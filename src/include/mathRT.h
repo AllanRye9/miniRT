@@ -33,6 +33,7 @@ typedef struct s_vector
 	double	w;
 }	t_vector;
 
+void 		scale_vec(t_vector *res, const t_vector *v, double scale);
 int			color_diff(int c1, int c2);
 void		axis_angle(t_mat4 *rot_mat, const t_vector *ax, double angle);
 void		matrix_multiply(t_mat4 *result, const t_mat4 *m1, const t_mat4 *m2);
