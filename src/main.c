@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/28 12:51:22 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 16:36:49 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ static int	read_file(int argc, char *argv[])
 	if (argc != 2)
 		return (invalid_argument(), -1);
 	file_name = argv[1];
-	if (ft_strncmp(&file_name[ft_strlen(file_name) - 3], ".rt", 3) != 0)
+	if (ft_strlen(file_name) < 3
+		|| ft_strncmp(&file_name[ft_strlen(file_name) - 3], ".rt", 4) != 0)
 		return (wrong_file_format(), -1);
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)

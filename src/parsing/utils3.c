@@ -59,12 +59,12 @@ double ft_atol(char *str, bool *status)
     *status = true;
     while(is_whitespace(str[i]))
         i++;
-    if (ft_strcmp(&str[i], "-9223372036854775808"))
+    if (ft_strcmp(&str[i], "-9223372036854775808") == 0)
         return (LONG_MIN);
     if (str[i] == '-' || str[i] == '+')
     {
         if (str[i] == '-')
-            sign *= -1;
+            sign = -1;
         i++;
     }
     return (atol_helper(str, i, status) * sign);

@@ -62,4 +62,5 @@ void opening_file_failed(char *file_name)
 {
 	ft_putendl_fd("Opening file failed", 2);
 	printf("%s", file_name);
+	perror(NULL);
 }

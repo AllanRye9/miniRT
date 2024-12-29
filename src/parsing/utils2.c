@@ -36,12 +36,12 @@ int	count_words(char *line)
 	count = 0;
 	while (line[i])
 	{
-		while (is_whitespace(line[i]) && line[i] != '\0')
+		while (is_whitespace(line[i]) == true && line[i])
 			i++;
 		if (line[i] == '\0')
 			break ;
 		count++;
-		while (!is_whitespace(line[i]) && line[i] != '\0')
+		while (is_whitespace(line[i]) == false && line[i])
 			i++;
 	}
 	return (count);

@@ -2,7 +2,7 @@
 
 bool	check_element_count(t_scene *scene)
 {
-	if (scene->count.ambience >= 0)
+	if (scene->count.ambience > 1 || scene->count.ambience == 0)
 	{
 		if (scene->count.ambience > 1)
 			printf(RED "Error: Scene contains multiple ambient light\n" RESET);
@@ -10,7 +10,7 @@ bool	check_element_count(t_scene *scene)
 			printf(RED "Error: Scene contains no ambient lights\n" RESET);
 		return (free_scene(scene), false);
 	}
-	if (scene->count.cameras >= 0)
+	if (scene->count.cameras > 1 || scene->count.cameras == 0)
 	{
 		if (scene->count.cameras > 1)
 			printf(RED "Error: Scene contains more than one camera\n" RESET);
@@ -20,8 +20,6 @@ bool	check_element_count(t_scene *scene)
 	}
 	return (true);
 }
-// skipline helps to element an usable data like comma, empty file, spaces,tabs and all
-// kinds of whitespaces and extracts only string data.
 
 bool	skip_line(char **line, int fd, size_t *line_count)
 {
@@ -41,14 +39,6 @@ bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 	char	**splitted;
 
 	splitted = ft_split_whitespace(line);
-	if (splitted) {
-    	printf("Contents of splitted:\n");
-		for (int i = 0; splitted[i] != NULL; i++) {
-			printf("[%d]: %s\n", i, splitted[i]);
-		}
-	} else {
-    	printf("splitted is NULL\n");
-	}
 	if (ft_strcmp(splitted[0], "A") == 0)
 		parse_ambient(scene, splitted);
 	else if (ft_strcmp(splitted[0], "C") == 0)
@@ -100,7 +90,6 @@ t_scene	*parse_scene(int fd)
 		if (status == false)
 			return (get_next_line(-1), NULL);
 		line = get_next_line(fd);
-		printf("%s\n", line);
 		line_count++;
 	}
 	return (check_elements(scene));

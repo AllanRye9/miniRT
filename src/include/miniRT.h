@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:55:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 13:08:45 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 16:36:12 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MINIRT_H
 
 # include <stdbool.h>
+# include <errno.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
