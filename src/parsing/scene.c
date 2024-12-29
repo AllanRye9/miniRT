@@ -1,6 +1,6 @@
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
-bool check_element_count(t_scene *scene)
+bool	check_element_count(t_scene *scene)
 {
 	if (scene->count.ambience >= 0)
 	{
@@ -23,9 +23,10 @@ bool check_element_count(t_scene *scene)
 // skipline helps to element an usable data like comma, empty file, spaces,tabs and all
 // kinds of whitespaces and extracts only string data.
 
-bool skip_line(char **line, int fd, size_t *line_count)
+bool	skip_line(char **line, int fd, size_t *line_count)
 {
-	if (ft_strlen(*line) == 0 || all_whitespace(*line) == true || ft_strncmp(*line, "//", 2) == 0 || ft_strncmp(*line, "#", 1) == 0)
+	if (ft_strlen(*line) == 0 || all_whitespace(*line) == true
+		|| ft_strncmp(*line, "//", 2) == 0 || ft_strncmp(*line, "#", 1) == 0)
 	{
 		free(*line);
 		*line = ft_strtrim_free(get_next_line(fd), " \t\n");
@@ -35,9 +36,9 @@ bool skip_line(char **line, int fd, size_t *line_count)
 	return (false);
 }
 
-bool parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
+bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 {
-	char **splitted;
+	char	**splitted;
 
 	splitted = ft_split_whitespace(line);
 	if (ft_strcmp(splitted[0], "A") == 0)
@@ -57,11 +58,11 @@ bool parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 	if (mem_error(&scene->error_flag))
 		print_error(scene, line, *line_num, splitted[0]);
 	free(line);
-	// free_2d_array(splitted);
+	free_2d_array(splitted);
 	return (!mem_error(&scene->error_flag));
 }
 
-t_scene *check_elements(t_scene *scene)
+t_scene	*check_elements(t_scene *scene)
 {
 	if (check_element_count(scene) == false)
 		return (NULL);
