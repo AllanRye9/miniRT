@@ -85,8 +85,7 @@ char **ft_split_whitespace(char *line)
 		{
 			while (index > 0)
 				free(arr[--index]);
-			free(arr);
-			return (NULL);
+			return (free(arr), NULL);
 		}
 		index++;
     }
