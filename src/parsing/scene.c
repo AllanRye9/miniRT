@@ -68,7 +68,7 @@ t_scene *check_elements(t_scene *scene)
 	return (scene);
 }
 
-t_scene *parse_scene(int fd)
+t_scene	*parse_scene(int fd)
 {
 	size_t		line_count;
 	t_scene		*scene;
@@ -81,15 +81,17 @@ t_scene *parse_scene(int fd)
 		return (NULL);
 	line = get_next_line(fd);
 	if (!line)
-		return (free(line), ft_putstr_fd("FD - encountered and Error", 2), NULL);
+		return (free(line),
+			ft_putstr_fd("FD - encountered and Error", 2), NULL);
 	while (line != NULL)
 	{
 		if (skip_line(&line, fd, &line_count) == true)
-			continue;
+			continue ;
 		status = parse_line(scene, line, &line_count, fd);
 		if (status == false)
 			return (get_next_line(-1), NULL);
 		line = get_next_line(fd);
+		printf("%s\n", line);
 		line_count++;
 	}
 	return (check_elements(scene));

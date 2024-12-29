@@ -17,12 +17,13 @@ void free_2d_array(char **arr)
 {
     int i;
 
-    i = 0;
     if (!arr)
         return ;
+	i = 0;
     while(arr[i] != NULL)
     {
         free(arr[i]);
+		i++;
     }
     free(arr);
 }
@@ -58,38 +59,31 @@ char *create_string(char *line, int start, int end)
     return (res);
 }
 
-char **ft_split_whitespace(char *line)
+char	**ft_split_whitespace(char *s)
 {
-    char    **arr;
-    int     i;
-    int     word_start;
-    int     index;
+	char	**words;
+	int		i;
+	int		word_start;
+	int		word_count;
 
-    arr = (char **)malloc(sizeof(char*) * (count_words(line) + 1));
-    if (!arr)
-        return (NULL);
-    i = 0;
-    word_start = 0;
-    index = 0;
-    while(line[i])
-    {
-        while (is_whitespace(line[i]) && line[i] != '\0')
-            i++;
-        if (line[i] == '\0')
-            break;
+	words = malloc(sizeof(char *) * (count_words(s) + 1));
+	if (words == NULL)
+		return (NULL);
+	i = 0;
+	word_count = 0;
+	while (s[i] != '\0')
+	{
+		while (is_whitespace(s[i]) == true && s[i] != '\0')
+			i++;
+		if (s[i] == '\0')
+			break ;
 		word_start = i;
-        while (!is_whitespace(line[i]) && line[i] != '\0')
-            i++;
-        arr[index] = create_string(line, word_start, i - 1);
-		if (arr[index] == NULL)
-		{
-			while (index > 0)
-				free(arr[--index]);
-			free(arr);
+		while (is_whitespace(s[i]) == false && s[i] != '\0')
+			i++;
+		words[word_count] = create_string(s, word_start, i - 1);
+		if (words[word_count++] == NULL)
 			return (NULL);
-		}
-		index++;
-    }
-	arr[index] = NULL;
-	return (arr);
+	}
+	words[word_count] = NULL;
+	return (words);
 }

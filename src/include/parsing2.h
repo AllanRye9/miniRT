@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 13:15:28 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 13:21:06 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/28 23:34:40 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 double		ft_atol(char *str, bool *status);
 long		atol_helper(char *str, int i, bool *status);
 double		ft_atof(const char *p, bool *status);
-char		**ft_split_whitespace(char *line);
 bool		print_color_error(t_color_err *err, const char *line, int line_num,
 				char *element);
 bool		print_orient_error(t_orient_err *err, const char *line,
@@ -50,7 +49,8 @@ int			ft_strcmp_case(const char *s1, const char *s2);
 bool		is_settings(const char *line);
 bool		is_valid_key(const char *key);
 bool		is_valid_color(const char *color);
-bool		check_value(const char *key, const char *val, double min, double max);
+bool		check_value(const char *key, const char *val,
+				double min, double max);
 bool		is_valid_val(const char *key, const char *val);
 char		*get_settings_str(size_t *line_num, int fd, const char *set);
 bool		check_key_val_split(char **key_val, char **settings, int line_idx);
@@ -90,7 +90,7 @@ bool		is_num(const char *str, bool decimal);
 size_t		split_count(char **split);
 void		free_2d_array(char **arr);
 char		*ft_strtrim_free(char *s1, char *set);
-char		**ft_split_whitespace(char *line);
+char		**ft_split_whitespace(char *s);
 void		mat4_multiply(t_vector *res, const t_mat4 *mat,
 				const t_vector *vec);
 void		free_and_update1(char **rgb, t_color *color, t_color_err *errs);
