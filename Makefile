@@ -147,7 +147,7 @@ all: subsystems $(NAME)
 
 %.o : %.c 
 	@echo $(Y)Compiling [$<]...$(X)
-	@$(CC) $(CFLAGS) -Imlx -c -o $@ $<
+	@$(CC) $(CFLAGS) -g3 -Imlx -c -o $@ $<
 
 subsystems:
 	@echo $(B)

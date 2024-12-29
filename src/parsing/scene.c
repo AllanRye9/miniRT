@@ -57,7 +57,7 @@ bool parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 	if (mem_error(&scene->error_flag))
 		print_error(scene, line, *line_num, splitted[0]);
 	free(line);
-	free_2d_array(splitted);
+	// free_2d_array(splitted);
 	return (!mem_error(&scene->error_flag));
 }
 
