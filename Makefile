@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2024/12/28 21:39:08 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/12/29 19:18:43 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC_DIR = src/renderer/init_display.c \
 		src/renderer/render_scene.c \
 		src/renderer/camera.c \
 		src/renderer/threads.c \
+		src/renderer/marker.c \
 		src/parsing/utils2.c \
 		src/parsing/texture2.c \
 		src/parsing/shape2.c \

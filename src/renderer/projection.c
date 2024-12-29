@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 12:58:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 14:29:53 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 19:08:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,11 @@ void	render_marker(t_scene *scene, int x, int y, int color)
 void	perspective_projection(t_vector *point, const t_scene *scene)
 {
 	point->x /= -point->z;
-	point->x /= -point->z;
-	point->x /= (point->x + scene->cam.half_w)
+	point->y /= -point->z;
+	point->x = (point->x + scene->cam.half_w)
 		/ (scene->cam.half_w * 2);
+	point->y = (point->y + scene->cam.half_h)
+		/ (scene->cam.half_h * 2);
 	point->x = 1 - point->x;
 	point->y = 1 - point->y;
 }

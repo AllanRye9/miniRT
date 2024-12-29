@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:02:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/25 13:43:14 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 19:12:39 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,12 +97,13 @@ void	render_scene(t_scene *scene)
 	exec_thread(tdata, scale_adjacent);
 	mlx_put_image_to_window(scene->disp->mlx, scene->disp->win,
 		scene->disp->display_img, 0, 0);
+	render_shape_marker(scene);
 	if (scene->settings.light_mode == true)
 	{
 		project_rays_on_screen(scene);
 		mlx_string_put(scene->disp->mlx, scene->disp->win,
 			scene->settings.disp_w * .9, 20, 0xffffff, "LIGHT MODE");
 	}
-	else
+	else if (scene->settings.camera_mode == false)
 		render_shape_info(scene);
 }
