@@ -1,62 +1,61 @@
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
-
-char *ft_strtrim_free(char *s1, char *set)
+char	*ft_strtrim_free(char *s1, char *set)
 {
-    char *line;
+	char	*line;
 
-    line = NULL;
-    if (!s1)
-        return (free(s1), NULL);
-    line = ft_strtrim(s1, set);
-    free(s1);
-    return (line);
+	line = NULL;
+	if (!s1)
+		return (free(s1), NULL);
+	line = ft_strtrim(s1, set);
+	free(s1);
+	return (line);
 }
 
-void free_2d_array(char **arr)
+void	free_2d_array(char **arr)
 {
-    int i;
+	int	i;
 
-    if (!arr)
-        return ;
+	if (!arr)
+		return ;
 	i = 0;
-    while(arr[i] != NULL)
-    {
-        free(arr[i]);
+	while (arr[i] != NULL)
+	{
+		free(arr[i]);
 		i++;
-    }
-    free(arr);
+	}
+	free(arr);
 }
 
-int count_words(char *line)
+int	count_words(char *line)
 {
-    int i;
-    int count;
+	int	i;
+	int	count;
 
-    i = 0;
-    count = 0;
-    while(line[i])
-    {
-        while(is_whitespace(line[i]) && line[i] != '\0')
-            i++;
-        if (line[i] == '\0')
-            break;
-        count++;
-        while(!is_whitespace(line[i]) && line[i] != '\0')
-            i++;
-    }
-    return (count);
+	i = 0;
+	count = 0;
+	while (line[i])
+	{
+		while (is_whitespace(line[i]) && line[i] != '\0')
+			i++;
+		if (line[i] == '\0')
+			break ;
+		count++;
+		while (!is_whitespace(line[i]) && line[i] != '\0')
+			i++;
+	}
+	return (count);
 }
 
-char *create_string(char *line, int start, int end)
+char	*create_string(char *line, int start, int end)
 {
-    char *res;
+	char	*res;
 
-    res = (char *)malloc(sizeof(char) * (end - start) + 1);
-    if (!res)
-        return (free(res), NULL);
-    ft_strlcpy(res, &line[start], (end - start) + 1);
-    return (res);
+	res = (char *)malloc(sizeof(char) * (end - start) + 2);
+	if (!res)
+		return (free(res), NULL);
+	ft_strlcpy(res, &line[start], (end - start) + 2);
+	return (res);
 }
 
 char	**ft_split_whitespace(char *s)

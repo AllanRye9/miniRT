@@ -41,6 +41,14 @@ bool	parse_line(t_scene *scene, char *line, size_t *line_num, int fd)
 	char	**splitted;
 
 	splitted = ft_split_whitespace(line);
+	if (splitted) {
+    	printf("Contents of splitted:\n");
+		for (int i = 0; splitted[i] != NULL; i++) {
+			printf("[%d]: %s\n", i, splitted[i]);
+		}
+	} else {
+    	printf("splitted is NULL\n");
+	}
 	if (ft_strcmp(splitted[0], "A") == 0)
 		parse_ambient(scene, splitted);
 	else if (ft_strcmp(splitted[0], "C") == 0)
