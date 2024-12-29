@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:02:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/29 19:17:57 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 21:57:18 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	transform_view(t_mat4 *result, const t_vector *from, const t_vector *up,
 		const t_vector *forward)
@@ -54,7 +53,7 @@ void	calc_cam_transform(t_scene *scene)
 	from.w = 1;
 	normalize_vector(&scene->cam.dir);
 	up.x = 0;
-	up.y = 0;
+	up.y = 1;
 	up.z = 0;
 	up.w = 0;
 	transform_view(&scene->cam.transform, &from, &up, &scene->cam.dir);

@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:48:35 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/28 21:06:08 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 22:06:41 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	calculate_orientation(t_mat4 *rot_transform, t_shape *shape)
 {
@@ -26,7 +25,7 @@ void	calculate_orientation(t_mat4 *rot_transform, t_shape *shape)
 		&& shape->orientation.z == 0)
 		return (matrix_rotate_xaxis(rot_transform, -M_PI));
 	up.x = 0;
-	up.y = 0;
+	up.y = 1;
 	up.z = 0;
 	up.w = 0;
 	ax.w = 0;

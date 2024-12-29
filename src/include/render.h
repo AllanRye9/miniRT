@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:40:39 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/29 19:19:33 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 22:43:39 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,7 @@ void		reflect_vector(t_vector *res, t_vector *in_vector,
 				t_vector *normal);
 t_color		shade_point(t_intersections *arr, t_scene *scene, t_ray *ray);
 void		render_shape_marker(t_scene *scene);
+t_color		render_pixel(double x, double y, t_intersections *arr,
+				t_thread_data *tdata);
 
 #endif

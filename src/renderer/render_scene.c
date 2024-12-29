@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:02:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/29 19:12:39 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 22:42:47 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void	renderwith_threads(t_thread_data *tdata)
 {
 	int				x;
 	int				y;
+	t_intersections	arr;
 
 	y = tdata->y_start;
 	while (y < tdata->y_end)
@@ -80,6 +81,7 @@ void	renderwith_threads(t_thread_data *tdata)
 		while (x < tdata->width)
 		{
 			set_color(tdata, x, y, 0);
+			render_pixel(x, y, &arr, tdata);
 			x += 3;
 		}
 		y += 3;

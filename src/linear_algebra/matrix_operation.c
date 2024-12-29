@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 17:43:37 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/26 21:09:07 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/29 22:02:08 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	matrix_multiply(t_mat4 *result, const t_mat4 *m1, const t_mat4 *m2)
 {
@@ -24,7 +23,7 @@ void	matrix_multiply(t_mat4 *result, const t_mat4 *m1, const t_mat4 *m2)
 		temp[row][0] = (*m1)[row][0] * (*m2)[0][0]
 			+ (*m1)[row][1] * (*m2)[1][0]
 			+ (*m1)[row][2] * (*m2)[2][0]
-			+ (*m1)[row][2] * (*m2)[3][0];
+			+ (*m1)[row][3] * (*m2)[3][0];
 		temp[row][1] = (*m1)[row][0] * (*m2)[0][1]
 			+ (*m1)[row][1] * (*m2)[1][1]
 			+ (*m1)[row][2] * (*m2)[2][1]
