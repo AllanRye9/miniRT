@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:49:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/30 14:15:40 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:16:23 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void	sphere_plane_collision_resolution(t_shape *sphere, t_shape *plane)
 	add_vector(&sphere->origin, &sphere->origin, &resolution);
 }
 
-//Added this 
 bool	sphere_plane_collision(t_shape *sphere, const t_shape *plane)
 {
 	t_vector	normal;
