@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:49:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/30 09:15:46 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:15:40 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/miniRT.h"
-
 
 bool	collided(t_scene *scene, bool r, int depth,
 		t_shape *t)
@@ -32,7 +31,9 @@ bool	collided(t_scene *scene, bool r, int depth,
 				continue ;
 			if (check_collision(&scene->shapes[i], &scene->shapes[j], r, t))
 				did_collide = true;
+			j++;
 		}
+		i++;
 	}
 	if (!r)
 		return (did_collide);
