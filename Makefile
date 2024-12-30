@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2024/12/29 19:18:43 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/12/30 13:34:14 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,6 +126,8 @@ SRC_DIR = src/renderer/init_display.c \
 		src/collision/triangle_on_origin.c \
 		src/collision/cylinder_sphere_collision.c \
 		src/collision/test_box_axes.c \
+		src/collision/collision_resolution.c \
+		src/collision/box_collision.c \
 		src/math/color_getter_setter.c \
 		src/math/color_utils.c \
 		src/math/colors_math.c \

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:04:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 18:56:00 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/30 13:33:21 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,5 +168,14 @@ bool		sphere_box_collision(t_shape *box, t_shape *sphere,
 				bool box_sphere, bool resolve);
 void		transform_ray(t_ray *transformed_ray, const t_ray *ray,
 				const t_shape *shape);
+void		box_box_collision_resolution(t_shape *shape1, t_shape *shape2,
+				t_shape *transformed_shape);
+void		resolve_sphere_sphere(t_shape *shape1, t_shape *shape2,
+				t_shape *transformed_shape);
+void		sphere_sphere_collision_resolution(t_shape *sphere1,
+				t_shape *sphere2);
+bool		box_cylinder_collision(t_shape *box, t_shape *cylinder);
+bool		box_plane_collision(t_shape *box, const t_shape *plane,
+				bool resolve);
 
 #endif
