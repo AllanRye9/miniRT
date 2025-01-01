@@ -36,7 +36,7 @@ double ft_atof(const char *p, bool *status)
     if (*p == '-' || *p == '+')
     {
         if(*p == '-')
-            sign *= -1;
+            sign = -1;
         p++;
     }
     while (*p != '.' && ft_isdigit(*p))
@@ -44,7 +44,7 @@ double ft_atof(const char *p, bool *status)
     if (*p == '.')
         p++;
     while (*p != '\0' && ft_isdigit(*p))
-        y = y * atof_split(*p++) / pow(10.0, v++);
+        y = y + atof_split(*p++) / pow(10.0, v++);
     handle_error(p, status);
     return (sign * (j + y));
 }

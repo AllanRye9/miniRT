@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 18:33:40 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/28 12:29:50 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/01 12:32:35 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ void	fill_skippedpixelh(double x, double y, t_thread_data *tdata, int th)
 	int				j;
 	t_intersections	arr;
 
-	j = 0;
 	i = get_color(tdata, x - 1, y);
-	i = get_color(tdata, x + 2, y);
+	j = get_color(tdata, x + 2, y);
 	if (color_diff(i, j) > th)
 	{
 		if (tdata->scene->settings.supersampling == true)

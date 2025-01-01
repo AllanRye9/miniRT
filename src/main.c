@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/29 16:36:49 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/12/31 15:12:26 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,28 @@ void	scene_init(t_scene *scene, t_display *display)
 	render_scene(scene);
 }
 
+void	print_scene(const t_scene *scene)
+{
+	if (!scene)
+	{
+		printf("Scene is NULL\n");
+		return ;
+	}
+	printf("Ambient: intensity = %f, color = (%f, %f, %f)\n",
+		scene->ambient.intensity, scene->ambient.color.r,
+		scene->ambient.color.g,
+		scene->ambient.color.b);
+	printf("Camera: position = (%f, %f, %f)\n", scene->cam.pos.x,
+		scene->cam.pos.y, scene->cam.pos.z);
+	printf("Camera fov = %f\n", scene->cam.fov);
+	printf("Camera normalized orientation, (%f, %f, %f)\n",
+		scene->cam.dir.x, scene->cam.dir.y, scene->cam.dir.z);
+	printf("Light color r %f\n", scene->lights->color.r);
+	printf("Light color r %f\n", scene->lights->color.g);
+	printf("Light color r %f\n", scene->lights->color.b);
+	printf("shape type %u\n", scene->shapes->type);
+}
+
 int	main(int argc, char *argv[])
 {
 	t_scene		*scene;
@@ -53,6 +75,7 @@ int	main(int argc, char *argv[])
 	scene = parse_scene(fd);
 	if (!scene)
 		return (close(fd), free_scene(scene), EXIT_FAILURE);
+	print_scene(scene);
 	close(fd);
 	init_settings(&scene->settings);
 	init_display(&dsply, &scene->settings);

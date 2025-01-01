@@ -1,5 +1,4 @@
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	parse_ambient(t_scene *scene, char **splitted)
 {
