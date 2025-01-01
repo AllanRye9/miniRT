@@ -1,5 +1,4 @@
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	parse_cylinder_props(t_shape *shape, t_scene *scene, char **splitted)
 {
@@ -54,7 +53,9 @@ bool	parse_shape(t_scene *scene, char **splitted)
 	if (scene->count.shapes == SHAPE_MAX)
 		return (scene->error_flag.shape.max_shapes = true, false);
 	if (scene->shapes == NULL)
-		return (scene->shapes = ft_calloc(SHAPE_MAX, sizeof(t_shape)), false);
+		scene->shapes = ft_calloc(SHAPE_MAX, sizeof(t_shape));
+	if (scene->shapes == NULL)
+		return (false);
 	if (ft_strcmp(splitted[0], "sp") == 0)
 		parse_sphere(scene, &scene->shapes[scene->count.shapes], splitted);
 	else if (ft_strcmp(splitted[0], "pl") == 0)

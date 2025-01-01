@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:49:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/30 14:16:23 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/01 15:55:39 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ bool	collided(t_scene *scene, bool r, int depth,
 		while (j < scene->count.shapes)
 		{
 			if (i == j)
+			{
+				j++;
 				continue ;
+			}
 			if (check_collision(&scene->shapes[i], &scene->shapes[j], r, t))
 				did_collide = true;
 			j++;

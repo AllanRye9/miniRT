@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:02:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/01 12:30:56 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/01 15:19:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	render_shape_info(t_scene *scene)
 {
