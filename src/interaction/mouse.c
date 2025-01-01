@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 14:53:43 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/31 15:17:17 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/01 17:22:36 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,11 @@ int	mouse_down(int key_code, int x, int y, t_scene *scene)
 	return (0);
 }
 
-int	mouse_up(t_scene *scene)
+int	mouse_up(int key_code, int x, int y, t_scene *scene)
 {
+	(void)x;
+	(void)y;
+	(void)key_code;
 	scene->mouse.key = 0;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:39:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/27 13:35:37 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/01 17:22:30 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ struct s_keys
 
 void		setup_hooks(t_scene *scene);
 int			mouse_down(int key_code, int x, int y, t_scene *scene);
-int			mouse_up(t_scene *scene);
+int			mouse_up(int key_code, int x, int y, t_scene *scene);
 void		mouse_move(t_scene *scene);
 int			mouse_rotate(t_scene *scene);
 int			render_loop(t_scene *scene);
