@@ -1,19 +1,20 @@
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
-
-int ft_strcmp_case(const char *s1, const char *s2)
+int	ft_strcmp_case(const char *s1, const char *s2)
 {
-	while(*s1 && *s2)
+	while (ft_tolower(*s1) != '\0' && ft_tolower(*s2) != '\0')
 	{
 		if (ft_tolower(*s1) > ft_tolower(*s2))
 			return (1);
-		else if (ft_tolower(*s1) < ft_tolower(*s2))
+		if (ft_tolower(*s1) < ft_tolower(*s2))
 			return (-1);
-		else
-			return (0);
 		s1++;
 		s2++;
 	}
+	if (*s1 != '\0')
+		return (1);
+	if (*s2 != '\0')
+		return (-1);
 	return (0);
 }
 
@@ -38,7 +39,7 @@ bool	is_valid_key(const char *key)
 	if (key != NULL && (ft_strcmp(key, "reflectiveness") == 0
 			|| ft_strcmp(key, "diffuse") == 0
 			|| ft_strcmp(key, "specular") == 0
-			|| ft_strcmp(key, "`") == 0
+			|| ft_strcmp(key, "shininess") == 0
 			|| ft_strcmp(key, "rotX") == 0
 			|| ft_strcmp(key, "rotY") == 0
 			|| ft_strcmp(key, "rotZ") == 0
