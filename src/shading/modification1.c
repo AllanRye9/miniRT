@@ -31,10 +31,12 @@ t_color	glear(t_intersection *itx, t_scene *scene, int light_idx)
 	t_glear			glear;
 	t_color			result;
 	t_color			shape_color;
+	double			light_dist;
+	double			attenuation;
 
-	const double	light_dist = vector_distance(&itx->point, \
+	light_dist = vector_distance(&itx->point, \
 			&scene->lights[light_idx].position);
-	const double	attenuation = (100 * scene->lights[light_idx].intensity \
+	attenuation = (100 * scene->lights[light_idx].intensity \
 			- light_dist) / (100 * scene->lights[light_idx].intensity - 1);
 	shape_color = get_shape_color(itx);
 	blend_colors(&glear.effective_color, &shape_color,
@@ -49,6 +51,6 @@ t_color	glear(t_intersection *itx, t_scene *scene, int light_idx)
 		mult_color(&glear.diffuse, &glear.diffuse, attenuation);
 		mult_color(&glear.specular, &glear.specular, attenuation);
 	}
-	glear_diffusion(result, glear);
+	glear_diffusion(&result, &glear);
 	return (result);
 }

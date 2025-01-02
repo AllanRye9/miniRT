@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 12:24:44 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/28 12:41:57 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/02 19:44:49 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/miniRT.h"
-#include "../include/intersection.h"
 
 t_color	render_pixel(double x, double y, t_intersections *arr,
 	t_thread_data *tdata)

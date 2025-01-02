@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:54:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/31 15:12:26 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/02 19:55:56 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,6 @@ static int	read_file(int argc, char *argv[])
 	return (fd);
 }
 
-void	scene_init(t_scene *scene, t_display *display)
-{
-	scene->disp = display;
-	setup_hooks(scene);
-	camera_init(&scene->cam, scene);
-	scene->cam.theta = atan(scene->cam.dir.z / scene->cam.dir.x);
-	scene->cam.pi = acos(scene->cam.dir.y);
-	calc_transform(scene);
-	collided(scene, true, 10, NULL);
-	render_scene(scene);
-}
-
 void	print_scene(const t_scene *scene)
 {
 	if (!scene)
@@ -61,6 +49,18 @@ void	print_scene(const t_scene *scene)
 	printf("Light color r %f\n", scene->lights->color.g);
 	printf("Light color r %f\n", scene->lights->color.b);
 	printf("shape type %u\n", scene->shapes->type);
+}
+
+void	scene_init(t_scene *scene, t_display *display)
+{
+	scene->disp = display;
+	setup_hooks(scene);
+	camera_init(&scene->cam, scene);
+	scene->cam.theta = atan(scene->cam.dir.z / scene->cam.dir.x);
+	scene->cam.pi = acos(scene->cam.dir.y);
+	calc_transform(scene);
+	collided(scene, true, 10, NULL);
+	render_scene(scene);
 }
 
 int	main(int argc, char *argv[])

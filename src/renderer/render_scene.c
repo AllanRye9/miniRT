@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:02:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/01 15:19:57 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/02 19:45:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	render_shape_info(t_scene *scene)
 	}
 }
 
-void	scale_adjacent(t_thread_data *tdata)
+void	*scale_adjacent(t_thread_data *tdata)
 {
 	int	i_w;
 	int	j_h;
@@ -65,9 +65,10 @@ void	scale_adjacent(t_thread_data *tdata)
 					+ (h * tdata->width + w) * tdata->scene->disp->bpp);
 		}
 	}
+	return (NULL);
 }
 
-void	renderwith_threads(t_thread_data *tdata)
+void	*renderwith_threads(t_thread_data *tdata)
 {
 	int				x;
 	int				y;
@@ -87,6 +88,7 @@ void	renderwith_threads(t_thread_data *tdata)
 	}
 	fill_h(tdata, 25);
 	fill_v(tdata, 25);
+	return (NULL);
 }
 
 void	render_scene(t_scene *scene)
