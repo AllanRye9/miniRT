@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 18:59:55 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/28 11:53:45 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 16:23:47 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,6 @@ void	cylindrical_map(double *u, double *v, t_vector *point)
 
 t_color	texture_mapping(t_intersection *p, double h, double w)
 {
-	if (p->shape->tex_tile != 0)
-	{
-		h = (int)floor(h * ((p->shape->text_height - 1)
-					* (p->shape->tex_tile))) % (p->shape->text_height);
-		w = (int)floor(w * ((p->shape->tex_width - 1)
-					* (p->shape->tex_tile))) % (p->shape->tex_width);
-	}
-	else
-	{
-		h = (int)floor(p->shape->text_height - 1);
-		w = (int)floor(p->shape->tex_width - 1);
-	}
-	if (h >= p->shape->text_height || w >= p->shape->tex_width)
-		return (p->shape->props.color);
-	return (p->shape->diffuse_tex[(int)h][(int)w]);
 	if (p->shape->tex_tile != 0)
 	{
 		h = (int)floor(h * ((p->shape->text_height - 1)
@@ -96,7 +81,6 @@ t_color	get_shape_color(t_intersection *itx)
 				coloring(0x0000ff)));
 	return (itx->shape->props.color);
 }
-
 
 bool	get_specular_and_diffuse(t_scene *scene, int light_idx,
 	t_intersection *itx, t_glear *phong)

@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2025/01/03 15:58:51 by sbartoul         ###   ########.fr        #
+#    Updated: 2025/01/03 16:13:28 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ SRC_DIR = src/renderer/init_display.c \
 		src/shading/transformations.c \
 		src/shading/modification1.c \
 		src/shading/matrix.c \
+		src/shading/mapping_utils.c \
 		src/linear_algebra/inverse_matrix.c \
 		src/linear_algebra/matrix_transformation.c \
 		src/linear_algebra/matrix_operation.c \
