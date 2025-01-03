@@ -1,7 +1,5 @@
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
-
-// returns true if printed
 bool	print_color_error(t_color_err *err, const char *line, int line_num,
 			char *element)
 {
@@ -16,7 +14,6 @@ bool	print_color_error(t_color_err *err, const char *line, int line_num,
 	return (ft_memchr(err, 1, sizeof(t_color_err)));
 }
 
-// // returns true if printed
 bool	print_orient_error(t_orient_err *err, const char *line, int line_num,
 			char *element)
 {
@@ -28,7 +25,7 @@ bool	print_orient_error(t_orient_err *err, const char *line, int line_num,
 		printf(ORIENT_Z_OOR);
 	else if (err->zero)
 		printf(ORIENT_ZERO);
-	else if(err->other)
+	else if (err->other)
 		printf(GENERIC_ERROR, element, line_num, line);
 	return (ft_memchr(err, 1, sizeof(t_orient_err)));
 }

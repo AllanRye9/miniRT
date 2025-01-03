@@ -46,7 +46,6 @@ bool	print_cam_error(t_cam_err *err, const char *line, int line_num)
 	return (ft_memchr(err, 1, sizeof(t_cam_err)));
 }
 
-// returns true if printed
 bool	print_light_error(t_light_errors *err, const char *line, int line_num)
 {
 	if (err->coords)

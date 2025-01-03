@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2024/12/30 13:34:14 by sbartoul         ###   ########.fr        #
+#    Updated: 2025/01/03 15:58:51 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRC_DIR = src/renderer/init_display.c \
 		src/parsing/attributes1.c \
 		src/parsing/settings_validation1.c \
 		src/parsing/settings3.c \
+		src/parsing/error_utils.c \
 		src/shading/cube_mapping.c \
 		src/shading/reflection.c \
 		src/shading/shape_texture.c \

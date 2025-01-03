@@ -1,5 +1,4 @@
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 char	*get_settings_str(size_t *line_num, int fd, const char *set)
 {

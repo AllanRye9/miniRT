@@ -1,37 +1,21 @@
-#include"../include/miniRT.h"
+#include "../include/miniRT.h"
 
-
-long atol_helper(char *str, int i, bool *status)
+long	atol_helper(char *str, int i, bool *status)
 {
-    long tem;
-    long n;
+	long	tem;
+	long	n;
 
-    n = 0;
-    tem = 0;
-    while(str[i] >= '0' && str[i] <= '9')
-    {
-        tem = n;
-        n *= 10;
-        n += str[i++] - '0';
-        if (n < tem)
-            return ((*status = false), 0);
-    }
-    return (n);
-}
-
-void free_and_update1(char **rgb, t_color *color, t_color_err *errs)
-{
-    free_2d_array(rgb);
-	check_color_range(color, errs);
-}
-
-void free_and_update2(t_vector *position, double *res, char	**coords)
-{
-	position->x = res[0];
-	position->y = res[1];
-	position->z = res[2];
-	position->w = 1;
-    free_2d_array(coords);
+	n = 0;
+	tem = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		tem = n;
+		n *= 10;
+		n += str[i++] - '0';
+		if (n < tem)
+			return ((*status = false), 0);
+	}
+	return (n);
 }
 
 static char	*dec_num(int is_negative, int len, int decimal, char *str)

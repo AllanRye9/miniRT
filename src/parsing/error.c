@@ -1,19 +1,4 @@
-#include"../include/miniRT.h"
-
-
-bool	print_shape_error(t_shape *shape, t_shape_errors *error, const char *line,
-			int line_num)
-{
-	if (shape->type == SPHERE)
-		return (print_sphere_error(error, line, line_num));
-	if (shape->type == CUBE)
-		return (print_cube_error(error, line, line_num));
-	if (shape->type == PLANE)
-		return (print_plane_error(error, line, line_num));
-	if (shape->type == CYLINDER)
-		return (print_cylinder_error(error, line, line_num));
-	return (print_cone_error(error, line, line_num));
-}
+#include "../include/miniRT.h"
 
 void	print_error(t_scene *scene, const char *line, int line_num,
 			const char *identifer)
@@ -48,17 +33,17 @@ bool	mem_error(t_error_flags *err)
 	return (ft_memchr(err, 1, sizeof(t_error_flags)));
 }
 
-void invalid_argument(void)
+void	invalid_argument(void)
 {
 	ft_putendl_fd("Please provide the correct arguments", 2);
 }
 
-void wrong_file_format(void)
+void	wrong_file_format(void)
 {
 	ft_putendl_fd("Provide .rt file format", 2);
 }
 
-void opening_file_failed(char *file_name)
+void	opening_file_failed(char *file_name)
 {
 	ft_putendl_fd("Opening file failed", 2);
 	printf("%s", file_name);

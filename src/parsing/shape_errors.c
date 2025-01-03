@@ -1,5 +1,4 @@
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	print_sphere_error(t_shape_errors *err, const char *line, int line_num)
 {
@@ -19,7 +18,6 @@ bool	print_sphere_error(t_shape_errors *err, const char *line, int line_num)
 	return (ft_memchr(err, 1, sizeof(t_shape_errors)));
 }
 
-// returns true if printed
 bool	print_cube_error(t_shape_errors *err, const char *line, int line_num)
 {
 	if (print_color_error(&err->color, line, line_num, "cube color")
@@ -38,7 +36,6 @@ bool	print_cube_error(t_shape_errors *err, const char *line, int line_num)
 	return (ft_memchr(err, 1, sizeof(t_shape_errors)));
 }
 
-// returns true if printed
 bool	print_plane_error(t_shape_errors *err, const char *line, int line_num)
 {
 	if (print_color_error(&err->color, line, line_num, "plane color")
