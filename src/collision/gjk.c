@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:56:40 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 17:41:35 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 00:41:04 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 int	sign(double num)
 {

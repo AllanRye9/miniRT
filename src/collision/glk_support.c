@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:17:21 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/06 22:50:05 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 00:50:02 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 static void	fill_vtx(t_vector *vtx)
 {
@@ -33,6 +32,7 @@ t_vector	cube_furthest_point(const t_vector *dir, const t_shape *box)
 	double		largest;
 	int			largest_idx;
 
+	ft_bzero(vtx, sizeof(t_vector) * 8);
 	fill_vtx(vtx);
 	i = -1;
 	while (++i < 8)

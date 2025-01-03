@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cylindrical_plane_collision.c                      :+:      :+:    :+:   */
+/*   cy_p_collision_res.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 23:39:57 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/04 11:33:30 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 02:21:07 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 static bool	handle_parallel_case(t_cy_collision_data *cy_data,
 	t_shape *cylinder, t_shape *plane)
@@ -63,10 +62,8 @@ static bool	get_cylinder_normal(t_vector *cylinder_normal, t_shape *cylinder)
 {
 	t_vector	up_vector;
 
-	up_vector.x = 0;
-	up_vector.y = 0;
-	up_vector.z = 0;
-	up_vector.w = 0;
+	ft_bzero(&up_vector, sizeof(t_vector));
+	up_vector.y = 1;
 	mat4_multiply(cylinder_normal, &cylinder->transf, &up_vector);
 	if (vector_magnitude(cylinder_normal) < 0.001)
 		return (false);
