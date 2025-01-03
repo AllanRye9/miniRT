@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:00:43 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 10:06:53 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:57:37 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	rest_press(int key, t_scene *scene)
 {

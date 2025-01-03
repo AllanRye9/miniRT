@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 22:06:23 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/07 16:38:39 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:59:58 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 t_vector	triple_cross_product(t_vector *v1, t_vector *v2,
 	const t_vector *v3)

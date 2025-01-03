@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 12:58:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/29 19:08:09 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:54:34 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	render_marker(t_scene *scene, int x, int y, int color)
 {

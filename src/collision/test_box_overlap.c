@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 19:02:15 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/03 22:38:01 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 15:00:14 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	initialize_box_axes(t_box_axes *ba)
 {

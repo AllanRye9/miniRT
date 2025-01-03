@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:28:03 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 10:39:47 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:56:16 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 t_vector	cylinder_normal(const t_shape *shape, const t_vector *itx_point)
 {

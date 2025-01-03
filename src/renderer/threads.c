@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 12:22:05 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/02 16:24:08 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:55:01 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	init_thread_data(t_thread_data *tdata, t_scene *scene)
 {

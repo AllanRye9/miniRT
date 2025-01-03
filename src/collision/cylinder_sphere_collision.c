@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:37:35 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/28 11:55:12 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:59:33 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	calculate_cylinder_normal(t_cy_collision_data *data, t_shape *cylinder)
 {

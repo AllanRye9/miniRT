@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:33:51 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 10:07:38 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:58:42 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 int	close_window(t_scene *scene)
 {

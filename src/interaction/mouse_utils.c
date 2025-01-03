@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 17:09:12 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 10:54:21 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:58:21 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	drag_along_plane(t_scene *scene, t_ray *mouse_selection)
 {

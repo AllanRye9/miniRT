@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:52:57 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/28 21:19:18 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:55:08 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	multiply_transform(t_shape *shape, t_mat4 *scale, t_mat4 *rot,
 		t_mat4 *translate)

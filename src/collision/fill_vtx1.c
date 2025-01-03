@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 15:59:24 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/02 23:56:26 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:59:41 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	fill_vtx0(t_vector *vtx)
 {

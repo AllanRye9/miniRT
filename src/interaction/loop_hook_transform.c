@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 17:14:47 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/10 17:17:14 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:58:06 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	collide_after_transform(t_scene *scene)
 {

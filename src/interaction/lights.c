@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:11:29 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 10:39:42 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:57:45 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 t_vector	*sphere_mod(t_vector *vec, double phi, double theta, double r)
 {

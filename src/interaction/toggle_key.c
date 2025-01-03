@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:47:59 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/12 09:56:09 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:58:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	toggle_edit_mode(int key, t_scene *scene)
 {

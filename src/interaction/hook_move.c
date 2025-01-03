@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:47:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 10:57:09 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:56:48 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	move_object_h(t_scene *scene, t_shape *shape)
 {

@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:02:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 11:54:06 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:58:13 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	is_loop_hook_key(t_scene *scene)
 {

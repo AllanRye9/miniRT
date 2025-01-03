@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 12:10:46 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 15:48:53 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 15:00:20 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 bool	handle_sim_orientation(t_tetrahedron_data *data,
 	t_simplex *simplex, t_vector *dir)

@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 14:52:38 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/09 21:12:40 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:53:59 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	draw_shape_type(t_scene *scene, t_shape *shape, t_vector *proj_origin)
 {

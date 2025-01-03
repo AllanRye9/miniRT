@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 17:28:10 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/03 12:21:21 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:41:30 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static bool	handle_complex_collision(t_shape *shape1, t_shape *shape2,
 
 	did_collide = false;
 	if (shape1->type == SPHERE && shape2->type == CUBE && t_s != shape2)
-		did_collide = sphere_box_collision(shape1, shape2, false, resolve);
+		did_collide = sphere_box_collision(shape2, shape1, false, resolve);
 	else if (shape1->type == CUBE && shape2->type == SPHERE && t_s != shape2)
-		did_collide = sphere_box_collision(shape2, shape1, true, resolve);
+		did_collide = sphere_box_collision(shape1, shape2, true, resolve);
 	else if (shape1->type == CUBE && shape2->type == PLANE)
 		did_collide = box_plane_collision(shape1, shape2, resolve);
 	else if (shape1->type == CYLINDER && shape2->type == SPHERE

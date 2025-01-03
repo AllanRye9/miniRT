@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 11:15:00 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 11:42:19 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:57:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	cylinder_cone_lookat_pos(t_vector *cam_to_object, t_look *look_at,
 		t_shape *shape)

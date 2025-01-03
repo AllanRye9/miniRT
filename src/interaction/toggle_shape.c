@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:57:52 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 11:11:27 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:59:04 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	toggle_reflections(t_scene *scene)
 {

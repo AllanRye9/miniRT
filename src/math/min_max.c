@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:35:33 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/28 11:49:54 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:55:32 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/miniRT.h"
-
 
 double	min(double a, double b)
 {

@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:42:31 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 22:38:57 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:55:54 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	matrix_scaling(t_mat4 *mat, double x, double y, double z)
 {

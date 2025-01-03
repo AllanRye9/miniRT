@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:20:43 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/11/28 22:35:20 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:54:19 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	init_settings(t_settings *settings)
 {

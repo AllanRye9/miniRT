@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:53:52 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/11 11:56:35 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:58:34 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../include/miniRT.h"
-
+#include "../include/miniRT.h"
 
 void	scale_cube_sides(t_scene *scene, t_shape *shape)
 {
