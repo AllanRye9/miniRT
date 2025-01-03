@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2025/01/03 16:58:03 by sbartoul         ###   ########.fr        #
+#    Updated: 2025/01/03 17:23:15 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -178,7 +178,7 @@ clean:
 
 fclean: clean
 	@make -C $(MLX_PATH) clean
-	@make -C $(LIBFT_PATH) clean
+	@make -C $(LIBFT_PATH) fclean
 	@$(RM) $(NAME)
 	@echo $(R)Removed [$(NAME)]$(X)
 
