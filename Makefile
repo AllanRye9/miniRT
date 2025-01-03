@@ -6,15 +6,25 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 20:54:22 by sbartoul          #+#    #+#              #
-#    Updated: 2025/01/03 16:13:28 by sbartoul         ###   ########.fr        #
+#    Updated: 2025/01/03 16:58:03 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = miniRT
 
+Y = "\033[33m"
+R = "\033[31m"
+G = "\033[32m"
+B = "\033[34m"
+X = "\033[0m"
+UP = "\033[A"
+CUT = "\033[K"
+
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
+
+RM = rm -f
 
 MLX_PATH = mlx/
 
@@ -136,23 +146,15 @@ SRC_DIR = src/renderer/init_display.c \
 		src/math/min_max.c \
 		src/main.c \
 
-Y = "\033[33m"
-R = "\033[31m"
-G = "\033[32m"
-B = "\033[34m"
-X = "\033[0m"
-UP = "\033[A"
-CUT = "\033[K"
-
 CFILES = $(SRC_DIR)
 
-OBJECTS = $(CFILES:%.c =%.o)
+OBJECTS = $(CFILES:%.c=%.o)
 
 all: subsystems $(NAME)
 
 %.o : %.c 
 	@echo $(Y)Compiling [$<]...$(X)
-	@$(CC) $(CFLAGS) -g3 -Imlx -c -o $@ $<
+	@$(CC) $(CFLAGS) -Imlx -c -o $@ $<
 
 subsystems:
 	@echo $(B)
@@ -171,13 +173,13 @@ $(NAME): $(OBJECTS)
 clean:
 	@make -C $(MLX_PATH) clean
 	@make -C $(LIBFT_PATH) clean
-	# removing objects files from here ...
+	@$(RM) $(OBJECTS)
 	@echo $(R)Removed [$(OBJECTS)]$(X)
 
 fclean: clean
 	@make -C $(MLX_PATH) clean
 	@make -C $(LIBFT_PATH) clean
-	@rm -f $(NAME)
+	@$(RM) $(NAME)
 	@echo $(R)Removed [$(NAME)]$(X)
 
 re: fclean all
