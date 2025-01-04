@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 19:02:15 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/03 15:00:14 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/04 15:16:14 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	extract_unit_vectors(t_shape *shape, t_vector *unit_vectors)
 		unit_vectors[i].z = shape->added_rots[2][i];
 		unit_vectors[i].w = 0;
 		normalize_vector(&unit_vectors[i]);
+		i++;
 	}
 }
 
@@ -61,6 +62,7 @@ void	compute_center_distance(t_box_axes *ba, t_shape *b1, t_shape *b2)
 	while (i < 3)
 	{
 		ba->t[i] = dot_product(&ba->center_distance, &ba->b1_u[i]);
+		i++;
 	}
 }
 
@@ -73,13 +75,13 @@ bool	test_axis_overlap(t_box_axes *ba, t_shape *b1, t_shape *b2, int axis)
 		+ b2->props.scale.x * fabs(ba->abs_rot[axis][0])
 		+ b1->props.scale.y * fabs(ba->abs_rot[axis][1])
 		+ b1->props.scale.z * fabs(ba->abs_rot[axis][2]);
-	if (fabs(ba->t[axis]) > ba->ra + ba->ra)
+	if (fabs(ba->t[axis]) > ba->ra + ba->rb)
 		return (false);
 	if ((ba->ra + ba->rb - fabs(ba->t[axis])) < ba->res_distance)
 	{
 		ba->res_distance = ba->ra + ba->rb - fabs(ba->t[axis]);
 		ba->res_axis = ba->b1_u[axis];
-		if (ba->t[axis] > 0)
+		if (ba->t[axis] < 0)
 			negate_vector(&ba->res_axis, &ba->res_axis);
 	}
 	return (true);
