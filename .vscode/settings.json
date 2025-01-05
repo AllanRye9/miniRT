@@ -2,6 +2,7 @@
 	"files.associations": {
 		"cmath": "c",
 		"__hash_table": "c",
-		"unordered_map": "c"
+		"unordered_map": "c",
+		"minirt.h": "c"
 	}
 }
