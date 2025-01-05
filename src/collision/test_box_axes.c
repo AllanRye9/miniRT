@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 22:31:52 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/26 15:44:25 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/04 15:00:16 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ bool	test_box_axes(t_shape *b1, t_shape *b2, t_vector *resolution)
 	{
 		if (!test_axis_overlap(&ba, b1, b2, 1))
 			return (false);
+		i++;
 	}
 	resolve_resolution(resolution, &ba);
 	return (true);

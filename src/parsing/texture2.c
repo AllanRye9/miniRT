@@ -23,6 +23,7 @@ t_color	**parse_texture(char *img_path, t_shape *shape)
 	if (fd == -1)
 	{
 		free(img_path);
+		printf("Error coming from fd-1\n");
 		return ((void) printf("Error reading texture file `%s`\n"RESET,
 				img_path), NULL);
 	}
@@ -30,6 +31,7 @@ t_color	**parse_texture(char *img_path, t_shape *shape)
 	{
 		close(fd);
 		free(img_path);
+		printf("Error coming from ppm_header\n");
 		return ((void) printf("Error reading texture file `%s`\n"RESET,
 				img_path), NULL);
 	}
