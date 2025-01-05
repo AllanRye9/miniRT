@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 13:14:29 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/12/28 11:49:42 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/05 18:43:04 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,3 @@ t_color	int_to_color(int hex_color)
 	color.b = ((unsigned char *)&hex_color)[0] / 255.0f;
 	return (color);
 }
-

@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 13:08:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/03 14:54:50 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/05 18:42:32 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ void	project_on_screen(t_scene *scene, t_shape *shape)
 				p_from_origin.y * scene->settings.disp_h, 0x00ffff);
 		mlx_put_image_to_window(scene->disp->mlx, scene->disp->win,
 			scene->disp->display_img, 0, 0);
-		//	render_ray function declaration and defination not found.
-		// 	render_ray(scene, p_from_origin.x * scene->settings.disp_w,
-		// 	p_from_origin.y * scene->settings.disp_h, p_from_origin.z);
 	}
 }
 

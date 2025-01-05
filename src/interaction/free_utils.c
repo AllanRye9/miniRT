@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:40:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/03 14:56:40 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/05 18:30:42 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	free_scene(t_scene *scene)
 		mlx_destroy_image(scene->disp->mlx, scene->disp->render_img);
 		mlx_destroy_image(scene->disp->mlx, scene->disp->edit_img);
 		mlx_destroy_window(scene->disp->mlx, scene->disp->win);
-		// mlx_destroy_display(scene->disp->mlx);
 		free(scene->disp->mlx);
 	}
 	free_textures(scene);

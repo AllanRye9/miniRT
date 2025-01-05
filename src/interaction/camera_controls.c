@@ -6,11 +6,18 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 11:46:16 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/03 14:56:33 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/05 18:39:58 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/miniRT.h"
+
+void	fill_zero(t_vector *vec_x, t_vector *vec_y, t_vector *vec_z)
+{
+	ft_bzero(vec_x, sizeof(t_vector));
+	ft_bzero(vec_y, sizeof(t_vector));
+	ft_bzero(vec_z, sizeof(t_vector));
+}
 
 void	move_cam(t_scene *scene)
 {
@@ -18,9 +25,7 @@ void	move_cam(t_scene *scene)
 	t_vector	vec_y;
 	t_vector	vec_z;
 
-	ft_bzero(&vec_x, sizeof(t_vector));
-	ft_bzero(&vec_y, sizeof(t_vector));
-	ft_bzero(&vec_z, sizeof(t_vector));
+	fill_zero(&vec_x, &vec_y, &vec_z);
 	if (scene->keys_held.w == true)
 		sphere_mod(&vec_z, scene->cam.pi, scene->cam.theta, CAM_SPEED);
 	if (scene->keys_held.s == true)

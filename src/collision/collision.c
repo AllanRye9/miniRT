@@ -6,22 +6,20 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:49:42 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/03 01:42:16 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/05 18:54:28 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/miniRT.h"
 
-bool	collided(t_scene *scene, bool r, int depth,
-		t_shape *t)
+bool	loop_over_scene(t_scene *scene, bool r, t_shape *t)
 {
-	bool		did_collide;
-	int			i;
-	int			j;
+	bool	did_collide;
+	int		i;
+	int		j;
 
-	did_collide = false;
-	calc_transform(scene);
 	i = 0;
+	did_collide = false;
 	while (i < scene->count.shapes)
 	{
 		j = 0;
@@ -38,6 +36,17 @@ bool	collided(t_scene *scene, bool r, int depth,
 		}
 		i++;
 	}
+	return (did_collide);
+}
+
+bool	collided(t_scene *scene, bool r, int depth,
+		t_shape *t)
+{
+	bool		did_collide;
+
+	did_collide = false;
+	calc_transform(scene);
+	did_collide = loop_over_scene(scene, r, t);
 	if (!r)
 		return (did_collide);
 	if (collided(scene, false, 0, NULL) == true && depth > 0)
