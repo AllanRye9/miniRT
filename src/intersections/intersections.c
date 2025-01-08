@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:39:29 by sbartoul          #+#    #+#             */
-/*   Updated: 2025/01/08 21:44:26 by sbartoul         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:49:47 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,19 @@ bool	intersect_sphere_fast(const t_ray *ray, t_intersections *xs,
 	return (true);
 }
 
-//calculates the intersection times (t_min and t_max) for a ray along a specific axis of a cube.
 void	check_cube_axis(double *t_min, double *t_max, double origin,
 		double direction)
 {
 	double	tmin_numerator;
 	double	tmax_numerator;
 
-//represent the distances from the ray's origin to the cube's planes along the axis.
-//Cube boundries are assumed to be [-1, 1] on each axis.
 	tmin_numerator = (-1 - origin);
 	tmax_numerator = 1 - origin;
-	//Not parallel to the axis
 	if (fabs(direction) >= 0.000001)
 	{
 		*t_min = tmin_numerator / direction;
 		*t_max = tmax_numerator / direction;
 	}
-	//handle parallel rays
 	else
 	{
 		*t_min = tmin_numerator * INFINITY;
@@ -62,13 +57,10 @@ void	check_cube_axis(double *t_min, double *t_max, double origin,
 		ft_swapd(t_min, t_max);
 }
 
-//records the times of intersection t(min) and t(max)
 bool	intersect_cube(t_shape *shape, t_ray *ray, t_intersections *xs)
 {
 	t_vector	tmin_vec;
-	//tmin_vec.axis: The time when the ray enters the cube's slab along the given axis.
 	t_vector	tmax_vec;
-	//tmax_vec.axis: The time when the ray exits the cube's slab along the given axis.
 	double		tmin;
 	double		tmax;
 
